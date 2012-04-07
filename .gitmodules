@@ -1,0 +1,612 @@
+[submodule "accumulators"]
+	path = accumulators
+	url = https://github.com/boost-lib/accumulators.git
+[submodule "algorithm"]
+	path = algorithm
+	url = https://github.com/boost-lib/algorithm.git
+[submodule "any"]
+	path = any
+	url = https://github.com/boost-lib/any.git
+[submodule "array"]
+	path = array
+	url = https://github.com/boost-lib/array.git
+[submodule "asio"]
+	path = asio
+	url = https://github.com/boost-lib/asio.git
+[submodule "assign"]
+	path = assign
+	url = https://github.com/boost-lib/assign.git
+[submodule "auto_index"]
+	path = auto_index
+	url = https://github.com/boost-lib/auto_index.git
+[submodule "bimap"]
+	path = bimap
+	url = https://github.com/boost-lib/bimap.git
+[submodule "bind"]
+	path = bind
+	url = https://github.com/boost-lib/bind.git
+[submodule "boostbook"]
+	path = boostbook
+	url = https://github.com/boost-lib/boostbook.git
+[submodule "chrono"]
+	path = chrono
+	url = https://github.com/boost-lib/chrono.git
+[submodule "circular_buffer"]
+	path = circular_buffer
+	url = https://github.com/boost-lib/circular_buffer.git
+[submodule "compatibility"]
+	path = compatibility
+	url = https://github.com/boost-lib/compatibility.git
+[submodule "concept_check"]
+	path = concept_check
+	url = https://github.com/boost-lib/concept_check.git
+[submodule "config"]
+	path = config
+	url = https://github.com/boost-lib/config.git
+[submodule "container"]
+	path = container
+	url = https://github.com/boost-lib/container.git
+[submodule "context"]
+	path = context
+	url = https://github.com/boost-lib/context.git
+[submodule "conversion"]
+	path = conversion
+	url = https://github.com/boost-lib/conversion.git
+[submodule "core"]
+	path = core
+	url = https://github.com/boost-lib/core.git
+[submodule "crc"]
+	path = crc
+	url = https://github.com/boost-lib/crc.git
+[submodule "date_time"]
+	path = date_time
+	url = https://github.com/boost-lib/date_time.git
+[submodule "detail"]
+	path = detail
+	url = https://github.com/boost-lib/detail.git
+[submodule "disjoint_sets"]
+	path = disjoint_sets
+	url = https://github.com/boost-lib/disjoint_sets.git
+[submodule "dynamic_bitset"]
+	path = dynamic_bitset
+	url = https://github.com/boost-lib/dynamic_bitset.git
+[submodule "exception"]
+	path = exception
+	url = https://github.com/boost-lib/exception.git
+[submodule "filesystem"]
+	path = filesystem
+	url = https://github.com/boost-lib/filesystem.git
+[submodule "flyweight"]
+	path = flyweight
+	url = https://github.com/boost-lib/flyweight.git
+[submodule "foreach"]
+	path = foreach
+	url = https://github.com/boost-lib/foreach.git
+[submodule "format"]
+	path = format
+	url = https://github.com/boost-lib/format.git
+[submodule "function"]
+	path = function
+	url = https://github.com/boost-lib/function.git
+[submodule "function_types"]
+	path = function_types
+	url = https://github.com/boost-lib/function_types.git
+[submodule "functional"]
+	path = functional
+	url = https://github.com/boost-lib/functional.git
+[submodule "fusion"]
+	path = fusion
+	url = https://github.com/boost-lib/fusion.git
+[submodule "geometry"]
+	path = geometry
+	url = https://github.com/boost-lib/geometry.git
+[submodule "gil"]
+	path = gil
+	url = https://github.com/boost-lib/gil.git
+[submodule "graph"]
+	path = graph
+	url = https://github.com/boost-lib/graph.git
+[submodule "graph_parallel"]
+	path = graph_parallel
+	url = https://github.com/boost-lib/graph_parallel.git
+[submodule "heap"]
+	path = heap
+	url = https://github.com/boost-lib/heap.git
+[submodule "icl"]
+	path = icl
+	url = https://github.com/boost-lib/icl.git
+[submodule "inspect"]
+	path = inspect
+	url = https://github.com/boost-lib/inspect.git
+[submodule "integer"]
+	path = integer
+	url = https://github.com/boost-lib/integer.git
+[submodule "interprocess"]
+	path = interprocess
+	url = https://github.com/boost-lib/interprocess.git
+[submodule "intrusive"]
+	path = intrusive
+	url = https://github.com/boost-lib/intrusive.git
+[submodule "io"]
+	path = io
+	url = https://github.com/boost-lib/io.git
+[submodule "iostreams"]
+	path = iostreams
+	url = https://github.com/boost-lib/iostreams.git
+[submodule "iterator"]
+	path = iterator
+	url = https://github.com/boost-lib/iterator.git
+[submodule "lambda"]
+	path = lambda
+	url = https://github.com/boost-lib/lambda.git
+[submodule "local_function"]
+	path = local_function
+	url = https://github.com/boost-lib/local_function.git
+[submodule "locale"]
+	path = locale
+	url = https://github.com/boost-lib/locale.git
+[submodule "logic"]
+	path = logic
+	url = https://github.com/boost-lib/logic.git
+[submodule "math"]
+	path = math
+	url = https://github.com/boost-lib/math.git
+[submodule "move"]
+	path = move
+	url = https://github.com/boost-lib/move.git
+[submodule "mpi"]
+	path = mpi
+	url = https://github.com/boost-lib/mpi.git
+[submodule "mpl"]
+	path = mpl
+	url = https://github.com/boost-lib/mpl.git
+[submodule "msm"]
+	path = msm
+	url = https://github.com/boost-lib/msm.git
+[submodule "multi_array"]
+	path = multi_array
+	url = https://github.com/boost-lib/multi_array.git
+[submodule "multi_index"]
+	path = multi_index
+	url = https://github.com/boost-lib/multi_index.git
+[submodule "numeric"]
+	path = numeric
+	url = https://github.com/boost-lib/numeric.git
+[submodule "optional"]
+	path = optional
+	url = https://github.com/boost-lib/optional.git
+[submodule "parameter"]
+	path = parameter
+	url = https://github.com/boost-lib/parameter.git
+[submodule "phoenix"]
+	path = phoenix
+	url = https://github.com/boost-lib/phoenix.git
+[submodule "polygon"]
+	path = polygon
+	url = https://github.com/boost-lib/polygon.git
+[submodule "pool"]
+	path = pool
+	url = https://github.com/boost-lib/pool.git
+[submodule "preprocessor"]
+	path = preprocessor
+	url = https://github.com/boost-lib/preprocessor.git
+[submodule "program_options"]
+	path = program_options
+	url = https://github.com/boost-lib/program_options.git
+[submodule "property_map"]
+	path = property_map
+	url = https://github.com/boost-lib/property_map.git
+[submodule "property_tree"]
+	path = property_tree
+	url = https://github.com/boost-lib/property_tree.git
+[submodule "proto"]
+	path = proto
+	url = https://github.com/boost-lib/proto.git
+[submodule "ptr_container"]
+	path = ptr_container
+	url = https://github.com/boost-lib/ptr_container.git
+[submodule "python"]
+	path = python
+	url = https://github.com/boost-lib/python.git
+[submodule "quickbook"]
+	path = quickbook
+	url = https://github.com/boost-lib/quickbook.git
+[submodule "random"]
+	path = random
+	url = https://github.com/boost-lib/random.git
+[submodule "range"]
+	path = range
+	url = https://github.com/boost-lib/range.git
+[submodule "ratio"]
+	path = ratio
+	url = https://github.com/boost-lib/ratio.git
+[submodule "rational"]
+	path = rational
+	url = https://github.com/boost-lib/rational.git
+[submodule "regex"]
+	path = regex
+	url = https://github.com/boost-lib/regex.git
+[submodule "scope_exit"]
+	path = scope_exit
+	url = https://github.com/boost-lib/scope_exit.git
+[submodule "serialization"]
+	path = serialization
+	url = https://github.com/boost-lib/serialization.git
+[submodule "signals"]
+	path = signals
+	url = https://github.com/boost-lib/signals.git
+[submodule "signals2"]
+	path = signals2
+	url = https://github.com/boost-lib/signals2.git
+[submodule "smart_ptr"]
+	path = smart_ptr
+	url = https://github.com/boost-lib/smart_ptr.git
+[submodule "spirit"]
+	path = spirit
+	url = https://github.com/boost-lib/spirit.git
+[submodule "statechart"]
+	path = statechart
+	url = https://github.com/boost-lib/statechart.git
+[submodule "static_assert"]
+	path = static_assert
+	url = https://github.com/boost-lib/static_assert.git
+[submodule "system"]
+	path = system
+	url = https://github.com/boost-lib/system.git
+[submodule "test"]
+	path = test
+	url = https://github.com/boost-lib/test.git
+[submodule "thread"]
+	path = thread
+	url = https://github.com/boost-lib/thread.git
+[submodule "timer"]
+	path = timer
+	url = https://github.com/boost-lib/timer.git
+[submodule "tokenizer"]
+	path = tokenizer
+	url = https://github.com/boost-lib/tokenizer.git
+[submodule "tr1"]
+	path = tr1
+	url = https://github.com/boost-lib/tr1.git
+[submodule "tti"]
+	path = tti
+	url = https://github.com/boost-lib/tti.git
+[submodule "tuple"]
+	path = tuple
+	url = https://github.com/boost-lib/tuple.git
+[submodule "type_traits"]
+	path = type_traits
+	url = https://github.com/boost-lib/type_traits.git
+[submodule "typeof"]
+	path = typeof
+	url = https://github.com/boost-lib/typeof.git
+[submodule "units"]
+	path = units
+	url = https://github.com/boost-lib/units.git
+[submodule "unordered"]
+	path = unordered
+	url = https://github.com/boost-lib/unordered.git
+[submodule "utility"]
+	path = utility
+	url = https://github.com/boost-lib/utility.git
+[submodule "uuid"]
+	path = uuid
+	url = https://github.com/boost-lib/uuid.git
+[submodule "variant"]
+	path = variant
+	url = https://github.com/boost-lib/variant.git
+[submodule "wave"]
+	path = wave
+	url = https://github.com/boost-lib/wave.git
+[submodule "xpressive"]
+	path = xpressive
+	url = https://github.com/boost-lib/xpressive.git
+[submodule "cmake"]
+	path = cmake
+	url = https://purpleKarrot@github.com/purpleKarrot/Boost.CMake.git
+[submodule "boost/accumulators"]
+	path = boost/accumulators
+	url = https://github.com/boost-lib/accumulators.git
+[submodule "boost/algorithm"]
+	path = boost/algorithm
+	url = https://github.com/boost-lib/algorithm.git
+[submodule "boost/any"]
+	path = boost/any
+	url = https://github.com/boost-lib/any.git
+[submodule "boost/array"]
+	path = boost/array
+	url = https://github.com/boost-lib/array.git
+[submodule "boost/asio"]
+	path = boost/asio
+	url = https://github.com/boost-lib/asio.git
+[submodule "boost/assign"]
+	path = boost/assign
+	url = https://github.com/boost-lib/assign.git
+[submodule "boost/auto_index"]
+	path = boost/auto_index
+	url = https://github.com/boost-lib/auto_index.git
+[submodule "boost/bimap"]
+	path = boost/bimap
+	url = https://github.com/boost-lib/bimap.git
+[submodule "boost/bind"]
+	path = boost/bind
+	url = https://github.com/boost-lib/bind.git
+[submodule "boost/boostbook"]
+	path = boost/boostbook
+	url = https://github.com/boost-lib/boostbook.git
+[submodule "boost/chrono"]
+	path = boost/chrono
+	url = https://github.com/boost-lib/chrono.git
+[submodule "boost/circular_buffer"]
+	path = boost/circular_buffer
+	url = https://github.com/boost-lib/circular_buffer.git
+[submodule "boost/compatibility"]
+	path = boost/compatibility
+	url = https://github.com/boost-lib/compatibility.git
+[submodule "boost/concept_check"]
+	path = boost/concept_check
+	url = https://github.com/boost-lib/concept_check.git
+[submodule "boost/config"]
+	path = boost/config
+	url = https://github.com/boost-lib/config.git
+[submodule "boost/container"]
+	path = boost/container
+	url = https://github.com/boost-lib/container.git
+[submodule "boost/context"]
+	path = boost/context
+	url = https://github.com/boost-lib/context.git
+[submodule "boost/conversion"]
+	path = boost/conversion
+	url = https://github.com/boost-lib/conversion.git
+[submodule "boost/core"]
+	path = boost/core
+	url = https://github.com/boost-lib/core.git
+[submodule "boost/crc"]
+	path = boost/crc
+	url = https://github.com/boost-lib/crc.git
+[submodule "boost/date_time"]
+	path = boost/date_time
+	url = https://github.com/boost-lib/date_time.git
+[submodule "boost/detail"]
+	path = boost/detail
+	url = https://github.com/boost-lib/detail.git
+[submodule "boost/disjoint_sets"]
+	path = boost/disjoint_sets
+	url = https://github.com/boost-lib/disjoint_sets.git
+[submodule "boost/dynamic_bitset"]
+	path = boost/dynamic_bitset
+	url = https://github.com/boost-lib/dynamic_bitset.git
+[submodule "boost/exception"]
+	path = boost/exception
+	url = https://github.com/boost-lib/exception.git
+[submodule "boost/filesystem"]
+	path = boost/filesystem
+	url = https://github.com/boost-lib/filesystem.git
+[submodule "boost/flyweight"]
+	path = boost/flyweight
+	url = https://github.com/boost-lib/flyweight.git
+[submodule "boost/foreach"]
+	path = boost/foreach
+	url = https://github.com/boost-lib/foreach.git
+[submodule "boost/format"]
+	path = boost/format
+	url = https://github.com/boost-lib/format.git
+[submodule "boost/function"]
+	path = boost/function
+	url = https://github.com/boost-lib/function.git
+[submodule "boost/function_types"]
+	path = boost/function_types
+	url = https://github.com/boost-lib/function_types.git
+[submodule "boost/functional"]
+	path = boost/functional
+	url = https://github.com/boost-lib/functional.git
+[submodule "boost/fusion"]
+	path = boost/fusion
+	url = https://github.com/boost-lib/fusion.git
+[submodule "boost/geometry"]
+	path = boost/geometry
+	url = https://github.com/boost-lib/geometry.git
+[submodule "boost/gil"]
+	path = boost/gil
+	url = https://github.com/boost-lib/gil.git
+[submodule "boost/graph"]
+	path = boost/graph
+	url = https://github.com/boost-lib/graph.git
+[submodule "boost/graph_parallel"]
+	path = boost/graph_parallel
+	url = https://github.com/boost-lib/graph_parallel.git
+[submodule "boost/heap"]
+	path = boost/heap
+	url = https://github.com/boost-lib/heap.git
+[submodule "boost/icl"]
+	path = boost/icl
+	url = https://github.com/boost-lib/icl.git
+[submodule "boost/inspect"]
+	path = boost/inspect
+	url = https://github.com/boost-lib/inspect.git
+[submodule "boost/integer"]
+	path = boost/integer
+	url = https://github.com/boost-lib/integer.git
+[submodule "boost/interprocess"]
+	path = boost/interprocess
+	url = https://github.com/boost-lib/interprocess.git
+[submodule "boost/intrusive"]
+	path = boost/intrusive
+	url = https://github.com/boost-lib/intrusive.git
+[submodule "boost/io"]
+	path = boost/io
+	url = https://github.com/boost-lib/io.git
+[submodule "boost/iostreams"]
+	path = boost/iostreams
+	url = https://github.com/boost-lib/iostreams.git
+[submodule "boost/iterator"]
+	path = boost/iterator
+	url = https://github.com/boost-lib/iterator.git
+[submodule "boost/lambda"]
+	path = boost/lambda
+	url = https://github.com/boost-lib/lambda.git
+[submodule "boost/local_function"]
+	path = boost/local_function
+	url = https://github.com/boost-lib/local_function.git
+[submodule "boost/locale"]
+	path = boost/locale
+	url = https://github.com/boost-lib/locale.git
+[submodule "boost/logic"]
+	path = boost/logic
+	url = https://github.com/boost-lib/logic.git
+[submodule "boost/math"]
+	path = boost/math
+	url = https://github.com/boost-lib/math.git
+[submodule "boost/move"]
+	path = boost/move
+	url = https://github.com/boost-lib/move.git
+[submodule "boost/mpi"]
+	path = boost/mpi
+	url = https://github.com/boost-lib/mpi.git
+[submodule "boost/mpl"]
+	path = boost/mpl
+	url = https://github.com/boost-lib/mpl.git
+[submodule "boost/msm"]
+	path = boost/msm
+	url = https://github.com/boost-lib/msm.git
+[submodule "boost/multi_array"]
+	path = boost/multi_array
+	url = https://github.com/boost-lib/multi_array.git
+[submodule "boost/multi_index"]
+	path = boost/multi_index
+	url = https://github.com/boost-lib/multi_index.git
+[submodule "boost/numeric"]
+	path = boost/numeric
+	url = https://github.com/boost-lib/numeric.git
+[submodule "boost/optional"]
+	path = boost/optional
+	url = https://github.com/boost-lib/optional.git
+[submodule "boost/parameter"]
+	path = boost/parameter
+	url = https://github.com/boost-lib/parameter.git
+[submodule "boost/phoenix"]
+	path = boost/phoenix
+	url = https://github.com/boost-lib/phoenix.git
+[submodule "boost/polygon"]
+	path = boost/polygon
+	url = https://github.com/boost-lib/polygon.git
+[submodule "boost/pool"]
+	path = boost/pool
+	url = https://github.com/boost-lib/pool.git
+[submodule "boost/preprocessor"]
+	path = boost/preprocessor
+	url = https://github.com/boost-lib/preprocessor.git
+[submodule "boost/program_options"]
+	path = boost/program_options
+	url = https://github.com/boost-lib/program_options.git
+[submodule "boost/property_map"]
+	path = boost/property_map
+	url = https://github.com/boost-lib/property_map.git
+[submodule "boost/property_tree"]
+	path = boost/property_tree
+	url = https://github.com/boost-lib/property_tree.git
+[submodule "boost/proto"]
+	path = boost/proto
+	url = https://github.com/boost-lib/proto.git
+[submodule "boost/ptr_container"]
+	path = boost/ptr_container
+	url = https://github.com/boost-lib/ptr_container.git
+[submodule "boost/python"]
+	path = boost/python
+	url = https://github.com/boost-lib/python.git
+[submodule "boost/quickbook"]
+	path = boost/quickbook
+	url = https://github.com/boost-lib/quickbook.git
+[submodule "boost/random"]
+	path = boost/random
+	url = https://github.com/boost-lib/random.git
+[submodule "boost/range"]
+	path = boost/range
+	url = https://github.com/boost-lib/range.git
+[submodule "boost/ratio"]
+	path = boost/ratio
+	url = https://github.com/boost-lib/ratio.git
+[submodule "boost/rational"]
+	path = boost/rational
+	url = https://github.com/boost-lib/rational.git
+[submodule "boost/regex"]
+	path = boost/regex
+	url = https://github.com/boost-lib/regex.git
+[submodule "boost/scope_exit"]
+	path = boost/scope_exit
+	url = https://github.com/boost-lib/scope_exit.git
+[submodule "boost/serialization"]
+	path = boost/serialization
+	url = https://github.com/boost-lib/serialization.git
+[submodule "boost/signals"]
+	path = boost/signals
+	url = https://github.com/boost-lib/signals.git
+[submodule "boost/signals2"]
+	path = boost/signals2
+	url = https://github.com/boost-lib/signals2.git
+[submodule "boost/smart_ptr"]
+	path = boost/smart_ptr
+	url = https://github.com/boost-lib/smart_ptr.git
+[submodule "boost/spirit"]
+	path = boost/spirit
+	url = https://github.com/boost-lib/spirit.git
+[submodule "boost/statechart"]
+	path = boost/statechart
+	url = https://github.com/boost-lib/statechart.git
+[submodule "boost/static_assert"]
+	path = boost/static_assert
+	url = https://github.com/boost-lib/static_assert.git
+[submodule "boost/system"]
+	path = boost/system
+	url = https://github.com/boost-lib/system.git
+[submodule "boost/test"]
+	path = boost/test
+	url = https://github.com/boost-lib/test.git
+[submodule "boost/thread"]
+	path = boost/thread
+	url = https://github.com/boost-lib/thread.git
+[submodule "boost/timer"]
+	path = boost/timer
+	url = https://github.com/boost-lib/timer.git
+[submodule "boost/tokenizer"]
+	path = boost/tokenizer
+	url = https://github.com/boost-lib/tokenizer.git
+[submodule "boost/tr1"]
+	path = boost/tr1
+	url = https://github.com/boost-lib/tr1.git
+[submodule "boost/tti"]
+	path = boost/tti
+	url = https://github.com/boost-lib/tti.git
+[submodule "boost/tuple"]
+	path = boost/tuple
+	url = https://github.com/boost-lib/tuple.git
+[submodule "boost/type_traits"]
+	path = boost/type_traits
+	url = https://github.com/boost-lib/type_traits.git
+[submodule "boost/typeof"]
+	path = boost/typeof
+	url = https://github.com/boost-lib/typeof.git
+[submodule "boost/units"]
+	path = boost/units
+	url = https://github.com/boost-lib/units.git
+[submodule "boost/unordered"]
+	path = boost/unordered
+	url = https://github.com/boost-lib/unordered.git
+[submodule "boost/utility"]
+	path = boost/utility
+	url = https://github.com/boost-lib/utility.git
+[submodule "boost/uuid"]
+	path = boost/uuid
+	url = https://github.com/boost-lib/uuid.git
+[submodule "boost/variant"]
+	path = boost/variant
+	url = https://github.com/boost-lib/variant.git
+[submodule "boost/wave"]
+	path = boost/wave
+	url = https://github.com/boost-lib/wave.git
+[submodule "boost/xpressive"]
+	path = boost/xpressive
+	url = https://github.com/boost-lib/xpressive.git
+[submodule "boost/cmake"]
+	path = boost/cmake
+	url = https://github.com/purpleKarrot/Boost.CMake.git
