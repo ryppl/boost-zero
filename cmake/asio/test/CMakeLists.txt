@@ -1,7 +1,11 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-boost_add_multiple_tests(
+find_package(Boost COMPONENTS asio regex system test thread NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
+
+boost_add_test_suite(
   RUN
     basic_datagram_socket.cpp
     basic_deadline_timer.cpp
@@ -74,9 +78,10 @@ boost_add_multiple_tests(
     windows/stream_handle_service.cpp
     write.cpp
     write_at.cpp
-  LINK_BOOST_LIBRARIES
-    regex
-    system
-    test_exec_monitor
-    thread
+  LINK_LIBRARIES
+    regex-shared
+    system-shared
+    test_exec_monitor-static
+    thread-shared
+	NO_SINGLE_TARGET
   )

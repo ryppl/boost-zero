@@ -44,3 +44,5 @@ boost_export(
   INCLUDE_DIRECTORIES
     include
   )
+
+add_subdirectory(test)

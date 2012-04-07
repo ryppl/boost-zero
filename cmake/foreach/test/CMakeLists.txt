@@ -1,36 +1,40 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+find_package(Boost COMPONENTS test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
 if(MSVC)
   # <asynch-exceptions>on
 endif(MSVC)
 
-boost_add_multiple_tests(
+boost_add_test_suite(
   RUN
-    stl_byval
-    stl_byref
-    stl_byval_r
-    stl_byref_r
-    array_byval
-    array_byref
-    array_byval_r
-    array_byref_r
-    cstr_byval
-    cstr_byref
-    cstr_byval_r
-    cstr_byref_r
-    pair_byval
-    pair_byref
-    pair_byval_r
-    pair_byref_r
-    user_defined
-    call_once
-    rvalue_const
-    rvalue_nonconst
-    rvalue_const_r
-    rvalue_nonconst_r
-    dependent_type
-    misc
+    stl_byval.cpp
+    stl_byref.cpp
+    stl_byval_r.cpp
+    stl_byref_r.cpp
+    array_byval.cpp
+    array_byref.cpp
+    array_byval_r.cpp
+    array_byref_r.cpp
+    cstr_byval.cpp
+    cstr_byref.cpp
+    cstr_byval_r.cpp
+    cstr_byref_r.cpp
+    pair_byval.cpp
+    pair_byref.cpp
+    pair_byval_r.cpp
+    pair_byref_r.cpp
+    user_defined.cpp
+    call_once.cpp
+    rvalue_const.cpp
+    rvalue_nonconst.cpp
+    rvalue_const_r.cpp
+    rvalue_nonconst_r.cpp
+    dependent_type.cpp
+    misc.cpp
   COMPILE
-    noncopyable
+    noncopyable.cpp
+	NO_SINGLE_TARGET
   )

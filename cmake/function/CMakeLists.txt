@@ -24,3 +24,5 @@ boost_export(
   )
 
 #boost_documentation(doc/function.xml)
+
+add_subdirectory(test)

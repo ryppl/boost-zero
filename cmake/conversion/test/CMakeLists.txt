@@ -1,22 +1,27 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-boost_add_test(cast_test         RUN ../cast_test)
-boost_add_test(numeric_cast_test RUN ../numeric_cast_test)
-#boost_add_test(lexical_cast_test RUN ../lexical_cast_test)
+find_package(Boost COMPONENTS conversion test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
-boost_add_multiple_tests(
+boost_add_test_suite(RUN ../cast_test.cpp NO_SINGLE_TARGET)
+boost_add_test_suite(RUN ../numeric_cast_test.cpp NO_SINGLE_TARGET)
+#boost_add_test_suite(RUN ../lexical_cast_test.cpp NO_SINGLE_TARGET)
+
+boost_add_test_suite(
   RUN
-    implicit_cast
-    lexical_cast_loopback_test
-    lexical_cast_abstract_test
-    lexical_cast_noncopyable_test
-    lexical_cast_vc8_bug_test
-    lexical_cast_wchars_test
-    lexical_cast_float_types_test
-    lexical_cast_inf_nan_test
+    implicit_cast.cpp
+    lexical_cast_loopback_test.cpp
+    lexical_cast_abstract_test.cpp
+    lexical_cast_noncopyable_test.cpp
+    lexical_cast_vc8_bug_test.cpp
+    lexical_cast_wchars_test.cpp
+    lexical_cast_float_types_test.cpp
+    lexical_cast_inf_nan_test.cpp
   COMPILE_FAIL
-    implicit_cast_fail
-  LINK_BOOST_LIBRARIES
-    unit_test_framework
+    implicit_cast_fail.cpp
+  LINK_LIBRARIES
+    unit_test_framework-static
+	NO_SINGLE_TARGET
   )

@@ -4,9 +4,10 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostDisjointSets)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
+find_package(Boost COMPONENTS cmake test graph NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
+include(BoostAddTestSuite)
 
 boost_export(
   BOOST_DEPENDS
@@ -17,7 +18,7 @@ boost_export(
     include
   )
 
-#boost_add_multiple_tests(
-#  RUN
-#    disjoint_set_test
-#  )
+boost_add_test_suite(
+  RUN
+    disjoint_set_test.cpp
+  )

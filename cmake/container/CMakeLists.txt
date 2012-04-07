@@ -8,6 +8,8 @@ find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
 
+add_subdirectory(test)
+
 boost_export(
   BOOST_DEPENDS
     config

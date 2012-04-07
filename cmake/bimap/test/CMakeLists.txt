@@ -1,25 +1,27 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(Boost COMPONENTS assign NO_MODULE)
-include("${Boost_USE_FILE}")
+find_package(Boost COMPONENTS bimap serialization assign test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
 # XXX: some tests #include <libs/bimap/test/test_bimap.hpp>
 include_directories("../../..")
 
 # tagged_test
-boost_add_test(test_tagged.cpp RUN)
+boost_add_test_suite(test_tagged.cpp RUN)
 
 # relation_test
-boost_add_multiple_tests(
+boost_add_test_suite(
   RUN
     test_structured_pair.cpp
     test_mutant.cpp
     test_mutant_relation.cpp
+  NO_SINGLE_TARGET
   )
 
 # bimap_test
-boost_add_multiple_tests(
+boost_add_test_suite(
   RUN
     # Check library user interface
     test_bimap_set_of.cpp
@@ -45,12 +47,13 @@ boost_add_multiple_tests(
     test_bimap_project.cpp
     test_bimap_serialization.cpp
     test_bimap_info.cpp
-  LINK_BOOST_LIBRARIES
-    serialization
+  LINK_LIBRARIES
+    serialization-shared
+  NO_SINGLE_TARGET
   )
 
 # compile_fail_test
-boost_add_multiple_tests(
+boost_add_test_suite(
   COMPILE_FAIL
     compile_fail/test_bimap_mutable_1.cpp
     compile_fail/test_bimap_mutable_2.cpp
@@ -58,11 +61,12 @@ boost_add_multiple_tests(
     compile_fail/test_bimap_info_1.cpp
     compile_fail/test_bimap_info_2.cpp
     compile_fail/test_bimap_info_3.cpp
+  NO_SINGLE_TARGET
   )
 
 
 # bimap_and_boost
-boost_add_multiple_tests(
+boost_add_test_suite(
   RUN
     ../example/bimap_and_boost/property_map.cpp
     ../example/bimap_and_boost/range.cpp
@@ -73,6 +77,7 @@ boost_add_multiple_tests(
     ../example/bimap_and_boost/typeof.cpp
   COMPILE
     ../example/bimap_and_boost/serialization.cpp
-  LINK_BOOST_LIBRARIES
-    serialization
+  LINK_LIBRARIES
+    serialization-shared
+  NO_SINGLE_TARGET
   )

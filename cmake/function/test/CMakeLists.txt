@@ -1,38 +1,42 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+find_package(Boost COMPONENTS test core NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
 if(MSVC)
   # <asynch-exceptions>on
 endif(MSVC)
 
-boost_add_multiple_tests(
+boost_add_test_suite(
   COMPILE
-    function_typeof_test
-    function_30
+    function_typeof_test.cpp
+    function_30.cpp
   COMPILE_FAIL
-    function_test_fail1
-    function_test_fail2
+    function_test_fail1.cpp
+    function_test_fail2.cpp
   RUN
-    function_test
-    function_n_test
-    allocator_test
-    stateless_test
-    lambda_test
-    function_arith_cxx98
-    function_arith_portable
-    sum_avg_cxx98
-    sum_avg_portable
-    mem_fun_cxx98
-    mem_fun_portable
-    std_bind_cxx98
-    std_bind_portable
-    function_ref_cxx98
-    function_ref_portable
-    contains_test
-    contains2_test
-    nothrow_swap
-  LINK_BOOST_LIBRARIES
-    test_exec_monitor
+    function_test.cpp
+    function_n_test.cpp
+    allocator_test.cpp
+    stateless_test.cpp
+    lambda_test.cpp
+    function_arith_cxx98.cpp
+    function_arith_portable.cpp
+    sum_avg_cxx98.cpp
+    sum_avg_portable.cpp
+    mem_fun_cxx98.cpp
+    mem_fun_portable.cpp
+    std_bind_cxx98.cpp
+    std_bind_portable.cpp
+    function_ref_cxx98.cpp
+    function_ref_portable.cpp
+    contains_test.cpp
+    contains2_test.cpp
+    nothrow_swap.cpp
+  LINK_LIBRARIES
+    test_exec_monitor-static
+	NO_SINGLE_TARGET
   )
 
 

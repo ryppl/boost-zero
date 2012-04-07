@@ -2,77 +2,97 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 find_package(Threads)
-find_package(Boost COMPONENTS container NO_MODULE)
+find_package(Boost COMPONENTS container test NO_MODULE)
 include("${Boost_USE_FILE}")
+include(BoostAddTestSuite)
 
-boost_add_test(assoc_cont_factory RUN
-  SOURCES
+
+#		assoc_cont_factory
+boost_add_test_suite(
+	RUN
     test_assoc_cont_factory.cpp
+	ADDITIONAL_SOURCES
     test_assoc_cont_fact_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(basic RUN
-  SOURCES
+#basic
+boost_add_test_suite(
+	RUN
     test_basic.cpp
+	ADDITIONAL_SOURCES
     test_basic_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(custom_factory RUN
-  SOURCES
-    test_basic.cpp
-    test_basic_main.cpp
+# custom_factory
+boost_add_test_suite(
+	RUN
+    test_custom_factory.cpp
+	ADDITIONAL_SOURCES
+    test_custom_factory_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(init RUN
-  SOURCES
+# init
+boost_add_test_suite(
+	RUN
     test_init.cpp
+	ADDITIONAL_SOURCES
     test_init_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(intermod_holder RUN
-  SOURCES
+# intermod_holder <threading>multi   
+boost_add_test_suite(
+	RUN
     test_intermod_holder.cpp
+	ADDITIONAL_SOURCES
     test_intermod_holder_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
     intermod_holder_dll
   )
 
-boost_add_test(multictor RUN
-  SOURCES
+# multictor
+boost_add_test_suite(
+	RUN
     test_multictor.cpp
+	ADDITIONAL_SOURCES
     test_multictor_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(no_locking RUN
-  SOURCES
+# no_locking
+boost_add_test_suite(
+	RUN
     test_no_locking.cpp
+	ADDITIONAL_SOURCES
     test_no_locking_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(no_tracking RUN
-  SOURCES
+# no_tracking
+boost_add_test_suite(
+	RUN
     test_no_tracking.cpp
+	ADDITIONAL_SOURCES
     test_no_tracking_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-boost_add_test(set_factory RUN
-  SOURCES
+# set_factory
+boost_add_test_suite(
+	RUN
     test_set_factory.cpp
+	ADDITIONAL_SOURCES
     test_set_factory_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}

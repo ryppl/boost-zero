@@ -8,6 +8,7 @@ find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
 
+
 math(EXPR BOOST_VERSION
   "${Boost_VERSION_MAJOR} * 100000 + ${Boost_VERSION_MINOR} * 100 + ${Boost_VERSION_PATCH}"
   )
@@ -25,3 +26,6 @@ boost_export(
     "${PROJECT_SOURCE_DIR}/include"
     "${PROJECT_BINARY_DIR}/include"
   )
+
+add_subdirectory(test)
+

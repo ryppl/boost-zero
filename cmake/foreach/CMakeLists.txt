@@ -21,3 +21,5 @@ boost_export(
   )
 
 #boost_documentation(doc/foreach.qbk)
+
+add_subdirectory(test)

@@ -108,3 +108,5 @@ boost_documentation(xmldoc/date_time.xml
   local_time_autodoc.xml
   #<xsl:param>boost.root=../../../..
   )
+
+# add_subdirectory(test)

@@ -4,9 +4,10 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostDynamicBitset)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
+find_package(Boost COMPONENTS cmake test config NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
+include(BoostAddTestSuite)
 
 boost_export(
   BOOST_DEPENDS
@@ -18,10 +19,11 @@ boost_export(
     include
   )
 
-#boost_add_multiple_tests(
+# boost_add_test_suite(
 #  RUN
-#    dyn_bitset_unit_tests1
-#    dyn_bitset_unit_tests2
-#    dyn_bitset_unit_tests3
-#    dyn_bitset_unit_tests4
+#    dyn_bitset_unit_tests1.cpp
+#    dyn_bitset_unit_tests2.cpp
+#    dyn_bitset_unit_tests3.cpp
+#    dyn_bitset_unit_tests4.cpp
 #  )
+

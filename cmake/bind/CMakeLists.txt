@@ -10,6 +10,8 @@ include(BoostExport)
 
 #boost_documentation(doc/ref.xml)
 
+add_subdirectory(test)
+
 boost_export(
   BOOST_DEPENDS
     config
