@@ -1,0 +1,39 @@
+EXTRACT_ALL          = YES
+PREDEFINED           =                                                         \
+  "BOOST_NUMERIC_FUNCTIONAL_DOXYGEN_INVOKED=1"                                 \
+  "BOOST_NUMERIC_FUNCTIONAL_DEFINE_BINARY_OP(a,b,c)=                           \
+    namespace functional {                                                     \
+    template<class Left,class Right,class EnableIf=void> struct a ## _base     \
+    : std::binary_function<Left, Right, typeof(lvalue<Left>() b lvalue<Right>())> { \
+    /** \return left b right */                                                \
+    result_type operator()(Left &left, Right &right) const; };                 \
+    template<class Left,class Right,                                           \
+             class LeftTag=typename tag<Left>::type,                           \
+             class RightTag=typename tag<Right>::type>                         \
+    struct a : a ## _base<Left,Right,void> {}; }                               \
+    namespace op {                                                             \
+    struct a : boost::detail::function2<                                       \
+    functional::a<_1,_2,functional::tag<_1>,functional::tag<_2> > > {}; }      \
+    namespace {                                                                \
+    /** \return functional::a<Left, Right>()(left, right) */                   \
+    op::a const & a = boost::detail::pod_singleton<op::min_assign>::instance; } " \
+  "BOOST_NUMERIC_FUNCTIONAL_DEFINE_UNARY_OP(a,b)=                              \
+    namespace functional {                                                     \
+    template<class Arg,class EnableIf=void> struct a ## _base                  \
+    : std::unary_function<Arg, typeof(b lvalue<Arg>())> {                      \
+    /** \return b arg */                                                       \
+    result_type operator()(Arg & arg) const; };                                \
+    template<class Arg,class Tag=typename tag<Arg>::type>                      \
+    struct a : a ## _base<Arg,void> {}; }                                      \
+    namespace op {                                                             \
+    struct a : boost::detail::function1<                                       \
+    functional::a<_,functional::tag<_> > > {}; }                               \
+    namespace {                                                                \
+    /** \return functional::a<Arg>()(arg) */                                   \
+    op::a const & a = boost::detail::pod_singleton<op::min_assign>::instance; }"
+HIDE_UNDOC_MEMBERS   = NO
+EXTRACT_PRIVATE      = NO
+ENABLE_PREPROCESSING = YES
+MACRO_EXPANSION      = YES
+EXPAND_ONLY_PREDEF   = YES
+SEARCH_INCLUDES      = NO

@@ -7,10 +7,11 @@
 ##########################################################################
 
 cmake_minimum_required(VERSION 2.8.5 FATAL_ERROR)
-project(Boost)
+project(Zero)
+
+file(COPY ${Zero_SOURCE_DIR}/cmake/ DESTINATION ${Zero_SOURCE_DIR}/boost)
 
 # make visual studio look nice
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(boost)
-

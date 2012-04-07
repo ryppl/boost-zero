@@ -1,0 +1,14 @@
+EXTRACT_ALL          = YES
+PREDEFINED           = "BOOST_ACCUMULATORS_DOXYGEN_INVOKED=1"          \
+                       "BOOST_PP_REPEAT_FROM_TO(a,b,c,d)="             \
+                       "BOOST_PP_REPEAT(a,b,c)="                       \
+                       "BOOST_PARAMETER_KEYWORD(a,b)=                  \
+                            namespace a { struct b {}; }               \
+                            boost::parameter::keyword<a::b> const b;"  \
+                       "BOOST_PP_ENUM_PARAMS(a,b)=b ## 1, b ## 2, ..."
+HIDE_UNDOC_MEMBERS   = NO
+EXTRACT_PRIVATE      = NO
+ENABLE_PREPROCESSING = YES
+MACRO_EXPANSION      = YES
+EXPAND_ONLY_PREDEF   = YES
+SEARCH_INCLUDES      = NO

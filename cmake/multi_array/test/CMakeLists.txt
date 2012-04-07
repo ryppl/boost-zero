@@ -1,0 +1,50 @@
+# Distributed under the Boost Software License, Version 1.0.
+# See http://www.boost.org/LICENSE_1_0.txt
+
+boost_add_multiple_tests(
+  RUN
+    constructors
+    access
+    compare
+    iterators
+    slice
+    assign
+    assign_to_array
+    index_bases
+    storage_order_convert
+    storage_order
+    reshape
+    range1
+    idxgen1
+    stl_interaction
+    resize
+    assert
+    reverse_view
+  COMPILE_FAIL
+    fail_cbracket
+    fail_cdata
+    fail_citerator
+    fail_cparen
+    fail_criterator
+    fail_csubarray
+    fail_csubarray2
+    fail_csubarray3
+    fail_cview
+    fail_cview2
+    fail_cview3
+    fail_ref_cbracket
+    fail_ref_cdata
+    fail_ref_citerator
+    fail_ref_cparen
+    fail_ref_criterator
+    fail_ref_csubarray
+    fail_ref_csubarray2
+    fail_ref_csubarray3
+    fail_ref_cview
+    fail_ref_cview2
+    fail_ref_cview3
+  COMPILE
+    concept_checks
+  LINK_BOOST_LIBRARIES
+    test_exec_monitor
+  )

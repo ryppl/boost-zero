@@ -1,0 +1,30 @@
+# Distributed under the Boost Software License, Version 1.0.
+# See http://www.boost.org/LICENSE_1_0.txt
+
+cmake_minimum_required(VERSION 2.8)
+project(BoostHeap NONE)
+
+find_package(Boost COMPONENTS cmake NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostExport)
+
+boost_export(
+  BOOST_DEPENDS
+    array
+    bind
+    concept_check
+    config
+    exception
+    foreach
+    integer
+    intrusive
+    iterator
+    mpl
+    parameter
+    static_assert
+    timer
+    type_traits
+    utility
+  INCLUDE_DIRECTORIES
+    include
+  )
