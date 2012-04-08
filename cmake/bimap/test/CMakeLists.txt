@@ -6,7 +6,15 @@ include(${Boost_USE_FILE})
 include(BoostAddTestSuite)
 
 # XXX: some tests #include <libs/bimap/test/test_bimap.hpp>
-include_directories("../../..")
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
+set(test_bimap_hpp
+  "${CMAKE_CURRENT_BINARY_DIR}/include/libs/bimap/test/test_bimap.hpp"
+  )
+if(NOT EXISTS "${test_bimap_hpp}")
+  file(WRITE "${test_bimap_hpp}"
+    "#include \"${CMAKE_CURRENT_SOURCE_DIR}/test_bimap.hpp\"\n"
+    )
+endif()
 
 # tagged_test
 boost_add_test_suite(test_tagged.cpp RUN)

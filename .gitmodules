@@ -61,9 +61,6 @@
 [submodule "date_time"]
 	path = date_time
 	url = https://github.com/boost-lib/date_time.git
-[submodule "detail"]
-	path = detail
-	url = https://github.com/boost-lib/detail.git
 [submodule "disjoint_sets"]
 	path = disjoint_sets
 	url = https://github.com/boost-lib/disjoint_sets.git

@@ -8,6 +8,6 @@ include(BoostAddTestSuite)
 boost_add_test_suite(
   RUN
     ../any_test.cpp
-	COMPILE_FAIL
-  	any_cast_cv_failed.cpp
+  COMPILE_FAIL
+    any_cast_cv_failed.cpp
   )
