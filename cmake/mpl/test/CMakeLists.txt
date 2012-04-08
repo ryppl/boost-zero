@@ -1,5 +1,11 @@
+# Distributed under the Boost Software License, Version 1.0.
+# See http://www.boost.org/LICENSE_1_0.txt
 
-boost_add_multiple_tests(
+find_package(Boost COMPONENTS config test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
+
+boost_add_test_suite(
   COMPILE
     aux_/largest_int.cpp
     aux_/msvc_is_class.cpp
@@ -52,6 +58,7 @@ boost_add_multiple_tests(
   RUN
     int.cpp
     char.cpp
+  NO_SINGLE_TARGET
   )
 
 # TODO: is there a more elegant way to write this (I hope)?
@@ -60,11 +67,11 @@ IF(CMAKE_CXX_COMPILER_ID STREQUAL "VisualAge" OR CMAKE_C_COMPILER_ID STREQUAL "X
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qchars=signed")
 ENDIF(CMAKE_CXX_COMPILER_ID STREQUAL "VisualAge" OR CMAKE_C_COMPILER_ID STREQUAL "XL")
 
-boost_add_test(RUN integral_c.cpp)
+boost_add_test_suite(RUN integral_c.cpp)
 
 set(CMAKE_CXX_FLAGS "${saved_CXX_FLAGS}")
 
-boost_add_multiple_tests(
+boost_add_test_suite(
   COMPILE
     is_placeholder.cpp
     is_sequence.cpp
@@ -116,4 +123,5 @@ boost_add_multiple_tests(
     zip_view.cpp
   RUN
     string.cpp
+  NO_SINGLE_TARGET
 )

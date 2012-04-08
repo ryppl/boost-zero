@@ -1,20 +1,25 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-boost_add_multiple_tests(
+find_package(Boost COMPONENTS config test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
+
+boost_add_test_suite(
   RUN
-    optional_test
-    optional_test_tie
-    optional_test_ref
-    optional_test_inplace
-    optional_test_io
+    optional_test.cpp
+    optional_test_tie.cpp
+    optional_test_ref.cpp
+    optional_test_inplace.cpp
+    optional_test_io.cpp
   COMPILE_FAIL
-    optional_test_fail1
-    optional_test_fail3a
-    optional_test_fail3b
-    optional_test_ref_fail1
-    optional_test_ref_fail3
-    optional_test_ref_fail4
-    optional_test_inplace_fail
-    optional_test_inplace_fail2
+    optional_test_fail1.cpp
+    optional_test_fail3a.cpp
+    optional_test_fail3b.cpp
+    optional_test_ref_fail1.cpp
+    optional_test_ref_fail3.cpp
+    optional_test_ref_fail4.cpp
+    optional_test_inplace_fail.cpp
+    optional_test_inplace_fail2.cpp
+  NO_SINGLE_TARGET
   )

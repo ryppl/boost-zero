@@ -1,50 +1,56 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-boost_add_multiple_tests(
+find_package(Boost COMPONENTS array test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
+
+boost_add_test_suite(
   RUN
-    constructors
-    access
-    compare
-    iterators
-    slice
-    assign
-    assign_to_array
-    index_bases
-    storage_order_convert
-    storage_order
-    reshape
-    range1
-    idxgen1
-    stl_interaction
-    resize
-    assert
-    reverse_view
+    constructors.cpp
+    access.cpp
+    compare.cpp
+    iterators.cpp
+    slice.cpp
+    assign.cpp
+    assign_to_array.cpp
+    index_bases.cpp
+    storage_order_convert.cpp
+    storage_order.cpp
+    reshape.cpp
+    range1.cpp
+    idxgen1.cpp
+    stl_interaction.cpp
+    resize.cpp
+    assert.cpp
+    reverse_view.cpp
   COMPILE_FAIL
-    fail_cbracket
-    fail_cdata
-    fail_citerator
-    fail_cparen
-    fail_criterator
-    fail_csubarray
-    fail_csubarray2
-    fail_csubarray3
-    fail_cview
-    fail_cview2
-    fail_cview3
-    fail_ref_cbracket
-    fail_ref_cdata
-    fail_ref_citerator
-    fail_ref_cparen
-    fail_ref_criterator
-    fail_ref_csubarray
-    fail_ref_csubarray2
-    fail_ref_csubarray3
-    fail_ref_cview
-    fail_ref_cview2
-    fail_ref_cview3
+    fail_cbracket.cpp
+    fail_cdata.cpp
+    fail_citerator.cpp
+    fail_cparen.cpp
+    fail_criterator.cpp
+    fail_csubarray.cpp
+    fail_csubarray2.cpp
+    fail_csubarray3.cpp
+    fail_cview.cpp
+    fail_cview2.cpp
+    fail_cview3.cpp
+    fail_ref_cbracket.cpp
+    fail_ref_cdata.cpp
+    fail_ref_citerator.cpp
+    fail_ref_cparen.cpp
+    fail_ref_criterator.cpp
+    fail_ref_csubarray.cpp
+    fail_ref_csubarray2.cpp
+    fail_ref_csubarray3.cpp
+    fail_ref_cview.cpp
+    fail_ref_cview2.cpp
+    fail_ref_cview3.cpp
   COMPILE
-    concept_checks
-  LINK_BOOST_LIBRARIES
-    test_exec_monitor
+    concept_checks.cpp
+  LINK_LIBRARIES
+    test_exec_monitor-static
+    assert
+  NO_SINGLE_TARGET
   )
