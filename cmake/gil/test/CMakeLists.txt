@@ -1,8 +1,9 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(Boost COMPONENTS crc NO_MODULE)
+find_package(Boost COMPONENTS crc test NO_MODULE)
 include("${Boost_USE_FILE}")
+include(BoostAddTestSuite)
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/gil_reference_checksums.txt"
@@ -15,28 +16,43 @@ add_definitions(
   -D_SCL_SECURE_NO_WARNINGS
   )
 
-boost_add_test(image RUN
-  image.cpp
-  sample_image.cpp
-  error_if.cpp
+# image
+boost_add_test_suite(
+  RUN
+    image.cpp
+  ADDITIONAL_SOURCES
+    sample_image.cpp
+    error_if.cpp
   )
 
-boost_add_test(channel RUN
-  channel.cpp 
-  error_if.cpp
+#channel
+boost_add_test_suite(
+  RUN
+    channel.cpp 
+  ADDITIONAL_SOURCES
+    error_if.cpp
   )
 
-boost_add_test(pixel RUN
-  pixel.cpp 
-  error_if.cpp
+# pixel
+boost_add_test_suite(
+  RUN
+    pixel.cpp 
+  ADDITIONAL_SOURCES
+    error_if.cpp
   )
 
-boost_add_test(pixel_iterator RUN
-  pixel_iterator.cpp 
-  error_if.cpp
+# pixel_iterator
+boost_add_test_suite(
+  RUN
+    pixel_iterator.cpp 
+  ADDITIONAL_SOURCES
+    error_if.cpp
   )
 
-boost_add_test(image_io RUN
-  image_io.cpp 
-  error_if.cpp
+# image_io
+boost_add_test_suite(
+  RUN
+    image_io.cpp 
+  ADDITIONAL_SOURCES
+    error_if.cpp
   )

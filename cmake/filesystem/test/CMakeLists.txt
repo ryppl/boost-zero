@@ -29,7 +29,7 @@ boost_add_test_suite(
 	NO_SINGLE_TARGET
 	)
 
- boost_add_test_suite(
+boost_add_test_suite(
   RUN
 		operations_test.cpp
 		operations_unit_test.cpp

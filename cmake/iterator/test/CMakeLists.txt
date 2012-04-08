@@ -1,32 +1,36 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+find_package(Boost COMPONENTS config test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
-boost_add_multiple_tests(
+boost_add_test_suite(
   COMPILE
-    is_lvalue_iterator
-    is_readable_iterator
-    pointee
-    iterator_archetype_cc
-    indirect_iter_member_types
+    is_lvalue_iterator.cpp
+    is_readable_iterator.cpp
+    pointee.cpp
+    iterator_archetype_cc.cpp
+    indirect_iter_member_types.cpp
   COMPILE_FAIL
-    interoperable_fail
-    iter_archetype_default_ctor
-    lvalue_concept_fail
+    interoperable_fail.cpp
+    iter_archetype_default_ctor.cpp
+    lvalue_concept_fail.cpp
   RUN
     is_convertible_fail.cpp
     zip_iterator_test.cpp
-    unit_tests
-    concept_tests
-    iterator_adaptor_cc
-    iterator_adaptor_test
-    transform_iterator_test
-    indirect_iterator_test
-    filter_iterator_test
-    iterator_facade
-    reverse_iterator_test
-    counting_iterator_test
-    interoperable
-    iterator_traits_test
-    permutation_iterator_test
-    function_input_iterator_test
+    unit_tests.cpp
+    concept_tests.cpp
+    iterator_adaptor_cc.cpp
+    iterator_adaptor_test.cpp
+    transform_iterator_test.cpp
+    indirect_iterator_test.cpp
+    filter_iterator_test.cpp
+    iterator_facade.cpp
+    reverse_iterator_test.cpp
+    counting_iterator_test.cpp
+    interoperable.cpp
+    iterator_traits_test.cpp
+    permutation_iterator_test.cpp
+    function_input_iterator_test.cpp
+  NO_SINGLE_TARGET
   )

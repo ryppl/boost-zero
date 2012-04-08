@@ -200,9 +200,4 @@ boost_add_library(locale
     ${link_libraries}
   )
 
-#boost_add_multiple_tests(
-#  RUN
-#    ${tests}
-#  LINK_BOOST_LIBRARIES
-#    shared locale
-#  )
+add_subdirectory(test)

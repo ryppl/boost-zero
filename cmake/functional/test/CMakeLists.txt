@@ -1,14 +1,11 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+
 find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostAddTestSuite)
 
 boost_add_test_suite(
   RUN
-    tribool_test.cpp
-    tribool_rename_test.cpp
-    tribool_io_test.cpp
-  NO_SINGLE_TARGET
+    function_test.cpp
   )
-  

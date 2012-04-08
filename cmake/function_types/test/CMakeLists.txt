@@ -1,10 +1,13 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+find_package(Boost COMPONENTS core mpl test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
 # needed for Boost.PP file iteration with some compilers
 include_directories(../example)
 
-boost_add_multiple_tests(
+boost_add_test_suite(
 
   COMPILE
 
@@ -67,4 +70,5 @@ boost_add_multiple_tests(
     decomposition/result_type_fail.cpp
     decomposition/parameter_types_fail.cpp
     decomposition/function_arity_fail.cpp
+  NO_SINGLE_TARGET
   )

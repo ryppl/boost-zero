@@ -6,9 +6,13 @@ include(BoostAddTestSuite)
 
 boost_add_test_suite(
   RUN
-    tribool_test.cpp
-    tribool_rename_test.cpp
-    tribool_io_test.cpp
-  NO_SINGLE_TARGET
+    back_move_inserter.cpp
+    construct_forward.cpp
+    conversion_test.cpp
+    copy_elision_test.cpp
+    copy_move_optimization.cpp
+    move.cpp
+    move_algorithm.cpp
+    move_iterator.cpp
+  NO_SINGLE_TARGET 
   )
-  

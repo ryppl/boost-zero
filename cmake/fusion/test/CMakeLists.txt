@@ -1,7 +1,10 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+find_package(Boost COMPONENTS mpl any test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 
-boost_add_multiple_tests(
+boost_add_test_suite(
   RUN
     algorithm/all.cpp
     algorithm/any.cpp
@@ -139,6 +142,8 @@ boost_add_multiple_tests(
 
   COMPILE_FAIL
     #xxx.cpp
+    
+  NO_SINGLE_TARGET
   )
 
 # Text for extension features, must be explicitly specified on the command line to be run
