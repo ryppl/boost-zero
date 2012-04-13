@@ -607,3 +607,6 @@
 [submodule "boost/cmake"]
 	path = boost/cmake
 	url = https://github.com/purpleKarrot/Boost.CMake.git
+[submodule "ryppl"]
+	path = ryppl
+	url = https://github.com/ryppl/ryppl-cmake.git

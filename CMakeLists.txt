@@ -9,9 +9,8 @@
 cmake_minimum_required(VERSION 2.8.5 FATAL_ERROR)
 project(Zero)
 
-file(COPY ${Zero_SOURCE_DIR}/cmake/ DESTINATION ${Zero_SOURCE_DIR}/boost)
+list(APPEND CMAKE_MODULE_PATH "${Zero_SOURCE_DIR}/ryppl/Modules")
 
-# make visual studio look nice
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+file(COPY ${Zero_SOURCE_DIR}/cmake/ DESTINATION ${Zero_SOURCE_DIR}/boost)
 
 add_subdirectory(boost)

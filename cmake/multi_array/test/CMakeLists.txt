@@ -51,6 +51,5 @@ boost_add_test_suite(
     concept_checks.cpp
   LINK_LIBRARIES
     test_exec_monitor-static
-    assert
   NO_SINGLE_TARGET
   )

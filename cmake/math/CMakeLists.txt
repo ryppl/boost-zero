@@ -35,7 +35,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
+include(RypplPrecompileHeader)
 include(BoostExport)
 
 include_directories(
@@ -96,9 +96,14 @@ function(add_math_library name suffix)
   foreach(src ${ARGN})
     list(APPEND sources "src/tr1/${src}${suffix}.cpp")
   endforeach(src)
-  boost_add_library(math_${name}
-    PRECOMPILE <boost/math/special_functions.hpp>
-    SOURCES ${sources}
+  ryppl_add_pch(${name} sources
+    <boost/math/special_functions.hpp>
+    )
+  add_library(boost_math_${name}
+    ${sources}
+    )
+  ryppl_add_pch_to_target(boost_math_${name}
+    ${PCH_HEADER}
     )
 endfunction(add_math_library)
 
@@ -111,12 +116,12 @@ add_math_library(c99l "l" ${C99_SOURCES})
 
 boost_export(
   TARGETS
-    math_tr1
-    math_tr1f
-    math_tr1l
-    math_c99
-    math_c99f
-    math_c99l
+    boost_math_tr1
+    boost_math_tr1f
+    boost_math_tr1l
+    boost_math_c99
+    boost_math_c99f
+    boost_math_c99l
   BOOST_DEPENDS
     algorithm
     array

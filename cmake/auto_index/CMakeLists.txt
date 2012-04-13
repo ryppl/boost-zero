@@ -21,14 +21,14 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddExecutable)
 
-boost_add_executable(auto_index
-  SOURCES
-    src/auto_index.cpp
-    src/file_scanning.cpp
-    src/index_generator.cpp
-    src/tiny_xml.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
+add_executable(auto_index
+  src/auto_index.cpp
+  src/file_scanning.cpp
+  src/index_generator.cpp
+  src/tiny_xml.cpp
+  )
+
+target_link_libraries(auto_index
+  ${Boost_LIBRARIES}
   )

@@ -31,7 +31,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddExecutable)
 include(BoostAddLibrary)
 
 include_directories(include)
@@ -60,10 +59,11 @@ boost_add_library(wave
     ${Boost_LIBRARIES}
   )
 
-boost_add_executable(wave
-  SOURCES
-    tool/cpp.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
-    wave-shared
+add_executable(wave
+  tool/cpp.cpp
+  )
+
+target_link_libraries(wave
+  ${Boost_LIBRARIES}
+  wave-shared
   )

@@ -177,5 +177,5 @@ boost_add_test_suite(
     scope/bug_000008.cpp 
   LINK_LIBRARIES 
     thread-shared
+    system-shared
   )
-

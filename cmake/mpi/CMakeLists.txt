@@ -28,7 +28,6 @@ find_package(Boost
   )
 include("${Boost_USE_FILE}")
 include(BoostAddLibrary)
-include(BoostAddPythonExtension)
 include(BoostExport)
 
 include_directories(include)

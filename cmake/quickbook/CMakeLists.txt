@@ -27,7 +27,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddExecutable)
 include(BoostExport)
 
 if(MSVC)
@@ -35,32 +34,32 @@ if(MSVC)
     /wd4244 /wd4267 /wd4355 /wd4511 /wd4512 /wd4701 /wd4702 /wd4800)
 endif()
 
-boost_add_executable(quickbook
-  SOURCES
-    src/quickbook.cpp
-    src/actions.cpp
-    src/doc_info_actions.cpp
-    src/state.cpp
-    src/utils.cpp
-    src/files.cpp
-    src/string_ref.cpp
-    src/input_path.cpp
-    src/values.cpp
-    src/id_manager.cpp
-    src/post_process.cpp
-    src/collector.cpp
-    src/template_stack.cpp
-    src/code_snippet.cpp
-    src/markups.cpp
-    src/syntax_highlight.cpp
-    src/grammar.cpp
-    src/main_grammar.cpp
-    src/block_element_grammar.cpp
-    src/phrase_element_grammar.cpp
-    src/doc_info_grammar.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
+add_executable(quickbook
+  src/quickbook.cpp
+  src/actions.cpp
+  src/doc_info_actions.cpp
+  src/state.cpp
+  src/utils.cpp
+  src/files.cpp
+  src/string_ref.cpp
+  src/input_path.cpp
+  src/values.cpp
+  src/id_manager.cpp
+  src/post_process.cpp
+  src/collector.cpp
+  src/template_stack.cpp
+  src/code_snippet.cpp
+  src/markups.cpp
+  src/syntax_highlight.cpp
+  src/grammar.cpp
+  src/main_grammar.cpp
+  src/block_element_grammar.cpp
+  src/phrase_element_grammar.cpp
+  src/doc_info_grammar.cpp
+  )
+
+target_link_libraries(quickbook
+  ${Boost_LIBRARIES}
   )
 
 boost_export(TARGETS quickbook)
-
