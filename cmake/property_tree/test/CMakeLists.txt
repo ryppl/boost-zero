@@ -3,18 +3,18 @@
 
 find_package(Boost COMPONENTS config any test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 add_definitions(-D_SCL_SECURE_NO_WARNINGS=1)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     test_property_tree.cpp
   LINK_LIBRARIES
     serialization-shared
   )  
   
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     test_info_parser.cpp
     test_json_parser.cpp
@@ -23,7 +23,7 @@ boost_add_test_suite(
   NO_SINGLE_TARGET
   )
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN 
     test_multi_module1.cpp 
   ADDITIONAL_SOURCES  

@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS crc test NO_MODULE)
 include("${Boost_USE_FILE}")
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/gil_reference_checksums.txt"
@@ -17,7 +17,7 @@ add_definitions(
   )
 
 # image
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     image.cpp
   ADDITIONAL_SOURCES
@@ -26,7 +26,7 @@ boost_add_test_suite(
   )
 
 #channel
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     channel.cpp 
   ADDITIONAL_SOURCES
@@ -34,7 +34,7 @@ boost_add_test_suite(
   )
 
 # pixel
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     pixel.cpp 
   ADDITIONAL_SOURCES
@@ -42,7 +42,7 @@ boost_add_test_suite(
   )
 
 # pixel_iterator
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     pixel_iterator.cpp 
   ADDITIONAL_SOURCES
@@ -50,7 +50,7 @@ boost_add_test_suite(
   )
 
 # image_io
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     image_io.cpp 
   ADDITIONAL_SOURCES

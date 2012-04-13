@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   COMPILE
     aux_/largest_int.cpp
     aux_/msvc_is_class.cpp
@@ -67,11 +67,11 @@ IF(CMAKE_CXX_COMPILER_ID STREQUAL "VisualAge" OR CMAKE_C_COMPILER_ID STREQUAL "X
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qchars=signed")
 ENDIF(CMAKE_CXX_COMPILER_ID STREQUAL "VisualAge" OR CMAKE_C_COMPILER_ID STREQUAL "XL")
 
-boost_add_test_suite(RUN integral_c.cpp)
+ryppl_test_suite(RUN integral_c.cpp)
 
 set(CMAKE_CXX_FLAGS "${saved_CXX_FLAGS}")
 
-boost_add_test_suite(
+ryppl_test_suite(
   COMPILE
     is_placeholder.cpp
     is_sequence.cpp

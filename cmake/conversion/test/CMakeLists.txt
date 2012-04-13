@@ -3,13 +3,13 @@
 
 find_package(Boost COMPONENTS conversion test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(RUN ../cast_test.cpp NO_SINGLE_TARGET)
-boost_add_test_suite(RUN ../numeric_cast_test.cpp NO_SINGLE_TARGET)
-#boost_add_test_suite(RUN ../lexical_cast_test.cpp NO_SINGLE_TARGET)
+ryppl_test_suite(RUN ../cast_test.cpp NO_SINGLE_TARGET)
+ryppl_test_suite(RUN ../numeric_cast_test.cpp NO_SINGLE_TARGET)
+#ryppl_test_suite(RUN ../lexical_cast_test.cpp NO_SINGLE_TARGET)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     implicit_cast.cpp
     lexical_cast_loopback_test.cpp

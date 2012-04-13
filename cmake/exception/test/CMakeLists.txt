@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS test utility NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 
 # todo
@@ -14,7 +14,7 @@ include(BoostAddTestSuite)
 #    ;
 
 #to_string
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     is_output_streamable_test.cpp
 		has_to_string_test.cpp
@@ -26,7 +26,7 @@ boost_add_test_suite(
 
 
 #exception
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     1-throw_exception_test.cpp
 		2-throw_exception_no_exceptions_test.cpp
@@ -54,7 +54,7 @@ boost_add_test_suite(
   )
 
 #headers
-boost_add_test_suite(
+ryppl_test_suite(
   COMPILE
 		exception_ptr_hpp_test.cpp
 		diagnostic_information_hpp_test.cpp

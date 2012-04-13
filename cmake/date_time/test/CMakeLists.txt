@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 add_definitions(-DBOOST_ALL_DYN_LINK)
 add_definitions(-DBOOST_DATE_TIME_POSIX_TIME_STD_CONFIG)
@@ -12,7 +12,7 @@ add_definitions(-DBOOST_ALL_NO_LIB)
 
 
 # date_time_core
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     testint_adapter.cpp
 		testtime_resolution_traits.cpp
@@ -24,7 +24,7 @@ boost_add_test_suite(
 
 
 # date_time_gregorian
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
 		gregorian/testdate.cpp # $(DATE_TIME_PROPERTIES)
 		gregorian/testdate_duration.cpp
@@ -54,7 +54,7 @@ add_definitions(-DBOOST_ALL_NO_LIB)
 #  <define>BOOST_ALL_NO_LIB ;
 
 # date_time_gregorian_dll
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
 		gregorian/testdate.cpp # $(DATE_TIME_DYNAMIC_PROPERTIES)
 		gregorian/testdate_duration.cpp

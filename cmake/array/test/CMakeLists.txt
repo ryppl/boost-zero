@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS array cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     array0.cpp
     array1.cpp

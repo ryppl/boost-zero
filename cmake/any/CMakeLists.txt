@@ -6,7 +6,7 @@ project(BoostAny)
 
 find_package(Boost COMPONENTS cmake config NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 #include(BoostDocumentation)
 include(BoostExport)
 
@@ -26,7 +26,7 @@ boost_export(
 
 include_directories(include)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     any_test.cpp
   COMPILE_FAIL

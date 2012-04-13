@@ -2,7 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 find_package(Boost COMPONENTS test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 if(MSVC)
   # <asynch-exceptions>on
@@ -11,7 +11,7 @@ endif(MSVC)
 # Some tests are run both statically and as shared libraries since Filesystem
 # has a history of bugs that appear only in one type of build or the other.
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
 		convenience_test.cpp
 		deprecated_test.cpp
@@ -29,7 +29,7 @@ boost_add_test_suite(
 	NO_SINGLE_TARGET
 	)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
 		operations_test.cpp
 		operations_unit_test.cpp

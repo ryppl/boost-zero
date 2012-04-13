@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS assign signals2 NO_MODULE)
 include("${Boost_USE_FILE}")
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
   # phoenix_core
     core/primitives_tests.cpp
@@ -172,7 +172,7 @@ boost_add_test_suite(
   NO_SINGLE_TARGET
   )
   
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     scope/bug_000008.cpp 
   LINK_LIBRARIES 

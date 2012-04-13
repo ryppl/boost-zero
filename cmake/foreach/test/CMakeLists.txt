@@ -2,13 +2,13 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 find_package(Boost COMPONENTS core test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 if(MSVC)
   # <asynch-exceptions>on
 endif(MSVC)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     stl_byval.cpp
     stl_byref.cpp

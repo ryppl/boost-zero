@@ -3,10 +3,10 @@
 
 find_package(Boost COMPONENTS core cmake test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 # Search tests
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
 		empty_search_test.cpp
 		search_test1.cpp
@@ -20,14 +20,14 @@ boost_add_test_suite(
 	)
 
 # Clamp tests
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
 		clamp_test.cpp
 	NO_SINGLE_TARGET
 	)
    
 # Cxx11 tests
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
 		all_of_test.cpp
 		any_of_test.cpp
@@ -45,7 +45,7 @@ boost_add_test_suite(
 	)
 
 # Hex tests
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
 		hex_test1.cpp
 		hex_test2.cpp

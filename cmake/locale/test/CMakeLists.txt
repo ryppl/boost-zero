@@ -3,11 +3,11 @@
 
 find_package(Boost COMPONENTS test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 add_definitions(-DBOOST_LOCALE_DYN_LINK=1)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     # Configuration Information
     test_config.cpp

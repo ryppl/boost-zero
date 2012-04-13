@@ -2,9 +2,9 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 find_package(Boost COMPONENTS core test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     format_test1.cpp
     format_test2.cpp

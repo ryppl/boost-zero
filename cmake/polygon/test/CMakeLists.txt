@@ -3,13 +3,13 @@
 
 find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 if(MSVC)
   # <asynch-exceptions>on
 endif(MSVC)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN 
     gtl_boost_unit_test.cpp
   )

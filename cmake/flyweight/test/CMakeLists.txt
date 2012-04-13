@@ -4,11 +4,11 @@
 find_package(Threads)
 find_package(Boost COMPONENTS container test NO_MODULE)
 include("${Boost_USE_FILE}")
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 
 #		assoc_cont_factory
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_assoc_cont_factory.cpp
 	ADDITIONAL_SOURCES
@@ -18,7 +18,7 @@ boost_add_test_suite(
   )
 
 #basic
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_basic.cpp
 	ADDITIONAL_SOURCES
@@ -28,7 +28,7 @@ boost_add_test_suite(
   )
 
 # custom_factory
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_custom_factory.cpp
 	ADDITIONAL_SOURCES
@@ -38,7 +38,7 @@ boost_add_test_suite(
   )
 
 # init
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_init.cpp
 	ADDITIONAL_SOURCES
@@ -48,7 +48,7 @@ boost_add_test_suite(
   )
 
 # intermod_holder <threading>multi   
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_intermod_holder.cpp
 	ADDITIONAL_SOURCES
@@ -59,7 +59,7 @@ boost_add_test_suite(
   )
 
 # multictor
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_multictor.cpp
 	ADDITIONAL_SOURCES
@@ -69,7 +69,7 @@ boost_add_test_suite(
   )
 
 # no_locking
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_no_locking.cpp
 	ADDITIONAL_SOURCES
@@ -79,7 +79,7 @@ boost_add_test_suite(
   )
 
 # no_tracking
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_no_tracking.cpp
 	ADDITIONAL_SOURCES
@@ -89,7 +89,7 @@ boost_add_test_suite(
   )
 
 # set_factory
-boost_add_test_suite(
+ryppl_test_suite(
 	RUN
     test_set_factory.cpp
 	ADDITIONAL_SOURCES

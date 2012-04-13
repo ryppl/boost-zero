@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS mpl any test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 #       <toolset>gcc:<cxxflags>"-ftemplate-depth-300 -g0"
 #       <toolset>darwin:<cxxflags>"-ftemplate-depth-300 -g0"
@@ -12,7 +12,7 @@ include(BoostAddTestSuite)
 #       <toolset>darwin:<optimization>off
 #       <toolset>intel:<optimization>off
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     Anonymous.cpp
     AnonymousEuml.cpp

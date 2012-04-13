@@ -2,23 +2,23 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 find_package(Boost COMPONENTS core test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(    
+ryppl_test_suite(    
   RUN
     ios_state_unit_test.cpp
   LINK_LIBRARIES
     unit_test_framework-static
   )
 
-boost_add_test_suite(    
+ryppl_test_suite(    
   RUN
     ios_state_test.cpp
   LINK_LIBRARIES
     test_exec_monitor-static
   )
 
-boost_add_test_suite(  
+ryppl_test_suite(  
   RUN
     quoted_manip_test.cpp
   )

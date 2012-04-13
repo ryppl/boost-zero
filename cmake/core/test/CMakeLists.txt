@@ -3,13 +3,13 @@
 
 find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite( RUN is_sorted_test.cpp )
+ryppl_test_suite( RUN is_sorted_test.cpp )
 
-boost_add_test_suite( RUN container_fwd/container_no_fwd_test.cpp )
+ryppl_test_suite( RUN container_fwd/container_no_fwd_test.cpp )
 
-boost_add_test_suite( RUN container_fwd/container_fwd_test.cpp )
+ryppl_test_suite( RUN container_fwd/container_fwd_test.cpp )
 
 #boost_add_test(container_fwd_debug RUN
 #  SOURCES
@@ -19,7 +19,7 @@ boost_add_test_suite( RUN container_fwd/container_fwd_test.cpp )
 #   _GLIBCXX_DEBUG
 #  )
 
-# boost_add_test_suite( COMPILE_FAIL container_fwd/correctly_disable_fail.cpp )  
+# ryppl_test_suite( COMPILE_FAIL container_fwd/correctly_disable_fail.cpp )  
 
 #boost_add_test(correctly_disable_debug COMPILE FAIL
 #  SOURCES

@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS asio regex system test thread NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     basic_datagram_socket.cpp
     basic_deadline_timer.cpp

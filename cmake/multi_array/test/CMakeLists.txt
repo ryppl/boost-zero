@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS array test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     constructors.cpp
     access.cpp

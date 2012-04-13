@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS circular_buffer cmake test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 if(MSVC)
   add_definitions(
@@ -15,7 +15,7 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     base_test.cpp                   # <threading>single 
     space_optimized_test.cpp        # <threading>single

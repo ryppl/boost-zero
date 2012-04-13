@@ -2,9 +2,9 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     crc_test
   LINK_LIBRARIES

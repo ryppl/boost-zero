@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 add_definitions(-DBOOST_PROTO_DONT_USE_PREPROCESSED_FILES)
 
@@ -18,7 +18,7 @@ elseif(CMAKE_COMPILER_IS_GNUCXX)
   add_definitions(-ftemplate-depth-1024)
 endif()
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     calculator.cpp
     constrained_ops.cpp

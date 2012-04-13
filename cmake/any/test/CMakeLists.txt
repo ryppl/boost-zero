@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS any cmake test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     ../any_test.cpp
   COMPILE_FAIL

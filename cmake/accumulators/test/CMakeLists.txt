@@ -3,13 +3,13 @@
 
 find_package(Boost COMPONENTS cmake serialization test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 #if(MSVC)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)
 #endif(MSVC)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     count
     covariance

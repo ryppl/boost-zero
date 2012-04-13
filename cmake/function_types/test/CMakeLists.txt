@@ -2,12 +2,12 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 find_package(Boost COMPONENTS core mpl test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 # needed for Boost.PP file iteration with some compilers
 include_directories(../example)
 
-boost_add_test_suite(
+ryppl_test_suite(
 
   COMPILE
 

@@ -3,7 +3,7 @@
 
 find_package(Boost COMPONENTS container test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 file(GLOB sources *.cpp)
-boost_add_test_suite(RUN ${sources} NO_SINGLE_TARGET)
+ryppl_test_suite(RUN ${sources} NO_SINGLE_TARGET)

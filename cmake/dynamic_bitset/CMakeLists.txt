@@ -7,7 +7,7 @@ project(BoostDynamicBitset)
 find_package(Boost COMPONENTS cmake test config NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 boost_export(
   BOOST_DEPENDS
@@ -19,7 +19,7 @@ boost_export(
     include
   )
 
-# boost_add_test_suite(
+# ryppl_test_suite(
 #  RUN
 #    dyn_bitset_unit_tests1.cpp
 #    dyn_bitset_unit_tests2.cpp

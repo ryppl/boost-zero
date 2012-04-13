@@ -3,9 +3,9 @@
 
 find_package(Boost COMPONENTS any config test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     dynamic_properties_test.cpp
   COMPILE

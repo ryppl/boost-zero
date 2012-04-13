@@ -7,7 +7,7 @@ project(BoostConceptCheck)
 find_package(Boost COMPONENTS config cmake test NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
-include(BoostAddTestSuite)
+include(RypplTestSuite)
 
 boost_export(
   BOOST_DEPENDS
@@ -21,7 +21,7 @@ boost_export(
     include
   )
 
-boost_add_test_suite(
+ryppl_test_suite(
   RUN
     #stl_concept_covering
     stl_concept_check.cpp
