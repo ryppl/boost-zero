@@ -9,23 +9,40 @@ include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 include(BoostExport)
 
-boost_add_library(filesystem
-  SOURCES
-    src/operations.cpp
-    src/path.cpp
-    src/portability.cpp
-    src/utf8_codecvt_facet.cpp
-    src/codecvt_error_category.cpp
-    src/path_traits.cpp
-    src/unique_path.cpp
-    src/windows_file_codecvt.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
+set(filesystem_src
+  src/operations.cpp
+  src/path.cpp
+  src/portability.cpp
+  src/utf8_codecvt_facet.cpp
+  src/codecvt_error_category.cpp
+  src/path_traits.cpp
+  src/unique_path.cpp
+  src/windows_file_codecvt.cpp
+  )
+
+add_library(filesystem-shared SHARED ${filesystem_src})
+add_library(filesystem-static STATIC ${filesystem_src})
+
+set_target_properties(filesystem-shared filesystem-static PROPERTIES
+  OUTPUT_NAME "boost_filesystem"
+  )
+
+set_target_properties(filesystem-static PROPERTIES
+  PREFIX "lib"
+  )
+
+target_link_libraries(filesystem-shared
+  system-shared
+  )
+
+target_link_libraries(filesystem-static
+  system-static
   )
 
 boost_export(
   TARGETS
-    filesystem
+    filesystem-shared
+    filesystem-static
   BOOST_DEPENDS
     bind
     config
