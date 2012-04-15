@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostStatechart NONE)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
+include(RypplFindPackage)
+ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostExport)
 

@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostLocale CXX)
 
-find_package(Boost
+include(RypplFindPackage)
+ryppl_find_package(Boost
   COMPONENTS
     cmake
     config
@@ -21,14 +22,16 @@ find_package(Boost
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 
-find_package(Iconv)
+include(RypplFindPackage)
+ryppl_find_package(Iconv)
 if(ICONV_FOUND)
   option(BOOST_LOCALE_NO_ICONV "Disable iconv library" OFF)
 else()
   set(BOOST_LOCALE_NO_ICONV ON)
 endif()
 
-find_package(ICU)
+include(RypplFindPackage)
+ryppl_find_package(ICU)
 if(ICU_FOUND AND ICU_I18N_FOUND)
   option(BOOST_LOCALE_NO_ICU "Disable ICU library/backend" OFF)
 else()

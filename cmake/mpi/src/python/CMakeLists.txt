@@ -1,7 +1,8 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(PythonLibs REQUIRED)
+include(RypplFindPackage)
+ryppl_find_package(PythonLibs REQUIRED)
 include_directories(${PYTHON_INCLUDE_DIRS})
 
 boost_add_library(${boost_mpi_name}_python

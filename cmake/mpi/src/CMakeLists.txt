@@ -5,7 +5,8 @@
 
 if(NOT BOOST_MPI_BASE)
   set(boost_mpi_name "mpi")
-  find_package(MPI)
+  include(RypplFindPackage)
+ryppl_find_package(MPI)
   if(NOT MPI_FOUND)
     return()
   endif(NOT MPI_FOUND)

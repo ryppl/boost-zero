@@ -3,7 +3,8 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(PythonInterp REQUIRED)
+include(RypplFindPackage)
+ryppl_find_package(PythonInterp REQUIRED)
 
 function( boost_python_test_library_add target target_module )
   add_library(${target} MODULE EXCLUDE_FROM_ALL ${ARGN})

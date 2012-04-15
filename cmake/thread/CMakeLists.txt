@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostThread CXX)
 
-find_package(Boost
+include(RypplFindPackage)
+ryppl_find_package(Boost
   COMPONENTS
     bind
     chrono
@@ -31,7 +32,8 @@ include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 include(BoostExport)
 
-find_package(Threads REQUIRED)
+include(RypplFindPackage)
+ryppl_find_package(Threads REQUIRED)
 include_directories(include)
 
 if(CMAKE_USE_WIN32_THREADS_INIT)

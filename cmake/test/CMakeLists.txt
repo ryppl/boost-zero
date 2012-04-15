@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostTest CXX)
 
-find_package(Boost
+include(RypplFindPackage)
+ryppl_find_package(Boost
   COMPONENTS
     bind
     cmake

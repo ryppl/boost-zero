@@ -22,6 +22,11 @@ endif(BOOST_INITIAL_PASS)
 # make visual studio look nice
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+# FIXME: I'm not sure why, but once we start using ryppl_find_package,
+# *this* find_package call had to be added in order to ensure that
+# Boost_USE_FILE is set properly. -DWA
+find_package(Boost NO_MODULE)
+
 add_subdirectory(accumulators)
 add_subdirectory(algorithm)
 add_subdirectory(any)
