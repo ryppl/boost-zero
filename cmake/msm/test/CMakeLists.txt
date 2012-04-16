@@ -36,8 +36,7 @@ ryppl_test_suite(
     SerializeSimpleEuml.cpp
     TestConstructor.cpp
   LINK_LIBRARIES
-    unit_test_framework-static
-    serialization-shared
+    boost_unit_test_framework
+    boost_serialization
   NO_SINGLE_TARGET
   )
-

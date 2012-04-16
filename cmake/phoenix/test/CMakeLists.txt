@@ -176,6 +176,6 @@ ryppl_test_suite(
   RUN
     scope/bug_000008.cpp 
   LINK_LIBRARIES 
-    thread-shared
-    system-shared
+    boost_thread
+    boost_system
   )

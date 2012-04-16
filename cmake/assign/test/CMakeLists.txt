@@ -21,6 +21,6 @@ ryppl_test_suite(
     my_vector_example.cpp
     multi_index_container.cpp
   LINK_LIBRARIES
-    unit_test_framework-static
+    boost_unit_test_framework
   NO_SINGLE_TARGET
   )

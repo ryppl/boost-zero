@@ -38,7 +38,7 @@ ryppl_test_suite(
     test_std_convert.cpp
     test_std_formatting.cpp
   LINK_LIBRARIES
-    locale-shared
-    system-shared
+    boost_locale
+    boost_system
   NO_SINGLE_TARGET
   )

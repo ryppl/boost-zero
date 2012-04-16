@@ -8,5 +8,5 @@ ryppl_test_suite(
   RUN
     crc_test
   LINK_LIBRARIES
-    test_exec_monitor-static
+    boost_test_exec_monitor
   )

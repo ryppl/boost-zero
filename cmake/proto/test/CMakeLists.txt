@@ -39,7 +39,6 @@ ryppl_test_suite(
   COMPILE
     bug2407.cpp
   LINK_LIBRARIES
-    unit_test_framework-static
+    boost_unit_test_framework
   NO_SINGLE_TARGET
   )
-  

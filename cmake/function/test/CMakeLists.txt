@@ -35,13 +35,6 @@ ryppl_test_suite(
     contains2_test.cpp
     nothrow_swap.cpp
   LINK_LIBRARIES
-    test_exec_monitor-static
-	NO_SINGLE_TARGET
+    boost_test_exec_monitor
+  NO_SINGLE_TARGET
   )
-
-
-
-
-
-
- 

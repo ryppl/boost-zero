@@ -22,6 +22,6 @@ ryppl_test_suite(
   COMPILE_FAIL
     implicit_cast_fail.cpp
   LINK_LIBRARIES
-    unit_test_framework-static
-	NO_SINGLE_TARGET
+    boost_unit_test_framework
+  NO_SINGLE_TARGET
   )

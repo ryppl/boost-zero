@@ -54,7 +54,7 @@ ryppl_test_suite(
     weighted_tail_quantile
     weighted_tail_variate_means
   LINK_LIBRARIES
-    serialization-static
-    unit_test_framework-static
+    boost_serialization
+    boost_unit_test_framework
   NO_SINGLE_TARGET
   )

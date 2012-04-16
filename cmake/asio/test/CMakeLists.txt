@@ -79,9 +79,9 @@ ryppl_test_suite(
     write.cpp
     write_at.cpp
   LINK_LIBRARIES
-    regex-shared
-    system-shared
-    test_exec_monitor-static
-    thread-shared
-	NO_SINGLE_TARGET
+    boost_regex
+    boost_system
+    boost_test_exec_monitor
+    boost_thread
+  NO_SINGLE_TARGET
   )

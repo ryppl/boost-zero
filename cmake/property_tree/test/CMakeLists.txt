@@ -11,7 +11,7 @@ ryppl_test_suite(
   RUN
     test_property_tree.cpp
   LINK_LIBRARIES
-    serialization-shared
+    boost_serialization
   )  
   
 ryppl_test_suite(

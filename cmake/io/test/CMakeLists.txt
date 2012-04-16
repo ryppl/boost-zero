@@ -8,14 +8,14 @@ ryppl_test_suite(
   RUN
     ios_state_unit_test.cpp
   LINK_LIBRARIES
-    unit_test_framework-static
+    boost_unit_test_framework
   )
 
 ryppl_test_suite(    
   RUN
     ios_state_test.cpp
   LINK_LIBRARIES
-    test_exec_monitor-static
+    boost_test_exec_monitor
   )
 
 ryppl_test_suite(  

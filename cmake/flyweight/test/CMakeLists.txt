@@ -7,21 +7,21 @@ include("${Boost_USE_FILE}")
 include(RypplTestSuite)
 
 
-#		assoc_cont_factory
+# assoc_cont_factory
 ryppl_test_suite(
-	RUN
+  RUN
     test_assoc_cont_factory.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_assoc_cont_fact_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
   )
 
-#basic
+# basic
 ryppl_test_suite(
-	RUN
+  RUN
     test_basic.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_basic_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -29,9 +29,9 @@ ryppl_test_suite(
 
 # custom_factory
 ryppl_test_suite(
-	RUN
+  RUN
     test_custom_factory.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_custom_factory_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -39,9 +39,9 @@ ryppl_test_suite(
 
 # init
 ryppl_test_suite(
-	RUN
+  RUN
     test_init.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_init_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -49,9 +49,9 @@ ryppl_test_suite(
 
 # intermod_holder <threading>multi   
 ryppl_test_suite(
-	RUN
+  RUN
     test_intermod_holder.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_intermod_holder_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -60,9 +60,9 @@ ryppl_test_suite(
 
 # multictor
 ryppl_test_suite(
-	RUN
+  RUN
     test_multictor.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_multictor_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -70,9 +70,9 @@ ryppl_test_suite(
 
 # no_locking
 ryppl_test_suite(
-	RUN
+  RUN
     test_no_locking.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_no_locking_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -80,9 +80,9 @@ ryppl_test_suite(
 
 # no_tracking
 ryppl_test_suite(
-	RUN
+  RUN
     test_no_tracking.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_no_tracking_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -90,9 +90,9 @@ ryppl_test_suite(
 
 # set_factory
 ryppl_test_suite(
-	RUN
+  RUN
     test_set_factory.cpp
-	ADDITIONAL_SOURCES
+  ADDITIONAL_SOURCES
     test_set_factory_main.cpp
   LINK_LIBRARIES
     ${CMAKE_THREAD_LIBS_INIT}
@@ -104,3 +104,6 @@ add_library(intermod_holder_dll SHARED EXCLUDE_FROM_ALL
 set_property(TARGET intermod_holder_dll APPEND PROPERTY
   COMPILE_DEFINITIONS "BOOST_FLYWEIGHT_TEST_INTERMOD_HOLDER_DLL_SOURCE=1"
   )
+if(UNIX AND NOT APPLE)
+  target_link_libraries(intermod_holder_dll rt)
+endif()

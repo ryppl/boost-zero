@@ -133,7 +133,7 @@ ryppl_test_suite(
     test_serialization3.cpp
     test_serialization_main.cpp
   LINK_LIBRARIES
-    serialization-shared
+    boost_serialization
   )
   
 ryppl_test_suite(

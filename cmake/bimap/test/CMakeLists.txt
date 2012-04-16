@@ -56,7 +56,7 @@ ryppl_test_suite(
     test_bimap_serialization.cpp
     test_bimap_info.cpp
   LINK_LIBRARIES
-    serialization-shared
+    boost_serialization
   NO_SINGLE_TARGET
   )
 
@@ -86,6 +86,6 @@ ryppl_test_suite(
   COMPILE
     ../example/bimap_and_boost/serialization.cpp
   LINK_LIBRARIES
-    serialization-shared
+    boost_serialization
   NO_SINGLE_TARGET
   )
