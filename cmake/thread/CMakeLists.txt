@@ -32,7 +32,6 @@ include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 include(BoostExport)
 
-include(RypplFindPackage)
 ryppl_find_package(Threads REQUIRED)
 include_directories(include)
 

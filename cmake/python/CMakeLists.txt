@@ -15,7 +15,6 @@ include_directories(
   ${PYTHON_INCLUDE_DIRS}
   )
 
-include(RypplFindPackage)
 ryppl_find_package(Boost
   COMPONENTS
     bind

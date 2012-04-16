@@ -3,7 +3,6 @@
 
 include(RypplFindPackage)
 ryppl_find_package(Threads)
-include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS container test NO_MODULE)
 include("${Boost_USE_FILE}")
 include(RypplTestSuite)

@@ -22,7 +22,6 @@ ryppl_find_package(Boost
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 
-include(RypplFindPackage)
 ryppl_find_package(Iconv)
 if(ICONV_FOUND)
   option(BOOST_LOCALE_NO_ICONV "Disable iconv library" OFF)

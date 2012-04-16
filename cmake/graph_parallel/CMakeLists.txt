@@ -17,7 +17,6 @@ if(MSVC)
     )
 endif(MSVC)
 
-include(RypplFindPackage)
 ryppl_find_package(MPI)
 if(NOT MPI_FOUND)
   message(STATUS "Graph library does not contain MPI-based parallel components.")

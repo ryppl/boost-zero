@@ -29,7 +29,6 @@ include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 include(BoostExport)
 
-include(RypplFindPackage)
 ryppl_find_package(ICU)
 if(ICU_FOUND)
   add_definitions(-DBOOST_HAS_ICU=1)
