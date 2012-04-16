@@ -42,21 +42,22 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_library(wave
-  SOURCES
-    src/instantiate_cpp_exprgrammar.cpp
-    src/instantiate_cpp_grammar.cpp
-    src/instantiate_cpp_literalgrs.cpp
-    src/instantiate_defined_grammar.cpp
-    src/instantiate_predef_macros.cpp
-    src/instantiate_re2c_lexer.cpp
-    src/instantiate_re2c_lexer_str.cpp
-    src/token_ids.cpp
-    src/wave_config_constant.cpp
-    src/cpplexer/re2clex/aq.cpp
-    src/cpplexer/re2clex/cpp_re.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
+add_library(boost_wave
+  src/instantiate_cpp_exprgrammar.cpp
+  src/instantiate_cpp_grammar.cpp
+  src/instantiate_cpp_literalgrs.cpp
+  src/instantiate_defined_grammar.cpp
+  src/instantiate_predef_macros.cpp
+  src/instantiate_re2c_lexer.cpp
+  src/instantiate_re2c_lexer_str.cpp
+  src/token_ids.cpp
+  src/wave_config_constant.cpp
+  src/cpplexer/re2clex/aq.cpp
+  src/cpplexer/re2clex/cpp_re.cpp
+  )
+
+target_link_libraries(boost_wave
+  ${Boost_LIBRARIES}
   )
 
 add_executable(wave
@@ -65,5 +66,5 @@ add_executable(wave
 
 target_link_libraries(wave
   ${Boost_LIBRARIES}
-  wave-shared
+  boost_wave
   )

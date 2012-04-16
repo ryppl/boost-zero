@@ -28,7 +28,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
 find_package(Threads REQUIRED)
@@ -47,25 +46,30 @@ else()
     )
 endif()
 
-boost_add_library(thread
-  SOURCES
-    ${sources}
-  LINK_LIBRARIES
-    #${Boost_LIBRARIES}
-    ${CMAKE_THREAD_LIBS_INIT}
+add_library(boost_thread
+  ${sources}
   )
 
-set_property(TARGET thread-shared APPEND PROPERTY
-  COMPILE_DEFINITIONS "BOOST_THREAD_BUILD_DLL=1"
+target_link_libraries(boost_thread
+  ${CMAKE_THREAD_LIBS_INIT}
   )
 
-set_property(TARGET thread-static APPEND PROPERTY
-  COMPILE_DEFINITIONS "BOOST_THREAD_BUILD_LIB=1"
-  )
+if(BUILD_SHARED_LIBS)
+  set_property(TARGET boost_thread APPEND PROPERTY
+    COMPILE_DEFINITIONS "BOOST_THREAD_BUILD_DLL=1"
+    )
+else()
+  set_property(TARGET boost_thread APPEND PROPERTY
+    COMPILE_DEFINITIONS "BOOST_THREAD_BUILD_LIB=1"
+    )
+  set_target_properties(boost_thread PROPERTIES
+    PREFIX "lib"
+    )
+endif()
 
 boost_export(
   TARGETS
-    thread
+    boost_thread
   BOOST_DEPENDS
     chrono
     date_time

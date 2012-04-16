@@ -6,17 +6,22 @@ project(BoostSystem CXX)
 
 find_package(Boost COMPONENTS cmake config integer utility NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
-boost_add_library(system
+add_library(boost_system
   src/error_code.cpp
   src/local_free_on_destruction.hpp
   )
 
+if(NOT BUILD_SHARED_LIBS)
+  set_target_properties(boost_system PROPERTIES
+    PREFIX "lib"
+    )
+endif(NOT BUILD_SHARED_LIBS)
+
 boost_export(
   TARGETS
-    system
+    boost_system
   BOOST_DEPENDS
     config
     integer

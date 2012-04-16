@@ -27,7 +27,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
 if(MSVC)
@@ -36,17 +35,10 @@ if(MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHa")
 endif(MSVC)
 
-set(prg_exec_monitor_src
+add_library(boost_prg_exec_monitor
   src/execution_monitor.cpp
   src/debug.cpp
   src/cpp_main.cpp
-  )
-
-add_library(boost_prg_exec_monitor-shared SHARED ${prg_exec_monitor_src})
-add_library(boost_prg_exec_monitor-static STATIC ${prg_exec_monitor_src})
-
-set_target_properties(boost_prg_exec_monitor-shared boost_prg_exec_monitor-static
-  PROPERTIES OUTPUT_NAME "boost_prg_exec_monitor"
   )
 
 add_library(boost_test_exec_monitor STATIC
@@ -70,7 +62,7 @@ add_library(boost_test_exec_monitor STATIC
   src/xml_report_formatter.cpp
   )
 
-set(unit_test_framework_src
+add_library(boost_unit_test_framework
   src/compiler_log_formatter.cpp
   src/debug.cpp
   src/decorator.cpp
@@ -93,20 +85,11 @@ set(unit_test_framework_src
   src/xml_report_formatter.cpp
   )
 
-add_library(boost_unit_test_framework-shared SHARED ${unit_test_framework_src})
-add_library(boost_unit_test_framework-static STATIC ${unit_test_framework_src})
-
-set_target_properties(boost_unit_test_framework-shared boost_unit_test_framework-static
-  PROPERTIES OUTPUT_NAME "boost_unit_test_framework"
-  )
-
 boost_export(
   TARGETS
-    boost_prg_exec_monitor-shared
-    boost_prg_exec_monitor-static
+    boost_prg_exec_monitor
     boost_test_exec_monitor
-    boost_unit_test_framework-shared
-    boost_unit_test_framework-static
+    boost_unit_test_framework
   INCLUDE_DIRECTORIES
     include
   )

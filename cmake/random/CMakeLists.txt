@@ -28,10 +28,9 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
-boost_add_library(random
+add_library(boost_random
   src/random_device.cpp
   )
 
@@ -56,7 +55,7 @@ boost_export(
     type_traits
     utility
   TARGETS
-    random
+    boost_random
   INCLUDE_DIRECTORIES
     include
   )

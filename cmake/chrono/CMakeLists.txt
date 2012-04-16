@@ -25,26 +25,26 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_USE_FILE}")
-include(BoostAddLibrary)
 include(BoostExport)
 
 if(CMAKE_SYSTEM MATCHES "Linux")
   find_library(RT_LIBRARY rt)
 endif(CMAKE_SYSTEM MATCHES "Linux") 
 
-boost_add_library(chrono
-  SOURCES
-    src/chrono.cpp
-    src/thread_clock.cpp
-    src/process_cpu_clocks.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
-    ${RT_LIBRARY}
+add_library(boost_chrono
+  src/chrono.cpp
+  src/thread_clock.cpp
+  src/process_cpu_clocks.cpp
+  )
+
+target_link_libraries(boost_chrono
+  ${Boost_LIBRARIES}
+  ${RT_LIBRARY}
   )
 
 boost_export(
   TARGETS
-    chrono
+    boost_chrono
   BOOST_DEPENDS
     accumulators
     config

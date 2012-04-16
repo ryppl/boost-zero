@@ -6,10 +6,9 @@ project(BoostFilesystem CXX)
 
 find_package(Boost COMPONENTS cmake system NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
-set(filesystem_src
+add_library(boost_filesystem
   src/operations.cpp
   src/path.cpp
   src/portability.cpp
@@ -20,29 +19,19 @@ set(filesystem_src
   src/windows_file_codecvt.cpp
   )
 
-add_library(filesystem-shared SHARED ${filesystem_src})
-add_library(filesystem-static STATIC ${filesystem_src})
+if(NOT BUILD_SHARED_LIBS)
+  set_target_properties(boost_filesystem PROPERTIES
+    PREFIX "lib"
+    )
+endif(NOT BUILD_SHARED_LIBS)
 
-set_target_properties(filesystem-shared filesystem-static PROPERTIES
-  OUTPUT_NAME "boost_filesystem"
-  )
-
-set_target_properties(filesystem-static PROPERTIES
-  PREFIX "lib"
-  )
-
-target_link_libraries(filesystem-shared
-  system-shared
-  )
-
-target_link_libraries(filesystem-static
-  system-static
+target_link_libraries(boost_filesystem
+  boost_system
   )
 
 boost_export(
   TARGETS
-    filesystem-shared
-    filesystem-static
+    boost_filesystem
   BOOST_DEPENDS
     bind
     config

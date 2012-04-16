@@ -18,20 +18,16 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_USE_FILE}")
-include(BoostAddLibrary)
 include(BoostExport)
 
-boost_add_library(timer
-  SOURCES
-    src/auto_timers_construction.cpp
-    src/cpu_timer.cpp
-# LINK_LIBRARIES
-#   ${Boost_LIBRARIES}
+add_library(boost_timer
+  src/auto_timers_construction.cpp
+  src/cpu_timer.cpp
   )
 
 boost_export(
   TARGETS
-    timer
+    boost_timer
   BOOST_DEPENDS
     system
   INCLUDE_DIRECTORIES

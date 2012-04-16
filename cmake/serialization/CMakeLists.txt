@@ -30,7 +30,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
 if(MSVC)
@@ -46,7 +45,7 @@ endif(MSVC)
 #   add_definitions(-fvisibility=hidden)
 # endif(GCC)
 
-boost_add_library(serialization
+add_library(boost_serialization
   src/basic_archive
   src/basic_iarchive
   src/basic_iserializer
@@ -77,25 +76,26 @@ boost_add_library(serialization
   src/shared_ptr_helper
   )
 
-boost_add_library(wserialization
-  SOURCES
-    src/basic_text_wiprimitive
-    src/basic_text_woprimitive
-    src/text_wiarchive
-    src/text_woarchive
-    src/utf8_codecvt_facet
-    src/xml_wgrammar
-    src/xml_wiarchive
-    src/xml_woarchive
-    src/codecvt_null
-  LINK_LIBRARIES
-    serialization-shared
+add_library(boost_wserialization
+  src/basic_text_wiprimitive
+  src/basic_text_woprimitive
+  src/text_wiarchive
+  src/text_woarchive
+  src/utf8_codecvt_facet
+  src/xml_wgrammar
+  src/xml_wiarchive
+  src/xml_woarchive
+  src/codecvt_null
+  )
+
+target_link_libraries(boost_wserialization
+  boost_serialization
   )
 
 boost_export(
   TARGETS
-    serialization
-    wserialization
+    boost_serialization
+    boost_wserialization
   BOOST_DEPENDS
     array
     config
