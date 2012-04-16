@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostGraphParallel CXX)
 
-find_package(Boost COMPONENTS cmake conversion graph mpi utility NO_MODULE)
+include(RypplFindPackage)
+ryppl_find_package(Boost COMPONENTS cmake conversion graph mpi utility NO_MODULE)
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 
@@ -16,7 +17,8 @@ if(MSVC)
     )
 endif(MSVC)
 
-find_package(MPI)
+include(RypplFindPackage)
+ryppl_find_package(MPI)
 if(NOT MPI_FOUND)
   message(STATUS "Graph library does not contain MPI-based parallel components.")
   return()
