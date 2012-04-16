@@ -6,7 +6,7 @@ project(BoostCore)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 
 math(EXPR BOOST_VERSION
@@ -16,12 +16,12 @@ string(REPLACE "." "_" BOOST_LIB_VERSION "${Boost_VERSION}")
 
 configure_file(include/boost/version.hpp.in include/boost/version.hpp)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    iterator
-    mpl
-    type_traits
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostIterator 
+    BoostMPL 
+    BoostTypeTraits 
   INCLUDE_DIRECTORIES
     "${PROJECT_SOURCE_DIR}/include"
     "${PROJECT_BINARY_DIR}/include"

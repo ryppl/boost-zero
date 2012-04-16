@@ -6,41 +6,41 @@ project(BoostGeometry NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    algorithm
-    array
-    assign
-    concept_check
-    config
-    conversion
-    core
-    foreach
-    function_types
-    fusion
-    integer
-    iterator
-    math
-    mpl
-    msm
-    numeric
-    polygon
-    program_options
-    proto
-    range
-    rational
-    smart_ptr
-    static_assert
-    test
-    timer
-    tokenizer
-    tuple
-    type_traits
-    typeof
-    units
-    utility
+ryppl_export(
+  DEPENDS
+    BoostAlgorithm 
+    BoostArray 
+    BoostAssign 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostForeach 
+    BoostFunctionTypes 
+    BoostFusion 
+    BoostInteger 
+    BoostIterator 
+    BoostMath 
+    BoostMPL 
+    BoostMSM 
+    BoostNumeric 
+    BoostPolygon 
+    BoostProgramOptions 
+    BoostProto 
+    BoostRange 
+    BoostRational 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTest 
+    BoostTimer 
+    BoostTokenizer 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostTypeof 
+    BoostUnits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

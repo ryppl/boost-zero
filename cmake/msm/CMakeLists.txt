@@ -6,29 +6,29 @@ project(BoostMSM NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    any
-    bind
-    circular_buffer
-    config
-    function
-    fusion
-    mpl
-    parameter
-    phoenix
-    preprocessor
-    proto
-    serialization
-    smart_ptr
-    statechart
-    timer
-    tuple
-    type_traits
-    typeof
-    utility
+ryppl_export(
+  DEPENDS
+    BoostAny 
+    BoostBind 
+    BoostCircularBuffer 
+    BoostConfig 
+    BoostFunction 
+    BoostFusion 
+    BoostMPL 
+    BoostParameter 
+    BoostPhoenix 
+    BoostPreprocessor 
+    BoostProto 
+    BoostSerialization 
+    BoostSmartPtr 
+    BoostStatechart 
+    BoostTimer 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostTypeof 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

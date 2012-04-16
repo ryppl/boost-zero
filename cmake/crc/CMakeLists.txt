@@ -6,15 +6,15 @@ project(BoostCRC)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    array
-    config
-    core
-    integer
-    mpl
+ryppl_export(
+  DEPENDS
+    BoostArray 
+    BoostConfig 
+    BoostCore 
+    BoostInteger 
+    BoostMPL 
   INCLUDE_DIRECTORIES
     include
   )

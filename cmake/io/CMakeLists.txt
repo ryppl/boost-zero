@@ -6,9 +6,9 @@ project(BoostIO NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
+ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )

@@ -28,7 +28,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 find_package(Threads REQUIRED)
 include_directories(include)
@@ -67,12 +67,12 @@ else()
     )
 endif()
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_thread
-  BOOST_DEPENDS
-    chrono
-    date_time
+  DEPENDS
+    BoostChrono 
+    BoostDateTime 
   INCLUDE_DIRECTORIES
     include
   )

@@ -6,15 +6,15 @@ project(BoostDynamicBitset)
 
 find_package(Boost COMPONENTS cmake test config NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 include(RypplTestSuite)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    core
-    static_assert
-    test
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostCore 
+    BoostStaticAssert 
+    BoostTest 
   INCLUDE_DIRECTORIES
     include
   )

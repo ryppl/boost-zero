@@ -30,7 +30,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 if(MSVC)
   add_definitions(
@@ -92,31 +92,31 @@ target_link_libraries(boost_wserialization
   boost_serialization
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_serialization
     boost_wserialization
-  BOOST_DEPENDS
-    array
-    config
-    core
-    exception
-    function
-    functional
-    integer
-    io
-    iterator
-    mpl
-    optional
-    preprocessor
-    smart_ptr
-    spirit
-    static_assert
-    timer
-    type_traits
-    utility
-    uuid
-    variant
+  DEPENDS
+    BoostArray 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostFunction 
+    BoostFunctional 
+    BoostInteger 
+    BoostIO 
+    BoostIterator 
+    BoostMPL 
+    BoostOptional 
+    BoostPreprocessor 
+    BoostSmartPtr 
+    BoostSpirit 
+    BoostStaticAssert 
+    BoostTimer 
+    BoostTypeTraits 
+    BoostUtility 
+    BoostUUID 
+    BoostVariant 
   INCLUDE_DIRECTORIES
     include
   )

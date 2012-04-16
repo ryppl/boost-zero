@@ -8,18 +8,18 @@ find_package(Boost COMPONENTS cmake config NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
 #include(BoostDocumentation)
-include(BoostExport)
+include(RypplExport)
 
 #boost_documentation(doc/any.xml)
 
 add_subdirectory(test)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    exception
-    static_assert
-    type_traits
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostException 
+    BoostStaticAssert 
+    BoostTypeTraits 
   INCLUDE_DIRECTORIES
     include
   )

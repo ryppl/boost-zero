@@ -6,7 +6,7 @@ project(BoostSystem CXX)
 
 find_package(Boost COMPONENTS cmake config integer utility NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_system
   src/error_code.cpp
@@ -19,13 +19,13 @@ if(NOT BUILD_SHARED_LIBS)
     )
 endif(NOT BUILD_SHARED_LIBS)
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_system
-  BOOST_DEPENDS
-    config
-    integer
-    utility
+  DEPENDS
+    BoostConfig 
+    BoostInteger 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

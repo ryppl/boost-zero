@@ -6,22 +6,22 @@ project(BoostPhoenix NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    bind
-    config
-    core
-    fusion
-    mpl
-    preprocessor
-    proto
-    range
-    smart_ptr
-    spirit
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostBind 
+    BoostConfig 
+    BoostCore 
+    BoostFusion 
+    BoostMPL 
+    BoostPreprocessor 
+    BoostProto 
+    BoostRange 
+    BoostSmartPtr 
+    BoostSpirit 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

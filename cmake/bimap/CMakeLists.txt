@@ -6,26 +6,26 @@ project(BoostBimap)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_subdirectory(test)
 
-boost_export(
-  BOOST_DEPENDS
-    concept_check
-    config
-    exception
-    functional
-    iterator
-    lambda
-    mpl
-    multi_index
-    preprocessor
-    property_map
-    serialization
-    static_assert
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConceptCheck 
+    BoostConfig 
+    BoostException 
+    BoostFunctional 
+    BoostIterator 
+    BoostLambda 
+    BoostMPL 
+    BoostMultiIndex 
+    BoostPreprocessor 
+    BoostPropertyMap 
+    BoostSerialization 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

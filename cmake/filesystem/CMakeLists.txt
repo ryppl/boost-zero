@@ -6,7 +6,7 @@ project(BoostFilesystem CXX)
 
 find_package(Boost COMPONENTS cmake system NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_filesystem
   src/operations.cpp
@@ -29,24 +29,22 @@ target_link_libraries(boost_filesystem
   boost_system
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_filesystem
-  BOOST_DEPENDS
-    bind
-    config
-    core
-    functional
-    integer
-    io
-    iterator
-    smart_ptr
-    static_assert
-    system
-    #test
-    #timer
-    type_traits
-    utility
+  DEPENDS
+    BoostBind 
+    BoostConfig 
+    BoostCore 
+    BoostFunctional 
+    BoostInteger 
+    BoostIO 
+    BoostIterator 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostSystem 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

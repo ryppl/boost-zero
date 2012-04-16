@@ -6,7 +6,7 @@ project(BoostIOStreams CXX)
 
 find_package(Boost COMPONENTS cmake config NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_definitions(-DBOOST_IOSTREAMS_USE_DEPRECATED)
 
@@ -43,25 +43,23 @@ target_link_libraries(boost_iostreams
   ${link_libraries}
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_iostreams
-  BOOST_DEPENDS
-    bind
-    config
-    core
-    exception
-    function
-    integer
-    mpl
-    preprocessor
-    #random
-    range
-    #regex
-    smart_ptr
-    static_assert
-    type_traits
-    utility
+  DEPENDS
+    BoostBind 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostFunction 
+    BoostInteger 
+    BoostMPL 
+    BoostPreprocessor 
+    BoostRange 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

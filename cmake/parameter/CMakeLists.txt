@@ -6,18 +6,17 @@ project(BoostParameter NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    core
-    mpl
-    optional
-    preprocessor
-    #python
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostCore 
+    BoostMPL 
+    BoostOptional 
+    BoostPreprocessor 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

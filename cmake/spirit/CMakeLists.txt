@@ -6,47 +6,42 @@ project(BoostSpirit NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    algorithm
-    array
-    assign
-    bind
-    concept_check
-    config
-    conversion
-    core
-    exception
-    foreach
-    format
-    function
-    function_types
-    fusion
-    integer
-    io
-    iostreams
-    iterator
-    #math
-    mpl
-    optional
-    phoenix
-    pool
-    preprocessor
-    proto
-    range
-    #regex
-    #serialization
-    smart_ptr
-    static_assert
-    #thread
-    #timer
-    type_traits
-    typeof
-    unordered
-    utility
-    variant
+ryppl_export(
+  DEPENDS
+    BoostAlgorithm 
+    BoostArray 
+    BoostAssign 
+    BoostBind 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostException 
+    BoostForeach 
+    BoostFormat 
+    BoostFunction 
+    BoostFunctionTypes 
+    BoostFusion 
+    BoostInteger 
+    BoostIO 
+    BoostIOStreams 
+    BoostIterator 
+    BoostMPL 
+    BoostOptional 
+    BoostPhoenix 
+    BoostPool 
+    BoostPreprocessor 
+    BoostProto 
+    BoostRange 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostTypeof 
+    BoostUnordered 
+    BoostUtility 
+    BoostVariant 
   INCLUDE_DIRECTORIES
     include
   )

@@ -6,18 +6,18 @@ project(BoostCircularBuffer)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    concept_check
-    config
-    core
-    exception
-    iterator
-    static_assert
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConceptCheck 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostIterator 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

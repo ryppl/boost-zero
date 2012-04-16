@@ -6,21 +6,21 @@ project(BoostContainer)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_subdirectory(test)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    intrusive
-    move
-    mpl
-    preprocessor
-    smart_ptr
-    static_assert
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostIntrusive 
+    BoostMove 
+    BoostMPL 
+    BoostPreprocessor 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

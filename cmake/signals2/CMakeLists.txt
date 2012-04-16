@@ -6,26 +6,26 @@ project(BoostSignals2 NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    any
-    bind
-    config
-    core
-    exception
-    function
-    iterator
-    mpl
-    multi_index
-    optional
-    parameter
-    preprocessor
-    smart_ptr
-    type_traits
-    utility
-    variant
+ryppl_export(
+  DEPENDS
+    BoostAny 
+    BoostBind 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostFunction 
+    BoostIterator 
+    BoostMPL 
+    BoostMultiIndex 
+    BoostOptional 
+    BoostParameter 
+    BoostPreprocessor 
+    BoostSmartPtr 
+    BoostTypeTraits 
+    BoostUtility 
+    BoostVariant 
   INCLUDE_DIRECTORIES
     include
   )

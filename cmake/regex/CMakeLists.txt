@@ -25,7 +25,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 find_package(ICU)
 if(ICU_FOUND)
@@ -57,25 +57,23 @@ target_link_libraries(boost_regex
   ${ICU_I18N_LIBRARIES}
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_regex
-  BOOST_DEPENDS
-    concept_check
-    config
-    core
-    exception
-    functional
-    integer
-    iterator
-    mpl
-    smart_ptr
-    static_assert
-    #test
-    #timer
-    type_traits
-    utility
-    xpressive
+  DEPENDS
+    BoostConceptCheck 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostFunctional 
+    BoostInteger 
+    BoostIterator 
+    BoostMPL 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
+    BoostXpressive 
   INCLUDE_DIRECTORIES
     include
   )

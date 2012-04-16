@@ -38,7 +38,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_python
   src/numeric.cpp
@@ -84,7 +84,7 @@ if(NOT BUILD_SHARED_LIBS)
     )
 endif(NOT BUILD_SHARED_LIBS)
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_python
   INCLUDE_DIRECTORIES

@@ -28,34 +28,30 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_random
   src/random_device.cpp
   )
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    conversion
-    core
-    foreach
-    format
-    integer
-    #math
-    mpl
-    multi_index
-    range
-    #regex
-    smart_ptr
-    static_assert
-    #test
-    #timer
-    tuple
-    type_traits
-    utility
+ryppl_export(
   TARGETS
     boost_random
+  DEPENDS
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostForeach 
+    BoostFormat 
+    BoostInteger 
+    BoostMPL 
+    BoostMultiIndex 
+    BoostRange 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

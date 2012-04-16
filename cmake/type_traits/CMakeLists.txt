@@ -6,16 +6,16 @@ project(BoostTypeTraits NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    mpl
-    preprocessor
-    static_assert
-    typeof
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostMPL 
+    BoostPreprocessor 
+    BoostStaticAssert 
+    BoostTypeof 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

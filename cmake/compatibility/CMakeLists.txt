@@ -7,11 +7,11 @@ project(BoostCompatibility)
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
 #include(BoostDocumentation)
-include(BoostExport)
+include(RypplExport)
 
 #boost_documentation(index.html)
 
-boost_export(
+ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )

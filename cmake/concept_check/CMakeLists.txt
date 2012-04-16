@@ -6,17 +6,17 @@ project(BoostConceptCheck)
 
 find_package(Boost COMPONENTS config cmake test NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 include(RypplTestSuite)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    iterator
-    mpl
-    parameter
-    preprocessor
-    type_traits
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostIterator 
+    BoostMPL 
+    BoostParameter 
+    BoostPreprocessor 
+    BoostTypeTraits 
   INCLUDE_DIRECTORIES
     include
   )

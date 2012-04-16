@@ -27,7 +27,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -64,4 +64,4 @@ target_link_libraries(quickbook
   boost_system
   )
 
-boost_export(TARGETS quickbook)
+ryppl_export(TARGETS quickbook)

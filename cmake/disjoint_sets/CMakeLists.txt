@@ -6,14 +6,14 @@ project(BoostDisjointSets)
 
 find_package(Boost COMPONENTS cmake test graph NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 include(RypplTestSuite)
 
-boost_export(
-  BOOST_DEPENDS
-    core
-    graph
-    test
+ryppl_export(
+  DEPENDS
+    BoostCore 
+    BoostGraph 
+    BoostTest 
   INCLUDE_DIRECTORIES
     include
   )

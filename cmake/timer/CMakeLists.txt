@@ -18,18 +18,18 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_USE_FILE}")
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_timer
   src/auto_timers_construction.cpp
   src/cpu_timer.cpp
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_timer
-  BOOST_DEPENDS
-    system
+  DEPENDS
+    BoostSystem 
   INCLUDE_DIRECTORIES
     include
   )

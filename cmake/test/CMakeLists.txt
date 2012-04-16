@@ -27,7 +27,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 if(MSVC)
   # specify the asynchronous exception handling model
@@ -85,7 +85,7 @@ add_library(boost_unit_test_framework
   src/xml_report_formatter.cpp
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_prg_exec_monitor
     boost_test_exec_monitor

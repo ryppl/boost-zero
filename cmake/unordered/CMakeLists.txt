@@ -6,23 +6,23 @@ project(BoostUnordered NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    algorithm
-    config
-    core
-    exception
-    foreach
-    functional
-    iterator
-    move
-    preprocessor
-    smart_ptr
-    tuple
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostAlgorithm 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostForeach 
+    BoostFunctional 
+    BoostIterator 
+    BoostMove 
+    BoostPreprocessor 
+    BoostSmartPtr 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

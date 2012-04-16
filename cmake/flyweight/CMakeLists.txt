@@ -6,18 +6,18 @@ project(BoostFlyweight NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    interprocess
-    mpl
-    multi_index
-    parameter
-    preprocessor
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostInterprocess 
+    BoostMPL 
+    BoostMultiIndex 
+    BoostParameter 
+    BoostPreprocessor 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

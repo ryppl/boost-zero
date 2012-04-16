@@ -6,7 +6,7 @@ project(Boostbook)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_subdirectory(doc)
 
@@ -58,7 +58,7 @@ install(FILES "${catalog}"
   COMPONENT bin
   )
 
-boost_export(CODE
+ryppl_export(CODE
   "set(BOOSTBOOK_CATALOG \"\${CMAKE_CURRENT_LIST_DIR}/../boostbook/catalog.xml\")\n"
   "set(BOOSTBOOK_XSL_DIR \"\${CMAKE_CURRENT_LIST_DIR}/../boostbook/xsl\")\n"
   )

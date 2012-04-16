@@ -6,25 +6,24 @@ project(BoostRange NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    algorithm
-    array
-    assign
-    concept_check
-    config
-    conversion
-    iterator
-    mpl
-    preprocessor
-    #regex
-    smart_ptr
-    static_assert
-    tuple
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostAlgorithm 
+    BoostArray 
+    BoostAssign 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostConversion 
+    BoostIterator 
+    BoostMPL 
+    BoostPreprocessor 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

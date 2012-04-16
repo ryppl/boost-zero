@@ -6,14 +6,13 @@ project(BoostRational NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    #math
-    static_assert
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostStaticAssert 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

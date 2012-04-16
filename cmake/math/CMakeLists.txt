@@ -36,7 +36,7 @@ find_package(Boost
   )
 include(${Boost_USE_FILE})
 include(RypplPrecompileHeader)
-include(BoostExport)
+include(RypplExport)
 
 include_directories(
   include
@@ -114,7 +114,7 @@ add_math_library(c99  ""  ${C99_SOURCES})
 add_math_library(c99f "f" ${C99_SOURCES})
 add_math_library(c99l "l" ${C99_SOURCES})
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_math_tr1
     boost_math_tr1f
@@ -122,28 +122,28 @@ boost_export(
     boost_math_c99
     boost_math_c99f
     boost_math_c99l
-  BOOST_DEPENDS
-    algorithm
-    array
-    bind
-    concept_check
-    config
-    conversion
-    core
-    exception
-    format
-    function
-    fusion
-    integer
-    mpl
-    numeric
-    smart_ptr
-    spirit
-    static_assert
-    tr1
-    tuple
-    type_traits
-    utility
+  DEPENDS
+    BoostAlgorithm 
+    BoostArray 
+    BoostBind 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostException 
+    BoostFormat 
+    BoostFunction 
+    BoostFusion 
+    BoostInteger 
+    BoostMPL 
+    BoostNumeric 
+    BoostSmartPtr 
+    BoostSpirit 
+    BoostStaticAssert 
+    BoostTR1 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

@@ -6,30 +6,30 @@ project(BoostAccumulators)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_subdirectory(test)
 
-boost_export(
-  BOOST_DEPENDS
-    array
-    circular_buffer
-    concept_check
-    config
-    core
-    exception
-    fusion
-    iterator
-    mpl
-    numeric
-    parameter
-    preprocessor
-    range
-    static_assert
-    tuple
-    type_traits
-    typeof
-    utility
+ryppl_export(
+  DEPENDS
+    BoostArray 
+    BoostCircularBuffer 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostFusion 
+    BoostIterator 
+    BoostMPL 
+    BoostNumeric 
+    BoostParameter 
+    BoostPreprocessor 
+    BoostRange 
+    BoostStaticAssert 
+    BoostTuple 
+    BoostTypeTraits 
+    BoostTypeof 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

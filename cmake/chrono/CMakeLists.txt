@@ -25,7 +25,7 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_USE_FILE}")
-include(BoostExport)
+include(RypplExport)
 
 if(CMAKE_SYSTEM MATCHES "Linux")
   find_library(RT_LIBRARY rt)
@@ -42,25 +42,25 @@ target_link_libraries(boost_chrono
   ${RT_LIBRARY}
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_chrono
-  BOOST_DEPENDS
-    accumulators
-    config
-    core
-    exception
-    format
-    integer
-    interprocess
-    math
-    mpl
-    ratio
-    static_assert
-    system
-    type_traits
-    typeof
-    utility
+  DEPENDS
+    BoostAccumulators 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostFormat 
+    BoostInteger 
+    BoostInterprocess 
+    BoostMath 
+    BoostMPL 
+    BoostRatio 
+    BoostStaticAssert 
+    BoostSystem 
+    BoostTypeTraits 
+    BoostTypeof 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

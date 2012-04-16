@@ -6,27 +6,27 @@ project(BoostPropertyMap NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    any
-    bind
-    concept_check
-    config
-    conversion
-    core
-    exception
-    function
-    graph
-    iterator
-    mpl
-    multi_index
-    optional
-    serialization
-    smart_ptr
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostAny 
+    BoostBind 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostException 
+    BoostFunction 
+    BoostGraph 
+    BoostIterator 
+    BoostMPL 
+    BoostMultiIndex 
+    BoostOptional 
+    BoostSerialization 
+    BoostSmartPtr 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

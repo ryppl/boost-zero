@@ -32,7 +32,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 include_directories(
   include
@@ -75,11 +75,11 @@ target_link_libraries(boost_mpi
 
 add_subdirectory(src/python)
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_mpi
-  BOOST_DEPENDS
-    serialization
+  DEPENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

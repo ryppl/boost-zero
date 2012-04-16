@@ -6,18 +6,18 @@ project(BoostBind)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 #boost_documentation(doc/ref.xml)
 
 add_subdirectory(test)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    core
-    smart_ptr
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostCore 
+    BoostSmartPtr 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

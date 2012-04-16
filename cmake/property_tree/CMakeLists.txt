@@ -6,23 +6,23 @@ project(BoostPropertyTree NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    any
-    config
-    core
-    exception
-    iterator
-    mpl
-    multi_index
-    optional
-    serialization
-    spirit
-    static_assert
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostAny 
+    BoostConfig 
+    BoostCore 
+    BoostException 
+    BoostIterator 
+    BoostMPL 
+    BoostMultiIndex 
+    BoostOptional 
+    BoostSerialization 
+    BoostSpirit 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

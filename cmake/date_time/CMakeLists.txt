@@ -24,7 +24,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_definitions(-DDATE_TIME_INLINE)
 
@@ -34,24 +34,24 @@ add_library(boost_date_time
   src/gregorian/date_generators.cpp
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_date_time
-  BOOST_DEPENDS
-    algorithm
-    config
-    conversion
-    core
-    exception
-    integer
-    io
-    mpl
-    range
-    serialization
-    smart_ptr
-    tokenizer
-    type_traits
-    utility
+  DEPENDS
+    BoostAlgorithm 
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostException 
+    BoostInteger 
+    BoostIO 
+    BoostMPL 
+    BoostRange 
+    BoostSerialization 
+    BoostSmartPtr 
+    BoostTokenizer 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

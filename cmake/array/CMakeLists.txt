@@ -7,16 +7,16 @@ project(BoostArray)
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
 #include(BoostDocumentation)
-include(BoostExport)
+include(RypplExport)
 
 add_subdirectory(test)
 #boost_documentation(doc/array.xml)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    exception
-    utility
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostException 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

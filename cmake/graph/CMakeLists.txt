@@ -50,7 +50,7 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_USE_FILE}")
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_graph
   src/read_graphviz_new.cpp
@@ -61,12 +61,12 @@ target_link_libraries(boost_graph
   ${Boost_LIBRARIES}
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_graph
-  BOOST_DEPENDS
-    property_map
-    serialization
+  DEPENDS
+    BoostPropertyMap 
+    BoostSerialization 
   INCLUDE_DIRECTORIES
     include
   )

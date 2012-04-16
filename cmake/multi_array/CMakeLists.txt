@@ -6,20 +6,20 @@ project(BoostMultiArray NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    array
-    concept_check
-    config
-    core
-    functional
-    iterator
-    mpl
-    static_assert
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostArray 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostCore 
+    BoostFunctional 
+    BoostIterator 
+    BoostMPL 
+    BoostStaticAssert 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

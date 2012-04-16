@@ -6,12 +6,12 @@ project(BoostInteger NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    config
-    core
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostCore 
   INCLUDE_DIRECTORIES
     include
   )

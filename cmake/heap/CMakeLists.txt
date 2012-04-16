@@ -6,25 +6,25 @@ project(BoostHeap NONE)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
-boost_export(
-  BOOST_DEPENDS
-    array
-    bind
-    concept_check
-    config
-    exception
-    foreach
-    integer
-    intrusive
-    iterator
-    mpl
-    parameter
-    static_assert
-    timer
-    type_traits
-    utility
+ryppl_export(
+  DEPENDS
+    BoostArray 
+    BoostBind 
+    BoostConceptCheck 
+    BoostConfig 
+    BoostException 
+    BoostForeach 
+    BoostInteger 
+    BoostIntrusive 
+    BoostIterator 
+    BoostMPL 
+    BoostParameter 
+    BoostStaticAssert 
+    BoostTimer 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

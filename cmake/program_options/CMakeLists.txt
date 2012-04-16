@@ -23,7 +23,7 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostExport)
+include(RypplExport)
 
 add_library(boost_program_options
   src/cmdline
@@ -39,23 +39,23 @@ add_library(boost_program_options
   src/split
   )
 
-boost_export(
+ryppl_export(
   TARGETS
     boost_program_options
-  BOOST_DEPENDS
-    any
-    bind
-    config
-    conversion
-    core
-    exception
-    function
-    iterator
-    smart_ptr
-    static_assert
-    tokenizer
-    type_traits
-    utility
+  DEPENDS
+    BoostAny 
+    BoostBind 
+    BoostConfig 
+    BoostConversion 
+    BoostCore 
+    BoostException 
+    BoostFunction 
+    BoostIterator 
+    BoostSmartPtr 
+    BoostStaticAssert 
+    BoostTokenizer 
+    BoostTypeTraits 
+    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )
