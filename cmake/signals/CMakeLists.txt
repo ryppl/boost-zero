@@ -20,7 +20,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 
 include_directories(include)
 
@@ -31,7 +30,7 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_library(signals
+add_library(boost_signals
   src/trackable.cpp
   src/connection.cpp
   src/named_slot_map.cpp

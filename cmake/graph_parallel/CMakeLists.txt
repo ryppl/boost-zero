@@ -6,7 +6,6 @@ project(BoostGraphParallel CXX)
 
 find_package(Boost COMPONENTS cmake conversion graph mpi utility NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 
 if(MSVC)
   add_definitions(
@@ -30,13 +29,14 @@ include_directories(${MPI_INCLUDE_PATH})
   set(mpi_library mpi)
 #endif()
 
-boost_add_library(graph_parallel
-  SOURCES
-    src/mpi_process_group.cpp
-    src/tag_allocator.cpp
-  LINK_LIBRARIES
-    ${MPI_LIBRARIES}
-    ${mpi_library}
+add_library(boost_graph_parallel
+  src/mpi_process_group.cpp
+  src/tag_allocator.cpp
+  )
+  
+target_link_libraries(boost_graph_parallel
+  ${MPI_LIBRARIES}
+  ${mpi_library}
   # <define>BOOST_GRAPH_NO_LIB=1
   # <link>shared:<define>BOOST_GRAPH_DYN_LINK=1
   # <toolset>intel-vc71-win-9.1:<optimization>off

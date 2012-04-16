@@ -19,7 +19,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 
 find_package(Iconv)
 if(ICONV_FOUND)
@@ -193,11 +192,12 @@ endif()
 
 include_directories(include)
 
-boost_add_library(locale
-  SOURCES
-    ${sources}
-  LINK_LIBRARIES
-    ${link_libraries}
+add_library(boost_locale
+  ${sources}
+  )
+
+target_link_libraries(boost_locale
+  ${link_libraries}
   )
 
 add_subdirectory(test)

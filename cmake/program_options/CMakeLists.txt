@@ -23,10 +23,9 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
-boost_add_library(program_options
+add_library(boost_program_options
   src/cmdline
   src/config_file
   src/options_description
@@ -42,7 +41,7 @@ boost_add_library(program_options
 
 boost_export(
   TARGETS
-    program_options
+    boost_program_options
   BOOST_DEPENDS
     any
     bind

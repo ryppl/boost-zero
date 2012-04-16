@@ -36,5 +36,7 @@ add_executable(inspect
   )
 
 target_link_libraries(inspect
-  ${Boost_LIBRARIES}
+  boost_filesystem
+  boost_system
+  boost_regex
   )

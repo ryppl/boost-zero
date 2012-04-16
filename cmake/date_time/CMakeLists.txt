@@ -24,18 +24,19 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
 add_definitions(-DDATE_TIME_INLINE)
 
-boost_add_library(date_time
+add_library(boost_date_time
   src/gregorian/greg_month.cpp
   src/gregorian/greg_weekday.cpp
   src/gregorian/date_generators.cpp
   )
 
 boost_export(
+  TARGETS
+    boost_date_time
   BOOST_DEPENDS
     algorithm
     config

@@ -4,15 +4,16 @@
 find_package(PythonLibs REQUIRED)
 include_directories(${PYTHON_INCLUDE_DIRS})
 
-boost_add_library(${boost_mpi_name}_python
-  SOURCES
-    serialize.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
-    ${boost_mpi_name}
+add_library(boost_mpi_python
+  serialize.cpp
   )
 
-set(py_module ${boost_mpi_name}-py)
+target_link_libraries(boost_mpi_python
+  ${Boost_LIBRARIES}
+  boost_mpi
+  )
+
+set(py_module boost_mpi-py)
 
 add_library(${py_module} SHARED
   collectives.cpp
@@ -30,7 +31,7 @@ add_library(${py_module} SHARED
   )
 
 target_link_libraries(${py_module}
-  ${boost_mpi_name}_python-shared
+  boost_mpi_python
   )
 
 set_target_properties(${py_module} PROPERTIES

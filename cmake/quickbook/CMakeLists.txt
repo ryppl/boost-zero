@@ -59,7 +59,9 @@ add_executable(quickbook
   )
 
 target_link_libraries(quickbook
-  ${Boost_LIBRARIES}
+  boost_program_options
+  boost_filesystem
+  boost_system
   )
 
 boost_export(TARGETS quickbook)

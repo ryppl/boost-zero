@@ -31,7 +31,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 
 include_directories(include)
 

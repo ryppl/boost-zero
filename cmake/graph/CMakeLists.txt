@@ -50,20 +50,20 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_USE_FILE}")
-include(BoostAddLibrary)
 include(BoostExport)
 
-boost_add_library(graph
-  SOURCES
-    src/read_graphviz_new.cpp
-    src/graphml.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
+add_library(boost_graph
+  src/read_graphviz_new.cpp
+  src/graphml.cpp
+  )
+
+target_link_libraries(boost_graph
+  ${Boost_LIBRARIES}
   )
 
 boost_export(
   TARGETS
-    graph
+    boost_graph
   BOOST_DEPENDS
     property_map
     serialization

@@ -4,6 +4,11 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostMPI CXX)
 
+find_package(MPI)
+if(NOT MPI_FOUND)
+  return()
+endif(NOT MPI_FOUND)
+
 find_package(Boost
   COMPONENTS
     cmake
@@ -26,11 +31,13 @@ find_package(Boost
     utility
   NO_MODULE
   )
-include("${Boost_USE_FILE}")
-include(BoostAddLibrary)
+include(${Boost_USE_FILE})
 include(BoostExport)
 
-include_directories(include)
+include_directories(
+  include
+  ${MPI_INCLUDE_PATH}
+  )
 
 if(MSVC)
   add_definitions(
@@ -39,27 +46,38 @@ if(MSVC)
     )
 endif(MSVC)
 
-#if(BOOST_DEBIAN_PACKAGES)
-#  set(BOOST_MPI_BASE mpich2)
-#  set(MPI_DEBIAN_DEPENDS DEB_DEPENDS
-#    DEV libmpich2-dev
-#    LIB libmpich2-2
-#    )
-#  add_subdirectory(src mpich2)
-#
-#  set(BOOST_MPI_BASE openmpi)
-#  set(MPI_DEBIAN_DEPENDS DEB_DEPENDS
-#    DEV libopenmpi-dev libcr-dev
-#    LIB libopenmpi1.3
-#    )
-#  add_subdirectory(src openmpi)
-#else()
-  add_subdirectory(src)
-#endif()
+add_library(boost_mpi
+  src/broadcast.cpp
+  src/communicator.cpp
+  src/computation_tree.cpp
+  src/content_oarchive.cpp
+  src/environment.cpp
+  src/exception.cpp
+  src/graph_communicator.cpp
+  src/group.cpp
+  src/intercommunicator.cpp
+  src/mpi_datatype_cache.cpp
+  src/mpi_datatype_oarchive.cpp
+  src/packed_iarchive.cpp
+  src/packed_oarchive.cpp
+  src/packed_skeleton_iarchive.cpp
+  src/packed_skeleton_oarchive.cpp
+  src/point_to_point.cpp
+  src/request.cpp
+  src/text_skeleton_oarchive.cpp
+  src/timer.cpp
+  )
+
+target_link_libraries(boost_mpi
+  ${Boost_LIBRARIES}
+  ${MPI_LIBRARIES}
+  )
+
+add_subdirectory(src/python)
 
 boost_export(
-# TARGETS
-#   mpi
+  TARGETS
+    boost_mpi
   BOOST_DEPENDS
     serialization
   INCLUDE_DIRECTORIES

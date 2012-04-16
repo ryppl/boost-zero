@@ -23,7 +23,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 
 
 set(abi
@@ -100,7 +99,7 @@ endif()
 
 include_directories(include)
 
-boost_add_library(context
+add_library(boost_context
   ${ASM_CONTEXT_SOURCES}
   ${CONTEXT_SOURCES}
   src/fcontext.cpp

@@ -6,7 +6,6 @@ project(BoostIOStreams CXX)
 
 find_package(Boost COMPONENTS cmake config NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddLibrary)
 include(BoostExport)
 
 add_definitions(-DBOOST_IOSTREAMS_USE_DEPRECATED)
@@ -36,16 +35,17 @@ if(BZIP2_FOUND)
   list(APPEND link_libraries ${BZIP2_LIBRARIES})
 endif(BZIP2_FOUND)
 
-boost_add_library(iostreams
-  SOURCES
-    ${sources}
-  LINK_LIBRARIES
-    ${link_libraries}
+add_library(boost_iostreams
+  ${sources}
+  )
+
+target_link_libraries(boost_iostreams
+  ${link_libraries}
   )
 
 boost_export(
   TARGETS
-    iostreams
+    boost_iostreams
   BOOST_DEPENDS
     bind
     config

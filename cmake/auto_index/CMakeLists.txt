@@ -30,5 +30,8 @@ add_executable(auto_index
   )
 
 target_link_libraries(auto_index
-  ${Boost_LIBRARIES}
+  boost_program_options
+  boost_filesystem
+  boost_system
+  boost_regex
   )
