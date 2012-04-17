@@ -25,6 +25,10 @@ add_library(boost_timer
   src/cpu_timer.cpp
   )
 
+target_link_libraries(boost_timer
+  boost_chrono
+  )
+
 ryppl_export(
   TARGETS
     boost_timer

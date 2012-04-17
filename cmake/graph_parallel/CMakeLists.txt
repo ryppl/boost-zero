@@ -23,20 +23,14 @@ endif()
 
 include_directories(${MPI_INCLUDE_PATH})
 
-#if(BOOST_DEBIAN_PACKAGES)
-#  set(mpi_library openmpi)
-#else()
-  set(mpi_library mpi)
-#endif()
-
 add_library(boost_graph_parallel
   src/mpi_process_group.cpp
   src/tag_allocator.cpp
   )
   
 target_link_libraries(boost_graph_parallel
-  ${MPI_LIBRARIES}
-  ${mpi_library}
+  boost_mpi
+  #${MPI_LIBRARIES}
   # <define>BOOST_GRAPH_NO_LIB=1
   # <link>shared:<define>BOOST_GRAPH_DYN_LINK=1
   # <toolset>intel-vc71-win-9.1:<optimization>off

@@ -38,7 +38,7 @@ add_library(boost_chrono
   )
 
 target_link_libraries(boost_chrono
-  ${Boost_LIBRARIES}
+  boost_system
   ${RT_LIBRARY}
   )
 

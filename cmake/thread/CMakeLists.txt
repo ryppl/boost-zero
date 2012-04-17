@@ -51,6 +51,8 @@ add_library(boost_thread
   )
 
 target_link_libraries(boost_thread
+  boost_chrono
+  boost_date_time
   ${CMAKE_THREAD_LIBS_INIT}
   )
 

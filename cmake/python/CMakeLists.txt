@@ -71,6 +71,10 @@ add_library(boost_python
   src/object/function_doc_signature.cpp
   )
 
+set_property(TARGET boost_python APPEND PROPERTY
+  COMPILE_DEFINITIONS BOOST_PYTHON_SOURCE
+  )
+
 target_link_libraries(boost_python
   ${PYTHON_LIBRARIES}
   )
@@ -90,4 +94,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-

@@ -79,6 +79,7 @@ set(tests
   )
 
 set(link_libraries
+  boost_system
   )
 
 if(BOOST_LOCALE_NO_ICONV)

@@ -58,7 +58,7 @@ add_library(boost_graph
   )
 
 target_link_libraries(boost_graph
-  ${Boost_LIBRARIES}
+  boost_regex
   )
 
 ryppl_export(

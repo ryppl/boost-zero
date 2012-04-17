@@ -56,7 +56,7 @@ add_library(boost_wave
   )
 
 target_link_libraries(boost_wave
-  ${Boost_LIBRARIES}
+  boost_thread
   )
 
 add_executable(wave
@@ -64,6 +64,5 @@ add_executable(wave
   )
 
 target_link_libraries(wave
-  ${Boost_LIBRARIES}
   boost_wave
   )
