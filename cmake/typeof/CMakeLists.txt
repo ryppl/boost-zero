@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostTypeof NONE)
+include(RypplProject)
+ryppl_project(BoostTypeof HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/typeof.xml
+  SUMMARY "Typeof operator emulation."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/typeof/"
+  AUTHOR "Peder Holt" "Arkadiy Vertleyb"
+  MAINTAINER "Peder Holt" "Arkadiy Vertleyb"
+  CATEGORY Development
+  KEYWORDS "Boost" "Emulation"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

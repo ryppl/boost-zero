@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostThread CXX)
+include(RypplProject)
+ryppl_project(BoostThread
+  FEED_URI http://ryppl.github.com/feeds/boost/thread.xml
+  SUMMARY "Portable C++ multi-threading."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/thread/"
+  AUTHOR "Anthony Williams (originally William Kempf)"
+  MAINTAINER "Anthony Williams (originally William Kempf)"
+  CATEGORY Development
+  KEYWORDS "Boost" "Concurrent" "System"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

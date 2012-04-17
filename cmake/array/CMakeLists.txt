@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostArray)
+include(RypplProject)
+ryppl_project(BoostArray HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/array.xml
+  SUMMARY "STL compliant container wrapper for arrays of constant size."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/array/"
+  AUTHOR "Nicolai Josuttis"
+  MAINTAINER "Nicolai Josuttis"
+  CATEGORY Development
+  KEYWORDS "Boost" "Containers"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

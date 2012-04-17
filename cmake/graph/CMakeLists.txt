@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostGraph CXX)
+include(RypplProject)
+ryppl_project(BoostGraph
+  FEED_URI http://ryppl.github.com/feeds/boost/graph.xml
+  SUMMARY "The BGL graph interface and graph components are generic, in the same sense as the the Standard Template Library (STL)."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/graph/"
+  AUTHOR "Jeremiah Willcock." "a University of Notre Dame team: now maintained by Andrew Sutton" "Jeremy Siek"
+  MAINTAINER "Jeremiah Willcock." "a University of Notre Dame team: now maintained by Andrew Sutton" "Jeremy Siek"
+  CATEGORY Development
+  KEYWORDS "Boost" "Iterators" "Algorithms" "Containers"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

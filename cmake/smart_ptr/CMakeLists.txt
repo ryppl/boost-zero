@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostSmartPtr NONE)
+include(RypplProject)
+ryppl_project(BoostSmartPtr HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/smart_ptr.xml
+  SUMMARY "Smart pointer class templates."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/smart_ptr/smart_ptr.htm"
+  AUTHOR "Peter Dimov" "Greg Colvin" "Darin Adler" "Beman Dawes"
+  MAINTAINER "Peter Dimov" "Greg Colvin" "Darin Adler" "Beman Dawes"
+  CATEGORY Development
+  KEYWORDS "Boost" "Memory"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

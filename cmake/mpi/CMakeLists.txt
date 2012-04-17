@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostMPI CXX)
+include(RypplProject)
+ryppl_project(BoostMPI
+  FEED_URI http://ryppl.github.com/feeds/boost/mpi.xml
+  SUMMARY "Message Passing Interface library, for use in distributed-memory parallel application programming."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/mpi/"
+  AUTHOR "Douglas Gregor" "Matthias Troyer"
+  MAINTAINER "Douglas Gregor" "Matthias Troyer"
+  CATEGORY Development
+  KEYWORDS "Boost" "Concurrent"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

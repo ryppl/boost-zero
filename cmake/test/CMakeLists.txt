@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostTest CXX)
+include(RypplProject)
+ryppl_project(BoostTest
+  FEED_URI http://ryppl.github.com/feeds/boost/test.xml
+  SUMMARY "Support for simple program testing, full unit testing, and for program execution monitoring."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/test/"
+  AUTHOR "Gennadiy Rozental"
+  MAINTAINER "Gennadiy Rozental"
+  CATEGORY Development
+  KEYWORDS "Boost" "Correctness"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

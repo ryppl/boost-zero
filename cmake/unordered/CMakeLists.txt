@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostUnordered NONE)
+include(RypplProject)
+ryppl_project(BoostUnordered HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/unordered.xml
+  SUMMARY "Unordered associative containers."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/unordered/"
+  AUTHOR "Daniel James"
+  MAINTAINER "Daniel James"
+  CATEGORY Development
+  KEYWORDS "Boost" "Containers"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

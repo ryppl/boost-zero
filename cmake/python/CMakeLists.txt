@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostPython CXX)
+include(RypplProject)
+ryppl_project(BoostPython
+  FEED_URI http://ryppl.github.com/feeds/boost/python.xml
+  SUMMARY "The Boost Python Library is a framework for interfacing Python and C++. It allows you to quickly and seamlessly expose C++ classes functions and objects to Python, and vice-versa, using no special tools -- just your C++ compiler."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/python/"
+  AUTHOR "Dave Abrahams"
+  MAINTAINER "Dave Abrahams"
+  CATEGORY Development
+  KEYWORDS "Boost" "Inter-language"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(PythonLibs)

@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostIOStreams CXX)
+include(RypplProject)
+ryppl_project(BoostIOStreams
+  FEED_URI http://ryppl.github.com/feeds/boost/iostreams.xml
+  SUMMARY "Boost.IOStreams provides a framework for defining streams, stream buffers and i/o filters."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/iostreams/"
+  AUTHOR "Jonathan Turkanis"
+  MAINTAINER "Jonathan Turkanis"
+  CATEGORY Development
+  KEYWORDS "Boost" "String" "IO"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake config NO_MODULE)

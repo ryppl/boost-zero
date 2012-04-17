@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostPhoenix NONE)
+include(RypplProject)
+ryppl_project(BoostPhoenix HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/phoenix.xml
+  SUMMARY "Define small unnamed function objects at the actual call site, and more."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/phoenix/"
+  AUTHOR "Dan Marsden" "Thomas Heller" "Joel de Guzman"
+  MAINTAINER "Dan Marsden" "Thomas Heller" "Joel de Guzman"
+  CATEGORY Development
+  KEYWORDS "Boost" "Function-objects"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

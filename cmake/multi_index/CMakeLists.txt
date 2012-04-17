@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostMultiIndex NONE)
+include(RypplProject)
+ryppl_project(BoostMultiIndex HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/multi_index.xml
+  SUMMARY "The Boost Multi-index Containers Library provides a class template named multi_index_container which enables the construction of containers maintaining one or more indices with different sorting and access semantics."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/multi_index/"
+  AUTHOR "Joaquín M López Muñoz"
+  MAINTAINER "Joaquín M López Muñoz"
+  CATEGORY Development
+  KEYWORDS "Boost" "Data" "Containers"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

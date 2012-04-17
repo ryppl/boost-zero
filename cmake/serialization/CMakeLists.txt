@@ -2,7 +2,21 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostSerialization CXX)
+include(RypplProject)
+ryppl_project(BoostSerialization
+  FEED_URI http://ryppl.github.com/feeds/boost/serialization.xml
+  SUMMARY "Serialization for persistence and marshalling."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/
+    libs/serialization/"
+  AUTHOR "Robert Ramey"
+  MAINTAINER "Robert Ramey"
+  CATEGORY Development
+  KEYWORDS "Boost" "IO"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostGIL NONE)
+include(RypplProject)
+ryppl_project(BoostGIL HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/gil.xml
+  SUMMARY "Generic Image Library"
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/gil/"
+  AUTHOR "Lubomir Bourdev" "Hailin Jin"
+  MAINTAINER "Lubomir Bourdev" "Hailin Jin"
+  CATEGORY Development
+  KEYWORDS "Boost" "Iterators" "Generic" "Algorithms" "Containers" "Image-processing"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

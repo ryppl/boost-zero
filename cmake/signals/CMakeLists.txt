@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostSignals CXX)
+include(RypplProject)
+ryppl_project(BoostSignals
+  FEED_URI http://ryppl.github.com/feeds/boost/signals.xml
+  SUMMARY "Managed signals & slots callback implementation."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/signals/"
+  AUTHOR "Doug Gregor"
+  MAINTAINER "Doug Gregor"
+  CATEGORY Development
+  KEYWORDS "Boost" "Patterns" "Function-objects"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

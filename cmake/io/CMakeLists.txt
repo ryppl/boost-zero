@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostIO NONE)
+include(RypplProject)
+ryppl_project(BoostIO HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/io.xml
+  SUMMARY "The I/O sub-library of Boost helps segregate the large number of Boost headers. This sub-library should contain various items to use with/for the standard I/O library."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/io/doc/ios_state.html"
+  AUTHOR "Daryle Walker"
+  MAINTAINER "Daryle Walker"
+  CATEGORY Development
+  KEYWORDS "Boost" "IO"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

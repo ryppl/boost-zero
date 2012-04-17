@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostFunction NONE)
+include(RypplProject)
+ryppl_project(BoostFunction HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/function.xml
+  SUMMARY "Function object wrappers for deferred calls or callbacks."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/function/"
+  AUTHOR "Doug Gregor"
+  MAINTAINER "Doug Gregor"
+  CATEGORY Development
+  KEYWORDS "Boost" "Programming" "Function-objects"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

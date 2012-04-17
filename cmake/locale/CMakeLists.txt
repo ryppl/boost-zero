@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostLocale CXX)
+include(RypplProject)
+ryppl_project(BoostLocale
+  FEED_URI http://ryppl.github.com/feeds/boost/locale.xml
+  SUMMARY "Provide localization and Unicode handling tools for C++."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/locale/"
+  AUTHOR "Artyom Beilis"
+  MAINTAINER "Artyom Beilis"
+  CATEGORY Development
+  KEYWORDS "Boost" "String"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

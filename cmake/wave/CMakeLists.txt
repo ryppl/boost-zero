@@ -2,7 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostWave CXX)
+include(RypplProject)
+ryppl_project(BoostWave
+  FEED_URI http://ryppl.github.com/feeds/boost/wave.xml
+  SUMMARY "The Boost.Wave library is a Standards conformant, and highly configurable implementation of the mandated C99/C++ preprocessor functionality packed behind an easy to use iterator interface."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/wave/"
+  AUTHOR "Hartmut Kaiser"
+  MAINTAINER "Hartmut Kaiser"
+  CATEGORY Development
+  KEYWORDS "Boost" "String"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+  CMAKE_LANGUAGES CXX
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

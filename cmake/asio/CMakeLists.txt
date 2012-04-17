@@ -2,7 +2,19 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-project(BoostAsio)
+include(RypplProject)
+ryppl_project(BoostAsio HEADER_ONLY
+  FEED_URI http://ryppl.github.com/feeds/boost/asio.xml
+  SUMMARY "Portable networking, including sockets, timers, hostname resolution and socket iostreams."
+  # DESCRIPTION
+  # "Write a full (possibly multi-paragraph) description here"
+  HOMEPAGE "http://boost.org/libs/asio/"
+  AUTHOR "Chris Kohlhoff"
+  MAINTAINER "Chris Kohlhoff"
+  CATEGORY Development
+  KEYWORDS "Boost" "Concurrent" "IO"
+  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
+)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)
