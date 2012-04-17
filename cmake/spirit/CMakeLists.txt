@@ -12,6 +12,8 @@ ryppl_project(BoostSpirit HEADER_ONLY
   AUTHOR "Hartmut Kaiser" "Dan Nuffer" "Joel de Guzman"
   MAINTAINER "Hartmut Kaiser" "Dan Nuffer" "Joel de Guzman"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "String" "Parsing"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

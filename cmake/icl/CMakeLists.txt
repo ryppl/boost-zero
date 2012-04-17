@@ -12,6 +12,8 @@ ryppl_project(BoostICL HEADER_ONLY
   AUTHOR "Joachim Faulhaber"
   MAINTAINER "Joachim Faulhaber"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Data" "Containers"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

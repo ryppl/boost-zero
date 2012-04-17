@@ -12,6 +12,8 @@ ryppl_project(BoostAsio HEADER_ONLY
   AUTHOR "Chris Kohlhoff"
   MAINTAINER "Chris Kohlhoff"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Concurrent" "IO"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

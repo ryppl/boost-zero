@@ -13,6 +13,8 @@ ryppl_project(BoostConceptCheck HEADER_ONLY
   AUTHOR "Jeremy Siek"
   MAINTAINER "Jeremy Siek"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Generic" "Correctness"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

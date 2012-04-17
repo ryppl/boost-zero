@@ -12,6 +12,8 @@ ryppl_project(BoostDisjointSets HEADER_ONLY
   AUTHOR "Andrew Lumsdaine" "Lie-Quan Lee" "Jeremy Siek"
   MAINTAINER "Andrew Lumsdaine" "Lie-Quan Lee" "Jeremy Siek"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Containers"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

@@ -12,6 +12,8 @@ ryppl_project(BoostTypeTraits HEADER_ONLY
   AUTHOR "Steve Cleary" "et al" "John Maddock"
   MAINTAINER "Steve Cleary" "et al" "John Maddock"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Generic" "Metaprogramming"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

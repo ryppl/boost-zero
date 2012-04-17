@@ -45,6 +45,8 @@ Wrapper for uniform-syntax value initialization,
   AUTHOR "Dave Abrahams" "et al" "" "Jeremy Siek" "Joseph Gauterin" "John Maddock" "others" "Howard Hinnant" "Jaakko Järvi" "Andrew Lumsdaine" "Jeremiah Willcock" "Fernando Cacciola"
   MAINTAINER "Dave Abrahams" "et al" "" "Jeremy Siek" "Joseph Gauterin" "John Maddock" "others" "Howard Hinnant" "Jaakko Järvi" "Andrew Lumsdaine" "Jeremiah Willcock" "Fernando Cacciola"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Generic" "Miscellaneous" "Function-objects" "Iterators" "Patterns" "Algorithms" "Memory" "Data" "Math"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

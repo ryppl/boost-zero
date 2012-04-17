@@ -12,6 +12,8 @@ ryppl_project(BoostFlyweight HEADER_ONLY
   AUTHOR "Joaquín M López Muñoz"
   MAINTAINER "Joaquín M López Muñoz"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Patterns"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

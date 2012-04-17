@@ -12,6 +12,8 @@ ryppl_project(BoostStaticAssert HEADER_ONLY
   AUTHOR "John Maddock"
   MAINTAINER "John Maddock"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Generic" "Correctness" "Metaprogramming"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

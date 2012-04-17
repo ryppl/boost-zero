@@ -12,6 +12,8 @@ ryppl_project(BoostFusion HEADER_ONLY
   AUTHOR "Dan Marsden" "Tobias Schwinger" "Joel de Guzman"
   MAINTAINER "Dan Marsden" "Tobias Schwinger" "Joel de Guzman"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Data" "Metaprogramming"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

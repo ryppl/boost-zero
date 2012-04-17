@@ -25,6 +25,8 @@ Adapters to allow generic function objects to accept arbitrary arguments"
   AUTHOR "Daniel James" "Tobias Schwinger" "Mark Rodgers"
   MAINTAINER "Daniel James" "Tobias Schwinger" "Mark Rodgers"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Function-objects"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

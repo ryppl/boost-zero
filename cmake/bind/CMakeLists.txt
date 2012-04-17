@@ -26,6 +26,8 @@ A utility library for passing references to
   AUTHOR "Peter Dimov" "Dave Abrahams" "Jaako Järvi" "Doug Gregor"
   MAINTAINER "Peter Dimov" "Dave Abrahams" "Jaako Järvi" "Doug Gregor"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Function-objects"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

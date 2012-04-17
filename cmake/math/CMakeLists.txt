@@ -41,6 +41,8 @@ A wide selection of univariate statistical distributions and
   AUTHOR "various" "Daryle Walker" "Hubert Holin" "John Maddock" "Paul Bristow" "Xiaogang Zhang"
   MAINTAINER "various" "Daryle Walker" "Hubert Holin" "John Maddock" "Paul Bristow" "Xiaogang Zhang"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Math"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
   CMAKE_LANGUAGES CXX

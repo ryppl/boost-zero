@@ -12,6 +12,8 @@ ryppl_project(BoostConversion HEADER_ONLY
   AUTHOR "Dave Abrahams" "Kevlin Henney"
   MAINTAINER "Dave Abrahams" "Kevlin Henney"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "String" "Miscellaneous"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

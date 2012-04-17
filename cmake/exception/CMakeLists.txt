@@ -12,6 +12,8 @@ ryppl_project(BoostException HEADER_ONLY
   AUTHOR "Emil Dotchevski"
   MAINTAINER "Emil Dotchevski"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Emulation"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
 )

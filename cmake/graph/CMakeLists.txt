@@ -12,6 +12,8 @@ ryppl_project(BoostGraph
   AUTHOR "Jeremiah Willcock." "a University of Notre Dame team: now maintained by Andrew Sutton" "Jeremy Siek"
   MAINTAINER "Jeremiah Willcock." "a University of Notre Dame team: now maintained by Andrew Sutton" "Jeremy Siek"
   CATEGORY Development
+  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
+  VERSION 1.50-pre
   KEYWORDS "Boost" "Iterators" "Algorithms" "Containers"
   ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
   CMAKE_LANGUAGES CXX
