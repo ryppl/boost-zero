@@ -10,8 +10,7 @@ include(RypplTestSuite)
 #include(BoostDocumentation)
 include(RypplExport)
 
-#boost_documentation(doc/any.xml)
-
+add_subdirectory(doc)
 add_subdirectory(test)
 
 ryppl_export(
