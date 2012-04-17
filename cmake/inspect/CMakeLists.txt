@@ -7,7 +7,6 @@ project(BoostInspect CXX)
 find_package(Boost
   COMPONENTS
     algorithm
-    cmake
     config
     conversion
     filesystem

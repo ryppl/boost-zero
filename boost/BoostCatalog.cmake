@@ -26,7 +26,6 @@ set(Boost_CATALOG
   build             BoostBuild            ""
   chrono            BoostChrono           ""
   circular_buffer   BoostCircularBuffer   ""
-  cmake             BoostCMake            ""
   compatibility     BoostCompatibility    ""
   concept_check     BoostConceptCheck     ""
   config            BoostConfig           ""

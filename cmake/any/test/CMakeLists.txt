@@ -1,7 +1,7 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(Boost COMPONENTS any cmake test NO_MODULE)
+find_package(Boost COMPONENTS any test NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
 

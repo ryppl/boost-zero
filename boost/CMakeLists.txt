@@ -34,7 +34,6 @@ add_subdirectory(bind)
 add_subdirectory(boostbook)
 add_subdirectory(chrono)
 add_subdirectory(circular_buffer)
-add_subdirectory(cmake)
 add_subdirectory(compatibility)
 add_subdirectory(concept_check)
 add_subdirectory(config)
@@ -127,7 +126,7 @@ add_subdirectory(xpressive)
 if(BOOST_INITIAL_PASS)
   # report an error in order to inhibit the generation step (save time).
   message(SEND_ERROR
-    "Initial pass successfully completed, now run CMake again!"
+    "Initial pass successfully completed, now run again!"
     )
   set(BOOST_INITIAL_PASS FALSE CACHE BOOL "" FORCE)
 endif(BOOST_INITIAL_PASS)

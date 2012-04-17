@@ -8,7 +8,6 @@ find_package(Boost
   COMPONENTS
     bind
     chrono
-    cmake
     config
     core
     date_time

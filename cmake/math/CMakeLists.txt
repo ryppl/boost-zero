@@ -9,7 +9,6 @@ find_package(Boost
     algorithm
     array
     bind
-    cmake
     concept_check
     config
     conversion

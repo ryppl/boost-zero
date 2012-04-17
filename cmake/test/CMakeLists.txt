@@ -7,7 +7,6 @@ project(BoostTest CXX)
 find_package(Boost
   COMPONENTS
     bind
-    cmake
     config
     conversion
     core

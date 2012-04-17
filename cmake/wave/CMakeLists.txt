@@ -7,7 +7,6 @@ project(BoostWave CXX)
 find_package(Boost
   COMPONENTS
     any
-    cmake
     concept_check
     config
     core

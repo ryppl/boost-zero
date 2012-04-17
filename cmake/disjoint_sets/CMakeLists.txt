@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostDisjointSets)
 
-find_package(Boost COMPONENTS cmake test graph NO_MODULE)
+find_package(Boost COMPONENTS test graph NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplExport)
 include(RypplTestSuite)

@@ -7,7 +7,6 @@ project(BoostContext CXX)
 find_package(Boost
   COMPONENTS
     bind
-    cmake
     config
     core
     format
@@ -23,7 +22,6 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-
 
 set(abi
   aapcs
@@ -41,7 +39,6 @@ set(binary_format
   mach-o
   pe
   )
-
 
 if(WIN32)
   set(default_abi ms)
@@ -61,14 +58,12 @@ else()
   set(default_binary_format elf)
 endif()
 
-
 set(BOOST_CONTEXT_ABI ${default_abi}
   CACHE STRING "ABI for Boost.Context (${abi})"
   )
 set_property(CACHE BOOST_CONTEXT_ABI
   PROPERTY STRINGS "${abi}"
   )
-
 
 set(BOOST_CONTEXT_BINARY_FORMAT ${default_binary_format}
   CACHE STRING "Binary format for Boost.Context (${binary_format})"
@@ -77,12 +72,10 @@ set_property(CACHE BOOST_CONTEXT_BINARY_FORMAT
   PROPERTY STRINGS "${binary_format}"
   )
 
-
 # TODO:
 set(ASM_CONTEXT_SOURCES
   src/asm/fcontext_i386_sysv_elf_gas.S
   )
-
 
 if(WIN32)
   set(CONTEXT_SOURCES

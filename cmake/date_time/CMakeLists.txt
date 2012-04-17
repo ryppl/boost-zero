@@ -7,7 +7,6 @@ project(BoostDateTime)
 find_package(Boost
   COMPONENTS
     algorithm
-    cmake
     config
     conversion
     core
@@ -55,7 +54,6 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
 
 return()
 

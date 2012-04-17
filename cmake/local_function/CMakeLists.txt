@@ -4,5 +4,3 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostLocalFunction CXX)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
-include(${Boost_USE_FILE})

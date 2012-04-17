@@ -4,10 +4,11 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostCore)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplExport)
 
+set(Boost_VERSION_MAJOR  1)
+set(Boost_VERSION_MINOR 50)
+set(Boost_VERSION_PATCH  0)
 
 math(EXPR BOOST_VERSION
   "${Boost_VERSION_MAJOR} * 100000 + ${Boost_VERSION_MINOR} * 100 + ${Boost_VERSION_PATCH}"

@@ -5,7 +5,6 @@ find_package(Boost COMPONENTS test utility NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
 
-
 # todo
 #project
 #    : requirements
@@ -23,7 +22,6 @@ ryppl_test_suite(
 	COMPILE_FAIL
 		to_string_fail.cpp
   )
-
 
 #exception
 ryppl_test_suite(

@@ -163,7 +163,7 @@ ryppl_test_suite(
     include/support/iterate.cpp
     include/support/preprocessor/round.cpp
     
-# CMake Error: Attempt to add a custom rule to output
+# Error: Attempt to add a custom rule to output
 #    include/function/function.cpp
 #    include/operator/member.cpp
 #    include/stl/container/container.cpp

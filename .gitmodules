@@ -298,9 +298,6 @@
 [submodule "xpressive"]
 	path = xpressive
 	url = https://github.com/boost-lib/xpressive.git
-[submodule "cmake"]
-	path = cmake
-	url = https://purpleKarrot@github.com/purpleKarrot/Boost.CMake.git
 [submodule "boost/accumulators"]
 	path = boost/accumulators
 	url = https://github.com/boost-lib/accumulators.git
@@ -604,9 +601,6 @@
 [submodule "boost/xpressive"]
 	path = boost/xpressive
 	url = https://github.com/boost-lib/xpressive.git
-[submodule "boost/cmake"]
-	path = boost/cmake
-	url = https://github.com/purpleKarrot/Boost.CMake.git
 [submodule "ryppl"]
 	path = ryppl
 	url = https://github.com/ryppl/ryppl-cmake.git

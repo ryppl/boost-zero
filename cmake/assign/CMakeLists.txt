@@ -4,8 +4,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostAssign)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplExport)
 
 add_subdirectory(test)

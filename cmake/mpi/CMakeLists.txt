@@ -13,7 +13,6 @@ endif(NOT MPI_FOUND)
 
 find_package(Boost
   COMPONENTS
-    cmake
     config
     conversion
     core

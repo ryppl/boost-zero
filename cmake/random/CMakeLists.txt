@@ -6,7 +6,6 @@ project(BoostRandom CXX)
 
 find_package(Boost
   COMPONENTS
-    cmake
     config
     conversion
     core

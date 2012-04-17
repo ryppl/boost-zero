@@ -7,7 +7,6 @@ project(BoostChrono CXX)
 find_package(Boost
   COMPONENTS
     accumulators
-    cmake
     config
     core
     exception

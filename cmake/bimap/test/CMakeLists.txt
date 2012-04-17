@@ -72,7 +72,6 @@ ryppl_test_suite(
   NO_SINGLE_TARGET
   )
 
-
 # bimap_and_boost
 ryppl_test_suite(
   RUN

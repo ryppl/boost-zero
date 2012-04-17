@@ -7,7 +7,6 @@ project(BoostTimer CXX)
 find_package(Boost
   COMPONENTS
     chrono
-    cmake
     config
     core
     exception

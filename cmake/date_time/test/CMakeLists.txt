@@ -10,7 +10,6 @@ add_definitions(-DBOOST_DATE_TIME_POSIX_TIME_STD_CONFIG)
 add_definitions(-DBOOST_ALL_NO_LIB)
 #local DATE_TIME_DYNAMIC_PROPERTIES = <define>BOOST_ALL_DYN_LINK <runtime-link>shared #<define>BOOST_DATE_TIME_POSIX_TIME_STD_CONFIG <define>BOOST_ALL_NO_LIB ;
 
-
 # date_time_core
 ryppl_test_suite(
   RUN
@@ -21,7 +20,6 @@ ryppl_test_suite(
 		testgregorian_calendar.cpp
 		testgeneric_period.cpp    
   )
-
 
 # date_time_gregorian
 ryppl_test_suite(

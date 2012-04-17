@@ -6,7 +6,6 @@ find_package(Boost COMPONENTS container test NO_MODULE)
 include("${Boost_USE_FILE}")
 include(RypplTestSuite)
 
-
 # assoc_cont_factory
 ryppl_test_suite(
   RUN

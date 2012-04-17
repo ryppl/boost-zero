@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostSystem CXX)
 
-find_package(Boost COMPONENTS cmake config integer utility NO_MODULE)
+find_package(Boost COMPONENTS config integer utility NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplExport)
 

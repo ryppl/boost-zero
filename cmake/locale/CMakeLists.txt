@@ -6,7 +6,6 @@ project(BoostLocale CXX)
 
 find_package(Boost
   COMPONENTS
-    cmake
     config
     function
     integer

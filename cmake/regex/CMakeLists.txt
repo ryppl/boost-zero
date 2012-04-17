@@ -6,7 +6,6 @@ project(BoostRegex CXX)
 
 find_package(Boost
   COMPONENTS
-    cmake
     concept_check
     config
     core

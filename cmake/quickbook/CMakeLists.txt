@@ -8,7 +8,6 @@ find_package(Boost
   COMPONENTS
     algorithm
     bind
-    cmake
     config
     conversion
     core
