@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostRandom CXX)
 
-find_package(Boost
+include(RypplFindPackage)
+ryppl_find_package(Boost
   COMPONENTS
     config
     conversion

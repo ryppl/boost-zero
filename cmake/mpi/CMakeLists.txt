@@ -11,7 +11,8 @@ if(NOT MPI_FOUND)
   return()
 endif(NOT MPI_FOUND)
 
-find_package(Boost
+include(RypplFindPackage)
+ryppl_find_package(Boost
   COMPONENTS
     config
     conversion

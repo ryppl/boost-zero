@@ -4,10 +4,10 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostAny)
 
-find_package(Boost COMPONENTS config NO_MODULE)
+include(RypplFindPackage)
+ryppl_find_package(Boost COMPONENTS config NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
-#include(BoostDocumentation)
 include(RypplExport)
 
 add_subdirectory(doc)

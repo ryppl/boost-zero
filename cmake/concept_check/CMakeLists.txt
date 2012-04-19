@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostConceptCheck)
 
-find_package(Boost COMPONENTS config test NO_MODULE)
+include(RypplFindPackage)
+ryppl_find_package(Boost COMPONENTS config test NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplExport)
 include(RypplTestSuite)

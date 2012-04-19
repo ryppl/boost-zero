@@ -1,7 +1,8 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(Boost COMPONENTS bimap serialization assign test NO_MODULE)
+include(RypplFindPackage)
+ryppl_find_package(Boost COMPONENTS bimap serialization assign test NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
 

@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostPython CXX)
 
-find_package(PythonLibs)
+include(RypplFindPackage)
+ryppl_find_package(PythonLibs)
 if(NOT PYTHONLIBS_FOUND)
   return()
 endif()
@@ -14,7 +15,7 @@ include_directories(
   ${PYTHON_INCLUDE_DIRS}
   )
 
-find_package(Boost
+ryppl_find_package(Boost
   COMPONENTS
     bind
     config

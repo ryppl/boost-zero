@@ -4,7 +4,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostRegex CXX)
 
-find_package(Boost
+include(RypplFindPackage)
+ryppl_find_package(Boost
   COMPONENTS
     concept_check
     config
@@ -26,7 +27,7 @@ find_package(Boost
 include(${Boost_USE_FILE})
 include(RypplExport)
 
-find_package(ICU)
+ryppl_find_package(ICU)
 if(ICU_FOUND)
   add_definitions(-DBOOST_HAS_ICU=1)
 endif()

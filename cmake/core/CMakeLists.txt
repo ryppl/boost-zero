@@ -29,4 +29,3 @@ ryppl_export(
   )
 
 add_subdirectory(test)
-
