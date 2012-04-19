@@ -22,7 +22,10 @@ if(NOT MPI_FOUND)
   return()
 endif()
 
-include_directories(${MPI_INCLUDE_PATH})
+include_directories(
+  include
+  ${MPI_INCLUDE_PATH}
+  )
 
 add_library(boost_graph_parallel
   src/mpi_process_group.cpp
