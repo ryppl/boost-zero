@@ -2,21 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-include(RypplProject)
-ryppl_project(BoostLambda HEADER_ONLY
-  FEED_URI http://ryppl.github.com/feeds/boost/lambda.xml
-  SUMMARY "Define small unnamed function objects at the actual call site, and more."
-  # DESCRIPTION
-  # "Write a full (possibly multi-paragraph) description here"
-  HOMEPAGE "http://boost.org/libs/lambda/"
-  AUTHOR "Jaakko Järvi" "Gary Powell"
-  MAINTAINER "Jaakko Järvi" "Gary Powell"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "Function-objects"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-)
+project(BoostLambda NONE)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

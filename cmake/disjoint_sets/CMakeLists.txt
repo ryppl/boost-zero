@@ -2,21 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-include(RypplProject)
-ryppl_project(BoostDisjointSets HEADER_ONLY
-  FEED_URI http://ryppl.github.com/feeds/boost/disjoint_sets.xml
-  SUMMARY "Boost.DisjointSets provides disjoint sets operations with union by rank and path compression."
-  # DESCRIPTION
-  # "Write a full (possibly multi-paragraph) description here"
-  HOMEPAGE "http://boost.org/libs/disjoint_sets/disjoint_sets.html"
-  AUTHOR "Andrew Lumsdaine" "Lie-Quan Lee" "Jeremy Siek"
-  MAINTAINER "Andrew Lumsdaine" "Lie-Quan Lee" "Jeremy Siek"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "Containers"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-)
+project(BoostDisjointSets)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake test graph NO_MODULE)

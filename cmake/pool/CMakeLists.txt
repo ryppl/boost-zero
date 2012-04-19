@@ -2,21 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-include(RypplProject)
-ryppl_project(BoostPool HEADER_ONLY
-  FEED_URI http://ryppl.github.com/feeds/boost/pool.xml
-  SUMMARY "Memory pool management."
-  # DESCRIPTION
-  # "Write a full (possibly multi-paragraph) description here"
-  HOMEPAGE "http://boost.org/libs/pool/"
-  AUTHOR "Steve Cleary"
-  MAINTAINER "Steve Cleary"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "Memory"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-)
+project(BoostPool NONE)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

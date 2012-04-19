@@ -2,22 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-include(RypplProject)
-ryppl_project(BoostFilesystem
-  FEED_URI http://ryppl.github.com/feeds/boost/filesystem.xml
-  SUMMARY "The Boost Filesystem Library provides portable facilities to query and manipulate paths, files, and directories."
-  # DESCRIPTION
-  # "Write a full (possibly multi-paragraph) description here"
-  HOMEPAGE "http://boost.org/libs/filesystem/"
-  AUTHOR "Beman Dawes"
-  MAINTAINER "Beman Dawes"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "System"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-  CMAKE_LANGUAGES CXX
-)
+project(BoostFilesystem CXX)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake system NO_MODULE)

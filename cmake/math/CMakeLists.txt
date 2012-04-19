@@ -2,51 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-include(RypplProject)
-ryppl_project(BoostMath
-  FEED_URI http://ryppl.github.com/feeds/boost/math.xml
-  SUMMARY "Boost.Math includes several contributions in the domain of mathematics: The Greatest Common Divisor and Least Common Multiple library provides run-time and compile-time evaluation of the greatest common divisor (GCD) or least common multiple (LCM) of two integers. The Special Functions library currently provides eight templated special functions, in namespace boost. The Complex Number Inverse Trigonometric Functions are the inverses of trigonometric functions currently present in the C++ standard. Quaternions are a relative of complex numbers often used to parameterise rotations in three dimentional space. Octonions, like quaternions, are a relative of complex numbers."
-  DESCRIPTION
-  "math:
-Boost.Math includes several contributions in the
-    domain of mathematics: The Greatest Common Divisor and Least
-    Common Multiple library provides run-time and compile-time
-    evaluation of the greatest common divisor (GCD) or least common
-    multiple (LCM) of two integers. The Special Functions library
-    currently provides eight templated special functions, in
-    namespace boost. The Complex Number Inverse Trigonometric
-    Functions are the inverses of trigonometric functions currently
-    present in the C++ standard. Quaternions are a relative of
-    complex numbers often used to parameterise rotations in three
-    dimentional space. Octonions, like quaternions, are a relative
-    of complex numbers.
-
-math/common_factor:
-Greatest common divisor and least common
-    multiple.
-
-math/octonion:
-Octonions.
-
-math/quaternion:
-Quaternions.
-
-math/special_functions:
-A wide selection of mathematical special functions.
-
-math/statistical_distributions:
-A wide selection of univariate statistical distributions and
-    functions that operate on them."
-  HOMEPAGE "http://boost.org/libs/math/"
-  AUTHOR "various" "Daryle Walker" "Hubert Holin" "John Maddock" "Paul Bristow" "Xiaogang Zhang"
-  MAINTAINER "various" "Daryle Walker" "Hubert Holin" "John Maddock" "Paul Bristow" "Xiaogang Zhang"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "Math"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-  CMAKE_LANGUAGES CXX
-)
+project(BoostMath CXX)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost

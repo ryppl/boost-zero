@@ -2,21 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
-include(RypplProject)
-ryppl_project(BoostCircularBuffer HEADER_ONLY
-  FEED_URI http://ryppl.github.com/feeds/boost/circular_buffer.xml
-  SUMMARY "A STL compliant container also known as ring or cyclic buffer. "
-  # DESCRIPTION
-  # "Write a full (possibly multi-paragraph) description here"
-  HOMEPAGE "http://boost.org/libs/circular_buffer/"
-  AUTHOR "Jan Gaspar"
-  MAINTAINER "Jan Gaspar"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "Containers"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-)
+project(BoostCircularBuffer)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost COMPONENTS cmake NO_MODULE)

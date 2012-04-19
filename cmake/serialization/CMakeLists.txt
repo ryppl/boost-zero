@@ -2,23 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-include(RypplProject)
-ryppl_project(BoostSerialization
-  FEED_URI http://ryppl.github.com/feeds/boost/serialization.xml
-  SUMMARY "Serialization for persistence and marshalling."
-  # DESCRIPTION
-  # "Write a full (possibly multi-paragraph) description here"
-  HOMEPAGE "http://boost.org/
-    libs/serialization/"
-  AUTHOR "Robert Ramey"
-  MAINTAINER "Robert Ramey"
-  CATEGORY Development
-  LICENSE "OSI Approved :: Boost Software License 1.0 (BSL-1.0)"
-  VERSION 1.50-pre
-  KEYWORDS "Boost" "IO"
-  ICON "http://svn.boost.org/svn/boost/website/public_html/live/gfx/boost-dark-trans.png" "image/png"
-  CMAKE_LANGUAGES CXX
-)
+project(BoostSerialization CXX)
 
 include(RypplFindPackage)
 ryppl_find_package(Boost
