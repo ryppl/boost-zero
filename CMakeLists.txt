@@ -6,7 +6,7 @@
 #   http://www.boost.org/LICENSE_1_0.txt                                 #
 ##########################################################################
 
-cmake_minimum_required(VERSION 2.8.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8.8 FATAL_ERROR)
 project(Zero)
 
 list(APPEND CMAKE_MODULE_PATH "${Zero_SOURCE_DIR}/ryppl/Modules")
