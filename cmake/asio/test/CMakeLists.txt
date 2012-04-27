@@ -2,9 +2,29 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS asio regex system test thread NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostAsio REQUIRED)
+ryppl_find_package(BoostRegex REQUIRED)
+ryppl_find_package(BoostSystem REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostThread REQUIRED)
+
+add_definitions(
+  ${BoostAsio_DEFINITIONS}
+  ${BoostRegex_DEFINITIONS}
+  ${BoostSystem_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  ${BoostThread_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostAsio_INCLUDE_DIRS}
+  ${BoostRegex_INCLUDE_DIRS}
+  ${BoostSystem_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  ${BoostThread_INCLUDE_DIRS}
+  )
 
 ryppl_test_suite(
   RUN

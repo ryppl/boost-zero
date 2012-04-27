@@ -2,9 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS config test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 ryppl_test_suite( RUN is_sorted_test.cpp )
 

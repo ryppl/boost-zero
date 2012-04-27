@@ -2,9 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS crc test NO_MODULE)
-include("${Boost_USE_FILE}")
 include(RypplTestSuite)
+
+ryppl_find_package(BoostCRC REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostCRC_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostCRC_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/gil_reference_checksums.txt"

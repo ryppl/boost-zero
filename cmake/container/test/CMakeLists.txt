@@ -2,9 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS container test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostContainer REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostContainer_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostContainer_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 file(GLOB sources *.cpp)
 ryppl_test_suite(RUN ${sources} NO_SINGLE_TARGET)

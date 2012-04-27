@@ -2,9 +2,23 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS python core test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostPython REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostPython_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostPython_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 ryppl_test_suite(
   RUN

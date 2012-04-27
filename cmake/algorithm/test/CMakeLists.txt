@@ -2,57 +2,67 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS core test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostCore_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 # Search tests
 ryppl_test_suite(
-	RUN
-		empty_search_test.cpp
-		search_test1.cpp
-		search_test2.cpp
-		search_test3.cpp
-	COMPILE_FAIL
-		search_fail1.cpp
-		search_fail2.cpp
-		search_fail3.cpp
-	NO_SINGLE_TARGET
-	)
+  RUN
+    empty_search_test.cpp
+    search_test1.cpp
+    search_test2.cpp
+    search_test3.cpp
+  COMPILE_FAIL
+    search_fail1.cpp
+    search_fail2.cpp
+    search_fail3.cpp
+  NO_SINGLE_TARGET
+  )
 
 # Clamp tests
 ryppl_test_suite(
-	RUN
-		clamp_test.cpp
-	NO_SINGLE_TARGET
-	)
-   
+  RUN
+    clamp_test.cpp
+  NO_SINGLE_TARGET
+  )
+
 # Cxx11 tests
 ryppl_test_suite(
-	RUN
-		all_of_test.cpp
-		any_of_test.cpp
-		none_of_test.cpp
-		one_of_test.cpp
-		ordered_test.cpp
-		find_if_not_test1.cpp
-		copy_n_test1.cpp
-		iota_test1.cpp
-		is_permutation_test1.cpp
-		partition_point_test1.cpp
-		is_partitioned_test1.cpp
-		partition_copy_test1.cpp
-	NO_SINGLE_TARGET
-	)
+  RUN
+    all_of_test.cpp
+    any_of_test.cpp
+    none_of_test.cpp
+    one_of_test.cpp
+    ordered_test.cpp
+    find_if_not_test1.cpp
+    copy_n_test1.cpp
+    iota_test1.cpp
+    is_permutation_test1.cpp
+    partition_point_test1.cpp
+    is_partitioned_test1.cpp
+    partition_copy_test1.cpp
+  NO_SINGLE_TARGET
+  )
 
 # Hex tests
 ryppl_test_suite(
-	RUN
-		hex_test1.cpp
-		hex_test2.cpp
-		hex_test3.cpp
-	COMPILE_FAIL
-		hex_fail1.cpp
-	NO_SINGLE_TARGET
+  RUN
+    hex_test1.cpp
+    hex_test2.cpp
+    hex_test3.cpp
+  COMPILE_FAIL
+    hex_fail1.cpp
+  NO_SINGLE_TARGET
   )
-

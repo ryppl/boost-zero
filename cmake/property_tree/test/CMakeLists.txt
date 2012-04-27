@@ -2,11 +2,24 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS config any test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
 
-add_definitions(-D_SCL_SECURE_NO_WARNINGS=1)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostAny REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  ${BoostAny_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  -D_SCL_SECURE_NO_WARNINGS=1
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostAny_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 ryppl_test_suite(
   RUN

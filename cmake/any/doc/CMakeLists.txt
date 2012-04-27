@@ -1,9 +1,10 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(Boost COMPONENTS boostbook NO_MODULE)
-
+include(RypplFindPackage)
 include(RypplDocumentation)
+
+ryppl_find_package(Boostbook REQUIRED)
 
 set(dbk_file ${CMAKE_CURRENT_BINARY_DIR}/any.dbk)
 

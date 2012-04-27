@@ -1,12 +1,25 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS core mpl test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
 
-# needed for Boost.PP file iteration with some compilers
-include_directories(../example)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostMPL REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostCore_DEFINITIONS}
+  ${BoostMPL_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostMPL_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  ../example # needed for Boost.PP file iteration with some compilers
+  )
 
 ryppl_test_suite(
 

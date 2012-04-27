@@ -2,9 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS conversion test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostConversion_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 ryppl_test_suite(RUN ../cast_test.cpp NO_SINGLE_TARGET)
 ryppl_test_suite(RUN ../numeric_cast_test.cpp NO_SINGLE_TARGET)

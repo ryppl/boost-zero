@@ -2,11 +2,21 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS config test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
 
-add_definitions(-DBOOST_PROTO_DONT_USE_PREPROCESSED_FILES)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  -DBOOST_PROTO_DONT_USE_PREPROCESSED_FILES
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 if(MSVC80)
   add_definitions(

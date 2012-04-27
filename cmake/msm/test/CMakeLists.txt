@@ -2,9 +2,23 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS mpl any test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostMPL REQUIRED)
+ryppl_find_package(BoostAny REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostMPL_DEFINITIONS}
+  ${BoostAny_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostMPL_INCLUDE_DIRS}
+  ${BoostAny_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 #       <toolset>gcc:<cxxflags>"-ftemplate-depth-300 -g0"
 #       <toolset>darwin:<cxxflags>"-ftemplate-depth-300 -g0"

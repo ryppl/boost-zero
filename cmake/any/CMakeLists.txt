@@ -18,10 +18,3 @@ ryppl_export(
 
 add_subdirectory(doc)
 add_subdirectory(test)
-
-#ryppl_test_suite(
-#  RUN
-#    any_test.cpp
-#  COMPILE_FAIL
-#    test/any_cast_cv_failed.cpp
-#  )

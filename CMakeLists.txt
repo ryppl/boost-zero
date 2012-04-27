@@ -14,7 +14,6 @@ list(APPEND CMAKE_MODULE_PATH "${Boost_SOURCE_DIR}/ryppl/Modules")
 file(COPY ${Boost_SOURCE_DIR}/cmake/ DESTINATION ${Boost_SOURCE_DIR}/boost)
 
 set(BOOST_INITIAL_PASS TRUE CACHE BOOL "")
-set(Boost_DIR ${Boost_SOURCE_DIR}/boost)
 
 add_subdirectory(boost/accumulators)
 add_subdirectory(boost/algorithm)

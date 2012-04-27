@@ -2,9 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS assign signals2 NO_MODULE)
-include("${Boost_USE_FILE}")
 include(RypplTestSuite)
+
+ryppl_find_package(BoostAssign REQUIRED)
+ryppl_find_package(BoostSignals2 REQUIRED)
+
+add_definitions(
+  ${BoostAssign_DEFINITIONS}
+  ${BoostSignals2_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostAssign_INCLUDE_DIRS}
+  ${BoostSignals2_INCLUDE_DIRS}
+  )
 
 ryppl_test_suite(
   RUN

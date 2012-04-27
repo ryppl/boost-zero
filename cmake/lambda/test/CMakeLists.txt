@@ -1,9 +1,24 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS core any test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostAny REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostCore_DEFINITIONS}
+  ${BoostAny_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostAny_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 if(MSVC)
   # <asynch-exceptions>on

@@ -2,9 +2,26 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS bimap serialization assign test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostBimap REQUIRED)
+ryppl_find_package(BoostSerialization REQUIRED)
+ryppl_find_package(BoostAssign REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostBimap_DEFINITIONS}
+  ${BoostSerialization_DEFINITIONS}
+  ${BoostAssign_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostBimap_INCLUDE_DIRS}
+  ${BoostSerialization_INCLUDE_DIRS}
+  ${BoostAssign_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 # XXX: some tests #include <libs/bimap/test/test_bimap.hpp>
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
