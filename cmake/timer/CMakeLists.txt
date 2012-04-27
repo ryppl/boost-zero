@@ -5,20 +5,38 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostTimer CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    chrono
-    config
-    core
-    exception
-    integer
-    io
-    system
-    utility
-  NO_MODULE
-  )
-include("${Boost_USE_FILE}")
 include(RypplExport)
+
+ryppl_find_package(BoostChrono REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostException REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostIO REQUIRED)
+ryppl_find_package(BoostSystem REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostChrono_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostException_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostIO_DEFINITIONS}
+  ${BoostSystem_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostChrono_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostException_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostIO_INCLUDE_DIRS}
+  ${BoostSystem_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 add_library(boost_timer
   src/auto_timers_construction.cpp

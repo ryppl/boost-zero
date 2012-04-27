@@ -5,9 +5,23 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostSystem CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS config integer utility NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplExport)
+
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 add_library(boost_system
   src/error_code.cpp

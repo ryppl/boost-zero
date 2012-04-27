@@ -5,11 +5,20 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostIOStreams CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS config NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplExport)
 
-add_definitions(-DBOOST_IOSTREAMS_USE_DEPRECATED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BZip2)
+ryppl_find_package(ZLIB)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  -DBOOST_IOSTREAMS_USE_DEPRECATED
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  )
 
 if(MSVC)
   add_definitions(
@@ -19,17 +28,19 @@ if(MSVC)
     )
 endif(MSVC)
 
-set(sources src/file_descriptor.cpp src/mapped_file.cpp)
+set(sources
+  src/file_descriptor.cpp
+  src/mapped_file.cpp
+  )
+
 set(link_libraries)
 
-find_package(ZLIB)
 if(ZLIB_FOUND)
   include_directories(${ZLIB_INCLUDE_DIRS})
   list(APPEND sources src/zlib.cpp src/gzip.cpp)
   list(APPEND link_libraries ${ZLIB_LIBRARIES})
 endif(ZLIB_FOUND)
 
-find_package(BZip2)
 if(BZIP2_FOUND)
   include_directories(${BZIP2_INCLUDE_DIR})
   list(APPEND sources src/bzip2.cpp)

@@ -5,27 +5,59 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostChrono CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    accumulators
-    config
-    core
-    exception
-    format
-    integer
-    interprocess
-    math
-    mpl
-    ratio
-    static_assert
-    system
-    type_traits
-    typeof
-    utility
-  NO_MODULE
-  )
-include("${Boost_USE_FILE}")
 include(RypplExport)
+
+ryppl_find_package(BoostAccumulators REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostException REQUIRED)
+ryppl_find_package(BoostFormat REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostInterprocess REQUIRED)
+ryppl_find_package(BoostMath REQUIRED)
+ryppl_find_package(BoostMPL REQUIRED)
+ryppl_find_package(BoostRatio REQUIRED)
+ryppl_find_package(BoostStaticAssert REQUIRED)
+ryppl_find_package(BoostSystem REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostTypeof REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostAccumulators_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostException_DEFINITIONS}
+  ${BoostFormat_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostInterprocess_DEFINITIONS}
+  ${BoostMath_DEFINITIONS}
+  ${BoostMPL_DEFINITIONS}
+  ${BoostRatio_DEFINITIONS}
+  ${BoostStaticAssert_DEFINITIONS}
+  ${BoostSystem_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostTypeof_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostAccumulators_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostException_INCLUDE_DIRS}
+  ${BoostFormat_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostInterprocess_INCLUDE_DIRS}
+  ${BoostMath_INCLUDE_DIRS}
+  ${BoostMPL_INCLUDE_DIRS}
+  ${BoostRatio_INCLUDE_DIRS}
+  ${BoostStaticAssert_INCLUDE_DIRS}
+  ${BoostSystem_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostTypeof_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 if(CMAKE_SYSTEM MATCHES "Linux")
   find_library(RT_LIBRARY rt)

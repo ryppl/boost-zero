@@ -4,14 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostAny)
 
-include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS config NO_MODULE)
-include(${Boost_USE_FILE})
-include(RypplTestSuite)
 include(RypplExport)
-
-add_subdirectory(doc)
-add_subdirectory(test)
 
 ryppl_export(
   DEPENDS
@@ -23,11 +16,12 @@ ryppl_export(
     include
   )
 
-include_directories(include)
+add_subdirectory(doc)
+add_subdirectory(test)
 
-ryppl_test_suite(
-  RUN
-    any_test.cpp
-  COMPILE_FAIL
-    test/any_cast_cv_failed.cpp
-  )
+#ryppl_test_suite(
+#  RUN
+#    any_test.cpp
+#  COMPILE_FAIL
+#    test/any_cast_cv_failed.cpp
+#  )

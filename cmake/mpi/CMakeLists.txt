@@ -4,42 +4,70 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostMPI CXX)
 
-find_package(MPI)
-find_package(PythonLibs)
-
-if(NOT MPI_FOUND)
-  return()
-endif(NOT MPI_FOUND)
-
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    config
-    conversion
-    core
-    exception
-    function
-    graph
-    integer
-    iterator
-    mpl
-    optional
-    property_map
-    python
-    serialization
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  NO_MODULE
-  )
-include(${Boost_USE_FILE})
 include(RypplExport)
 
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostException REQUIRED)
+ryppl_find_package(BoostFunction REQUIRED)
+ryppl_find_package(BoostGraph REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostIterator REQUIRED)
+ryppl_find_package(BoostMPL REQUIRED)
+ryppl_find_package(BoostOptional REQUIRED)
+ryppl_find_package(BoostPropertyMap REQUIRED)
+ryppl_find_package(BoostPython REQUIRED)
+ryppl_find_package(BoostSerialization REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostStaticAssert REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+ryppl_find_package(MPI REQUIRED)
+ryppl_find_package(PythonLibs REQUIRED)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  ${BoostConversion_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostException_DEFINITIONS}
+  ${BoostFunction_DEFINITIONS}
+  ${BoostGraph_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostIterator_DEFINITIONS}
+  ${BoostMPL_DEFINITIONS}
+  ${BoostOptional_DEFINITIONS}
+  ${BoostPropertyMap_DEFINITIONS}
+  ${BoostPython_DEFINITIONS}
+  ${BoostSerialization_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostStaticAssert_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
 include_directories(
-  include
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostException_INCLUDE_DIRS}
+  ${BoostFunction_INCLUDE_DIRS}
+  ${BoostGraph_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostIterator_INCLUDE_DIRS}
+  ${BoostMPL_INCLUDE_DIRS}
+  ${BoostOptional_INCLUDE_DIRS}
+  ${BoostPropertyMap_INCLUDE_DIRS}
+  ${BoostPython_INCLUDE_DIRS}
+  ${BoostSerialization_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostStaticAssert_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
   ${MPI_INCLUDE_PATH}
   ${PYTHON_INCLUDE_DIRS}
+  include
   )
 
 if(MSVC)

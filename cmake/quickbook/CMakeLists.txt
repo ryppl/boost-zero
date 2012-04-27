@@ -5,29 +5,65 @@ cmake_minimum_required(VERSION 2.8.8)
 project(Quickbook CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    algorithm
-    bind
-    config
-    conversion
-    core
-    filesystem
-    foreach
-    iostreams
-    iterator
-    preprocessor
-    program_options
-    range
-    smart_ptr
-    spirit
-    tuple
-    unordered
-    utility
-  NO_MODULE
-  )
-include(${Boost_USE_FILE})
 include(RypplExport)
+
+ryppl_find_package(BoostAlgorithm REQUIRED)
+ryppl_find_package(BoostBind REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostFilesystem REQUIRED)
+ryppl_find_package(BoostForeach REQUIRED)
+ryppl_find_package(BoostIOStreams REQUIRED)
+ryppl_find_package(BoostIterator REQUIRED)
+ryppl_find_package(BoostPreprocessor REQUIRED)
+ryppl_find_package(BoostProgramOptions REQUIRED)
+ryppl_find_package(BoostRange REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostSpirit REQUIRED)
+ryppl_find_package(BoostTuple REQUIRED)
+ryppl_find_package(BoostUnordered REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostAlgorithm_DEFINITIONS}
+  ${BoostBind_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostConversion_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostFilesystem_DEFINITIONS}
+  ${BoostForeach_DEFINITIONS}
+  ${BoostIOStreams_DEFINITIONS}
+  ${BoostIterator_DEFINITIONS}
+  ${BoostPreprocessor_DEFINITIONS}
+  ${BoostProgramOptions_DEFINITIONS}
+  ${BoostRange_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostSpirit_DEFINITIONS}
+  ${BoostTuple_DEFINITIONS}
+  ${BoostUnordered_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostAlgorithm_INCLUDE_DIRS}
+  ${BoostBind_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostFilesystem_INCLUDE_DIRS}
+  ${BoostForeach_INCLUDE_DIRS}
+  ${BoostIOStreams_INCLUDE_DIRS}
+  ${BoostIterator_INCLUDE_DIRS}
+  ${BoostPreprocessor_INCLUDE_DIRS}
+  ${BoostProgramOptions_INCLUDE_DIRS}
+  ${BoostRange_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostSpirit_INCLUDE_DIRS}
+  ${BoostTuple_INCLUDE_DIRS}
+  ${BoostUnordered_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS

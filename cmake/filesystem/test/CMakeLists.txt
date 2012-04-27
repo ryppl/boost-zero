@@ -23,7 +23,8 @@ ryppl_test_suite(
     ../example/simple_ls.cpp
     ../example/file_status.cpp
   LINK_LIBRARIES
-	boost_filesystem
+    boost_prg_exec_monitor
+    boost_filesystem
     boost_system
   NO_SINGLE_TARGET
   )

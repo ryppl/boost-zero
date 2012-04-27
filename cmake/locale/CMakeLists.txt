@@ -5,30 +5,50 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostLocale CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    config
-    function
-    integer
-    iterator
-    smart_ptr
-    thread
-    type_traits
-    unordered
-    utility
-  NO_MODULE
-  )
-include(${Boost_USE_FILE})
 
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostFunction REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostIterator REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostThread REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostUnordered REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
 ryppl_find_package(Iconv)
+ryppl_find_package(ICU)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  ${BoostFunction_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostIterator_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostThread_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostUnordered_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostFunction_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostIterator_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostThread_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostUnordered_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  include
+  )
+
 if(ICONV_FOUND)
   option(BOOST_LOCALE_NO_ICONV "Disable iconv library" OFF)
 else()
   set(BOOST_LOCALE_NO_ICONV ON)
 endif()
 
-include(RypplFindPackage)
-ryppl_find_package(ICU)
 if(ICU_FOUND AND ICU_I18N_FOUND)
   option(BOOST_LOCALE_NO_ICU "Disable ICU library/backend" OFF)
 else()
@@ -119,7 +139,7 @@ else()
   list(APPEND link_libraries
     ${ICU_LIBRARIES}
     ${ICU_I18N_LIBRARIES}
-    thread-shared
+    boost_thread
     )
 endif()
 
@@ -191,8 +211,6 @@ if(WIN32 OR CYGWIN)
       )
   endif()
 endif()
-
-include_directories(include)
 
 add_library(boost_locale
   ${sources}

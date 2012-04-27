@@ -5,28 +5,57 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostDateTime)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    algorithm
-    config
-    conversion
-    core
-    exception
-    integer
-    io
-    mpl
-    range
-    serialization
-    smart_ptr
-    tokenizer
-    type_traits
-    utility
-  NO_MODULE
-  )
-include(${Boost_USE_FILE})
 include(RypplExport)
 
-add_definitions(-DDATE_TIME_INLINE)
+ryppl_find_package(BoostAlgorithm REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostException REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostIO REQUIRED)
+ryppl_find_package(BoostMPL REQUIRED)
+ryppl_find_package(BoostRange REQUIRED)
+ryppl_find_package(BoostSerialization REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostTokenizer REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostAlgorithm_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostConversion_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostException_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostIO_DEFINITIONS}
+  ${BoostMPL_DEFINITIONS}
+  ${BoostRange_DEFINITIONS}
+  ${BoostSerialization_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostTokenizer_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  -DDATE_TIME_INLINE
+  )
+
+include_directories(
+  ${BoostAlgorithm_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostException_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostIO_INCLUDE_DIRS}
+  ${BoostMPL_INCLUDE_DIRS}
+  ${BoostRange_INCLUDE_DIRS}
+  ${BoostSerialization_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostTokenizer_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 add_library(boost_date_time
   src/gregorian/greg_month.cpp

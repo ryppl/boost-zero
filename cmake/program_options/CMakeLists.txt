@@ -5,25 +5,53 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostProgramOptions CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    any
-    bind
-    config
-    conversion
-    core
-    exception
-    function
-    iterator
-    smart_ptr
-    static_assert
-    tokenizer
-    type_traits
-    utility
-  NO_MODULE
-  )
-include(${Boost_USE_FILE})
 include(RypplExport)
+
+ryppl_find_package(BoostAny REQUIRED)
+ryppl_find_package(BoostBind REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostException REQUIRED)
+ryppl_find_package(BoostFunction REQUIRED)
+ryppl_find_package(BoostIterator REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostStaticAssert REQUIRED)
+ryppl_find_package(BoostTokenizer REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostAny_DEFINITIONS}
+  ${BoostBind_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostConversion_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostException_DEFINITIONS}
+  ${BoostFunction_DEFINITIONS}
+  ${BoostIterator_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostStaticAssert_DEFINITIONS}
+  ${BoostTokenizer_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostAny_INCLUDE_DIRS}
+  ${BoostBind_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostException_INCLUDE_DIRS}
+  ${BoostFunction_INCLUDE_DIRS}
+  ${BoostIterator_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostStaticAssert_INCLUDE_DIRS}
+  ${BoostTokenizer_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 add_library(boost_program_options
   src/cmdline

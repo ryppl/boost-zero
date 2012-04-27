@@ -5,9 +5,17 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostFilesystem CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS system NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplExport)
+
+ryppl_find_package(BoostSystem REQUIRED)
+
+add_definitions(
+  ${BoostSystem_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostSystem_INCLUDE_DIRS}
+  )
 
 add_library(boost_filesystem
   src/operations.cpp

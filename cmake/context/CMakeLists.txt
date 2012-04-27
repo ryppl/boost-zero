@@ -5,24 +5,52 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostContext CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    bind
-    config
-    core
-    format
-    integer
-    move
-    preprocessor
-    program_options
-    smart_ptr
-    system
-    thread
-    type_traits
-    utility
-  NO_MODULE
+
+ryppl_find_package(BoostBind REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostFormat REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostMove REQUIRED)
+ryppl_find_package(BoostPreprocessor REQUIRED)
+ryppl_find_package(BoostProgramOptions REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostSystem REQUIRED)
+ryppl_find_package(BoostThread REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostBind_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostFormat_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostMove_DEFINITIONS}
+  ${BoostPreprocessor_DEFINITIONS}
+  ${BoostProgramOptions_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostSystem_DEFINITIONS}
+  ${BoostThread_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
   )
-include(${Boost_USE_FILE})
+
+include_directories(
+  ${BoostBind_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostFormat_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostMove_INCLUDE_DIRS}
+  ${BoostPreprocessor_INCLUDE_DIRS}
+  ${BoostProgramOptions_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostSystem_INCLUDE_DIRS}
+  ${BoostThread_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 set(abi
   aapcs

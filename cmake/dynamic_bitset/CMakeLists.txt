@@ -4,11 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostDynamicBitset)
 
-include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS test config NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplExport)
-include(RypplTestSuite)
 
 ryppl_export(
   DEPENDS

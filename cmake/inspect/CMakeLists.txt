@@ -5,19 +5,37 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostInspect CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    algorithm
-    config
-    conversion
-    filesystem
-    regex
-    smart_ptr
-    test
-    utility
-  NO_MODULE
+
+ryppl_find_package(BoostAlgorithm REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostFilesystem REQUIRED)
+ryppl_find_package(BoostRegex REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostAlgorithm_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostConversion_DEFINITIONS}
+  ${BoostFilesystem_DEFINITIONS}
+  ${BoostRegex_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
   )
-include(${Boost_USE_FILE})
+
+include_directories(
+  ${BoostAlgorithm_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostFilesystem_INCLUDE_DIRS}
+  ${BoostRegex_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
+  )
 
 add_executable(inspect
   apple_macro_check.cpp

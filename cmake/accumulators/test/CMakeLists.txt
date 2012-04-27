@@ -2,9 +2,20 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(RypplFindPackage)
-ryppl_find_package(Boost COMPONENTS serialization test NO_MODULE)
-include(${Boost_USE_FILE})
 include(RypplTestSuite)
+
+ryppl_find_package(BoostSerialization REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+
+add_definitions(
+  ${BoostSerialization_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostSerialization_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  )
 
 #if(MSVC)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)
@@ -55,7 +66,7 @@ ryppl_test_suite(
     weighted_tail_quantile
     weighted_tail_variate_means
   LINK_LIBRARIES
-    serialization-static
-    unit_test_framework-static
+    boost_serialization
+    boost_unit_test_framework
   NO_SINGLE_TARGET
   )

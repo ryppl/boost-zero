@@ -5,40 +5,89 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostMath CXX)
 
 include(RypplFindPackage)
-ryppl_find_package(Boost
-  COMPONENTS
-    algorithm
-    array
-    bind
-    concept_check
-    config
-    conversion
-    core
-    exception
-    format
-    function
-    fusion
-    integer
-    mpl
-    numeric
-    random
-    regex
-    smart_ptr
-    spirit
-    static_assert
-    test
-    timer
-    tr1
-    tuple
-    type_traits
-    utility
-  NO_MODULE
-  )
-include(${Boost_USE_FILE})
 include(RypplPrecompileHeader)
 include(RypplExport)
 
+ryppl_find_package(BoostAlgorithm REQUIRED)
+ryppl_find_package(BoostArray REQUIRED)
+ryppl_find_package(BoostBind REQUIRED)
+ryppl_find_package(BoostConceptCheck REQUIRED)
+ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConversion REQUIRED)
+ryppl_find_package(BoostCore REQUIRED)
+ryppl_find_package(BoostException REQUIRED)
+ryppl_find_package(BoostFormat REQUIRED)
+ryppl_find_package(BoostFunction REQUIRED)
+ryppl_find_package(BoostFusion REQUIRED)
+ryppl_find_package(BoostInteger REQUIRED)
+ryppl_find_package(BoostMPL REQUIRED)
+ryppl_find_package(BoostNumeric REQUIRED)
+ryppl_find_package(BoostRandom REQUIRED)
+ryppl_find_package(BoostRegex REQUIRED)
+ryppl_find_package(BoostSmartPtr REQUIRED)
+ryppl_find_package(BoostSpirit REQUIRED)
+ryppl_find_package(BoostStaticAssert REQUIRED)
+ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostTimer REQUIRED)
+ryppl_find_package(BoostTR1 REQUIRED)
+ryppl_find_package(BoostTuple REQUIRED)
+ryppl_find_package(BoostTypeTraits REQUIRED)
+ryppl_find_package(BoostUtility REQUIRED)
+
+add_definitions(
+  ${BoostAlgorithm_DEFINITIONS}
+  ${BoostArray_DEFINITIONS}
+  ${BoostBind_DEFINITIONS}
+  ${BoostConceptCheck_DEFINITIONS}
+  ${BoostConfig_DEFINITIONS}
+  ${BoostConversion_DEFINITIONS}
+  ${BoostCore_DEFINITIONS}
+  ${BoostException_DEFINITIONS}
+  ${BoostFormat_DEFINITIONS}
+  ${BoostFunction_DEFINITIONS}
+  ${BoostFusion_DEFINITIONS}
+  ${BoostInteger_DEFINITIONS}
+  ${BoostMPL_DEFINITIONS}
+  ${BoostNumeric_DEFINITIONS}
+  ${BoostRandom_DEFINITIONS}
+  ${BoostRegex_DEFINITIONS}
+  ${BoostSmartPtr_DEFINITIONS}
+  ${BoostSpirit_DEFINITIONS}
+  ${BoostStaticAssert_DEFINITIONS}
+  ${BoostTest_DEFINITIONS}
+  ${BoostTimer_DEFINITIONS}
+  ${BoostTR1_DEFINITIONS}
+  ${BoostTuple_DEFINITIONS}
+  ${BoostTypeTraits_DEFINITIONS}
+  ${BoostUtility_DEFINITIONS}
+  )
+
 include_directories(
+  ${BoostAlgorithm_INCLUDE_DIRS}
+  ${BoostArray_INCLUDE_DIRS}
+  ${BoostBind_INCLUDE_DIRS}
+  ${BoostConceptCheck_INCLUDE_DIRS}
+  ${BoostConfig_INCLUDE_DIRS}
+  ${BoostConversion_INCLUDE_DIRS}
+  ${BoostCore_INCLUDE_DIRS}
+  ${BoostException_INCLUDE_DIRS}
+  ${BoostFormat_INCLUDE_DIRS}
+  ${BoostFunction_INCLUDE_DIRS}
+  ${BoostFusion_INCLUDE_DIRS}
+  ${BoostInteger_INCLUDE_DIRS}
+  ${BoostMPL_INCLUDE_DIRS}
+  ${BoostNumeric_INCLUDE_DIRS}
+  ${BoostRandom_INCLUDE_DIRS}
+  ${BoostRegex_INCLUDE_DIRS}
+  ${BoostSmartPtr_INCLUDE_DIRS}
+  ${BoostSpirit_INCLUDE_DIRS}
+  ${BoostStaticAssert_INCLUDE_DIRS}
+  ${BoostTest_INCLUDE_DIRS}
+  ${BoostTimer_INCLUDE_DIRS}
+  ${BoostTR1_INCLUDE_DIRS}
+  ${BoostTuple_INCLUDE_DIRS}
+  ${BoostTypeTraits_INCLUDE_DIRS}
+  ${BoostUtility_INCLUDE_DIRS}
   include
   src/tr1
   )
