@@ -4,8 +4,8 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostSerialization REQUIRED)
-ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostSerialization)
+ryppl_find_package(BoostTest)
 
 add_definitions(
   ${BoostSerialization_DEFINITIONS}

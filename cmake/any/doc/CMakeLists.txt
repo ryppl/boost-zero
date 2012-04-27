@@ -4,7 +4,7 @@
 include(RypplFindPackage)
 include(RypplDocumentation)
 
-ryppl_find_package(Boostbook REQUIRED)
+ryppl_find_package(Boostbook)
 
 set(dbk_file ${CMAKE_CURRENT_BINARY_DIR}/any.dbk)
 

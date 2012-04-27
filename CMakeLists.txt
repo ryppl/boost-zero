@@ -13,7 +13,7 @@ list(APPEND CMAKE_MODULE_PATH "${Boost_SOURCE_DIR}/ryppl/Modules")
 
 file(COPY ${Boost_SOURCE_DIR}/cmake/ DESTINATION ${Boost_SOURCE_DIR}/boost)
 
-set(BOOST_INITIAL_PASS TRUE CACHE BOOL "")
+set(RYPPL_INITIAL_PASS TRUE CACHE BOOL "")
 
 add_subdirectory(boost/accumulators)
 add_subdirectory(boost/algorithm)
@@ -116,10 +116,10 @@ add_subdirectory(boost/variant)
 add_subdirectory(boost/wave)
 add_subdirectory(boost/xpressive)
 
-if(BOOST_INITIAL_PASS)
+if(RYPPL_INITIAL_PASS)
   # report an error in order to inhibit the generation step (save time).
   message(SEND_ERROR
     "Initial pass successfully completed, now run again!"
     )
-  set(BOOST_INITIAL_PASS FALSE CACHE BOOL "" FORCE)
-endif(BOOST_INITIAL_PASS)
+  set(RYPPL_INITIAL_PASS FALSE CACHE BOOL "" FORCE)
+endif(RYPPL_INITIAL_PASS)

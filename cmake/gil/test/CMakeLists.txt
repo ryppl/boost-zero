@@ -4,8 +4,8 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostCRC REQUIRED)
-ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostCRC)
+ryppl_find_package(BoostTest)
 
 add_definitions(
   ${BoostCRC_DEFINITIONS}

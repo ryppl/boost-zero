@@ -7,7 +7,7 @@ project(BoostIOStreams CXX)
 include(RypplFindPackage)
 include(RypplExport)
 
-ryppl_find_package(BoostConfig REQUIRED)
+ryppl_find_package(BoostConfig)
 ryppl_find_package(BZip2)
 ryppl_find_package(ZLIB)
 

@@ -6,16 +6,16 @@ project(BoostSignals CXX)
 
 include(RypplFindPackage)
 
-ryppl_find_package(BoostAny REQUIRED)
-ryppl_find_package(BoostConfig REQUIRED)
-ryppl_find_package(BoostCore REQUIRED)
-ryppl_find_package(BoostFunction REQUIRED)
-ryppl_find_package(BoostIterator REQUIRED)
-ryppl_find_package(BoostMPL REQUIRED)
-ryppl_find_package(BoostOptional REQUIRED)
-ryppl_find_package(BoostSmartPtr REQUIRED)
-ryppl_find_package(BoostTypeTraits REQUIRED)
-ryppl_find_package(BoostUtility REQUIRED)
+ryppl_find_package(BoostAny)
+ryppl_find_package(BoostConfig)
+ryppl_find_package(BoostCore)
+ryppl_find_package(BoostFunction)
+ryppl_find_package(BoostIterator)
+ryppl_find_package(BoostMPL)
+ryppl_find_package(BoostOptional)
+ryppl_find_package(BoostSmartPtr)
+ryppl_find_package(BoostTypeTraits)
+ryppl_find_package(BoostUtility)
 
 add_definitions(
   ${BoostAny_DEFINITIONS}

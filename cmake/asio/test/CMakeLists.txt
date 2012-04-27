@@ -4,11 +4,11 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostAsio REQUIRED)
-ryppl_find_package(BoostRegex REQUIRED)
-ryppl_find_package(BoostSystem REQUIRED)
-ryppl_find_package(BoostTest REQUIRED)
-ryppl_find_package(BoostThread REQUIRED)
+ryppl_find_package(BoostAsio)
+ryppl_find_package(BoostRegex)
+ryppl_find_package(BoostSystem)
+ryppl_find_package(BoostTest)
+ryppl_find_package(BoostThread)
 
 add_definitions(
   ${BoostAsio_DEFINITIONS}

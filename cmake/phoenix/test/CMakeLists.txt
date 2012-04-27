@@ -4,8 +4,8 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostAssign REQUIRED)
-ryppl_find_package(BoostSignals2 REQUIRED)
+ryppl_find_package(BoostAssign)
+ryppl_find_package(BoostSignals2)
 
 add_definitions(
   ${BoostAssign_DEFINITIONS}

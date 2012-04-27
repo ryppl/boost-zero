@@ -4,9 +4,9 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostAny REQUIRED)
-ryppl_find_package(BoostConfig REQUIRED)
-ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostAny)
+ryppl_find_package(BoostConfig)
+ryppl_find_package(BoostTest)
 
 add_definitions(
   ${BoostAny_DEFINITIONS}

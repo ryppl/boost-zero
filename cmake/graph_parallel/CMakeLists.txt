@@ -6,11 +6,11 @@ project(BoostGraphParallel CXX)
 
 include(RypplFindPackage)
 
-ryppl_find_package(BoostConversion REQUIRED)
-ryppl_find_package(BoostGraph REQUIRED)
-ryppl_find_package(BoostMPI REQUIRED)
-ryppl_find_package(BoostUtility REQUIRED)
-ryppl_find_package(MPI REQUIRED)
+ryppl_find_package(BoostConversion)
+ryppl_find_package(BoostGraph)
+ryppl_find_package(BoostMPI)
+ryppl_find_package(BoostUtility)
+ryppl_find_package(MPI)
 
 add_definitions(
   ${BoostConversion_DEFINITIONS}

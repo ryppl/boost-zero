@@ -4,9 +4,9 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostContainer REQUIRED)
-ryppl_find_package(BoostTest REQUIRED)
-ryppl_find_package(Threads REQUIRED)
+ryppl_find_package(BoostContainer)
+ryppl_find_package(BoostTest)
+ryppl_find_package(Threads)
 
 add_definitions(
   ${BoostContainer_DEFINITIONS}

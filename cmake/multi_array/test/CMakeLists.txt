@@ -4,8 +4,8 @@
 include(RypplFindPackage)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostArray REQUIRED)
-ryppl_find_package(BoostTest REQUIRED)
+ryppl_find_package(BoostArray)
+ryppl_find_package(BoostTest)
 
 add_definitions(
   ${BoostArray_DEFINITIONS}
