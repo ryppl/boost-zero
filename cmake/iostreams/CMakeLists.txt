@@ -4,8 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostIOStreams CXX)
 
-include(RypplFindPackage)
-include(RypplExport)
+include(Ryppl)
 
 ryppl_find_package(BoostConfig)
 ryppl_find_package(BZip2)

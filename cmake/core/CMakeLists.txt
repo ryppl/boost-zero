@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostCore)
 
-include(RypplExport)
+include(Ryppl)
 
 set(Boost_VERSION_MAJOR  1)
 set(Boost_VERSION_MINOR 50)
@@ -29,6 +29,4 @@ ryppl_export(
   VERSION "1.50"
   )
 
-if(COMPONENT != dev)
-  add_subdirectory(test)
-endif()
+ryppl_add_test_subdirectory(test)

@@ -4,11 +4,9 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(Boostbook)
 
-include(RypplExport)
+include(Ryppl)
 
-if(COMPONENT != dev)
-  add_subdirectory(doc)
-endif()
+ryppl_add_doc_subdirectory(doc)
 
 if(WIN32)
   set(BOOSTBOOK_DIR "boostbook")

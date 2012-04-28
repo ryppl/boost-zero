@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostLambda NONE)
 
-include(RypplExport)
+include(Ryppl)
 
 ryppl_export(
   DEPENDS
@@ -20,6 +20,4 @@ ryppl_export(
     include
   )
   
-if(COMPONENT != dev)
-  add_subdirectory(test)
-endif()
+ryppl_add_test_subdirectory(test)

@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostInspect CXX)
 
-include(RypplFindPackage)
+include(Ryppl)
 
 ryppl_find_package(BoostAlgorithm)
 ryppl_find_package(BoostConfig)

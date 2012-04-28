@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostLocale CXX)
 
-include(RypplFindPackage)
+include(Ryppl)
 
 ryppl_find_package(BoostConfig)
 ryppl_find_package(BoostFunction)
@@ -220,6 +220,4 @@ target_link_libraries(boost_locale
   ${link_libraries}
   )
 
-if(COMPONENT != dev)
-  add_subdirectory(test)
-endif()
+ryppl_add_test_subdirectory(test)

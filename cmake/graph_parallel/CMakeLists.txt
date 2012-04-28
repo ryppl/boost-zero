@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostGraphParallel CXX)
 
-include(RypplFindPackage)
+include(Ryppl)
 
 ryppl_find_package(BoostConversion)
 ryppl_find_package(BoostGraph)

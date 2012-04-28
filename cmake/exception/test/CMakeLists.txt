@@ -1,7 +1,7 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-include(RypplFindPackage)
+include(Ryppl)
 ryppl_find_package(Boost COMPONENTS test utility NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
