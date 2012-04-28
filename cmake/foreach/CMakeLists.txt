@@ -20,4 +20,6 @@ ryppl_export(
 
 #boost_documentation(doc/foreach.qbk)
 
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()

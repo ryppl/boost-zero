@@ -6,7 +6,9 @@ project(BoostBimap)
 
 include(RypplExport)
 
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()
 
 ryppl_export(
   DEPENDS

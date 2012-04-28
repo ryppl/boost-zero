@@ -7,7 +7,9 @@ project(BoostArray)
 #include(BoostDocumentation)
 include(RypplExport)
 
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()
 #boost_documentation(doc/array.xml)
 
 ryppl_export(

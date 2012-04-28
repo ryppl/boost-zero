@@ -6,7 +6,9 @@ project(Boostbook)
 
 include(RypplExport)
 
-add_subdirectory(doc)
+if(COMPONENT != dev)
+  add_subdirectory(doc)
+endif()
 
 if(WIN32)
   set(BOOSTBOOK_DIR "boostbook")

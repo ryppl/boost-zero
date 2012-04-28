@@ -8,7 +8,9 @@ include(RypplExport)
 
 #boost_documentation(doc/ref.xml)
 
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()
 
 ryppl_export(
   DEPENDS

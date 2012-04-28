@@ -29,4 +29,6 @@ ryppl_export(
   VERSION "1.50"
   )
 
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()

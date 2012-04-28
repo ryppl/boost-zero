@@ -220,4 +220,6 @@ target_link_libraries(boost_locale
   ${link_libraries}
   )
 
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()

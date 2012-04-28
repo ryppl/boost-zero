@@ -25,4 +25,6 @@ ryppl_export(
     include
   )
   
-add_subdirectory(test)
+if(COMPONENT != dev)
+  add_subdirectory(test)
+endif()
