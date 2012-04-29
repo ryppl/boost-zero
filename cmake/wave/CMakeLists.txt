@@ -102,10 +102,10 @@ target_link_libraries(boost_wave
   boost_thread
   )
 
-add_executable(wave
-  tool/cpp.cpp
-  )
-
-target_link_libraries(wave
-  boost_wave
-  )
+# # wave currently has problems with filesystem3
+# add_executable(wave
+#   tool/cpp.cpp
+#   )
+# target_link_libraries(wave
+#   boost_wave
+#   )

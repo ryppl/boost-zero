@@ -122,36 +122,35 @@ target_link_libraries(boost_mpi_python
   boost_python
   )
 
-add_library(boost_mpi-py SHARED
-  src/python/collectives.cpp
-  src/python/py_communicator.cpp
-  src/python/datatypes.cpp
-  src/python/documentation.cpp
-  src/python/py_environment.cpp
-  src/python/py_nonblocking.cpp
-  src/python/py_exception.cpp
-  src/python/module.cpp
-  src/python/py_request.cpp
-  src/python/skeleton_and_content.cpp
-  src/python/status.cpp
-  src/python/py_timer.cpp
-  )
-
-target_link_libraries(boost_mpi-py
-  boost_mpi_python
-  )
-
-set_target_properties(boost_mpi-py PROPERTIES
-  OUTPUT_NAME mpi
-  PREFIX ""
-  )
-
-if(WIN32)
-  set_target_properties(boost_mpi-py PROPERTIES
-    IMPORT_SUFFIX .pyd
-    SUFFIX .pyd
+if(BUILD_SHARED_LIBS)
+  add_library(boost_mpi-py MODULE
+    src/python/collectives.cpp
+    src/python/py_communicator.cpp
+    src/python/datatypes.cpp
+    src/python/documentation.cpp
+    src/python/py_environment.cpp
+    src/python/py_nonblocking.cpp
+    src/python/py_exception.cpp
+    src/python/module.cpp
+    src/python/py_request.cpp
+    src/python/skeleton_and_content.cpp
+    src/python/status.cpp
+    src/python/py_timer.cpp
     )
-endif(WIN32)
+  target_link_libraries(boost_mpi-py
+    boost_mpi_python
+    )
+  set_target_properties(boost_mpi-py PROPERTIES
+    OUTPUT_NAME mpi
+    PREFIX ""
+    )
+  if(WIN32)
+    set_target_properties(boost_mpi-py PROPERTIES
+      IMPORT_SUFFIX .pyd
+      SUFFIX .pyd
+      )
+  endif(WIN32)
+endif(BUILD_SHARED_LIBS)
 
 ryppl_export(
   TARGETS
