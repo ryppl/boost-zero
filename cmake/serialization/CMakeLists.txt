@@ -153,7 +153,6 @@ ryppl_export(
     BoostSmartPtr 
     BoostSpirit 
     BoostStaticAssert 
-    BoostTimer 
     BoostTypeTraits 
     BoostUtility 
     BoostUUID 

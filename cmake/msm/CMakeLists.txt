@@ -21,7 +21,6 @@ ryppl_export(
     BoostProto 
     BoostSmartPtr 
     BoostStatechart 
-    BoostTimer 
     BoostTuple 
     BoostTypeTraits 
     BoostTypeof 

@@ -24,7 +24,6 @@ ryppl_find_package(BoostFunctional)
 ryppl_find_package(BoostInteger)
 ryppl_find_package(BoostIterator)
 ryppl_find_package(BoostMath)
-ryppl_find_package(BoostMPI)
 ryppl_find_package(BoostMPL)
 ryppl_find_package(BoostMultiIndex)
 ryppl_find_package(BoostOptional)
@@ -66,7 +65,6 @@ add_definitions(
   ${BoostInteger_DEFINITIONS}
   ${BoostIterator_DEFINITIONS}
   ${BoostMath_DEFINITIONS}
-  ${BoostMPI_DEFINITIONS}
   ${BoostMPL_DEFINITIONS}
   ${BoostMultiIndex_DEFINITIONS}
   ${BoostOptional_DEFINITIONS}
@@ -109,7 +107,6 @@ include_directories(
   ${BoostInteger_INCLUDE_DIRS}
   ${BoostIterator_INCLUDE_DIRS}
   ${BoostMath_INCLUDE_DIRS}
-  ${BoostMPI_INCLUDE_DIRS}
   ${BoostMPL_INCLUDE_DIRS}
   ${BoostMultiIndex_INCLUDE_DIRS}
   ${BoostOptional_INCLUDE_DIRS}

@@ -20,7 +20,6 @@ ryppl_export(
     BoostMPL 
     BoostParameter 
     BoostStaticAssert 
-    BoostTimer 
     BoostTypeTraits 
     BoostUtility 
   INCLUDE_DIRECTORIES
