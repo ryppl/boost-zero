@@ -6,14 +6,14 @@ project(BoostInspect CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostAlgorithm)
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostConversion)
-ryppl_find_package(BoostFilesystem)
-ryppl_find_package(BoostRegex)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostTest)
-ryppl_find_package(BoostUtility)
+ryppl_find_and_use_package(BoostAlgorithm)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostConversion)
+ryppl_find_and_use_package(BoostFilesystem)
+ryppl_find_and_use_package(BoostRegex)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostUtility)
 
 add_definitions(
   ${BoostAlgorithm_DEFINITIONS}

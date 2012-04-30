@@ -6,9 +6,9 @@ project(BoostSystem CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostInteger)
-ryppl_find_package(BoostUtility)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostInteger)
+ryppl_find_and_use_package(BoostUtility)
 
 add_definitions(
   ${BoostConfig_DEFINITIONS}

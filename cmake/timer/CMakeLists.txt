@@ -6,14 +6,14 @@ project(BoostTimer CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostChrono)
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostCore)
-ryppl_find_package(BoostException)
-ryppl_find_package(BoostInteger)
-ryppl_find_package(BoostIO)
-ryppl_find_package(BoostSystem)
-ryppl_find_package(BoostUtility)
+ryppl_find_and_use_package(BoostChrono)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostException)
+ryppl_find_and_use_package(BoostInteger)
+ryppl_find_and_use_package(BoostIO)
+ryppl_find_and_use_package(BoostSystem)
+ryppl_find_and_use_package(BoostUtility)
 
 add_definitions(
   ${BoostChrono_DEFINITIONS}

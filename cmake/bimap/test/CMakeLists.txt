@@ -4,10 +4,10 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostBimap)
-ryppl_find_package(BoostSerialization)
-ryppl_find_package(BoostAssign)
-ryppl_find_package(BoostTest)
+ryppl_find_and_use_package(BoostBimap)
+ryppl_find_and_use_package(BoostSerialization)
+ryppl_find_and_use_package(BoostAssign)
+ryppl_find_and_use_package(BoostTest)
 
 add_definitions(
   ${BoostBimap_DEFINITIONS}

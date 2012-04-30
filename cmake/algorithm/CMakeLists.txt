@@ -18,7 +18,6 @@ ryppl_export(
     BoostMPL 
     BoostRange 
     BoostRegex 
-    BoostTimer 
     BoostTuple 
     BoostTypeTraits 
     BoostUtility 

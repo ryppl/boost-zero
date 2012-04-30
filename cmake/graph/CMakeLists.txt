@@ -6,132 +6,45 @@ project(BoostGraph CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostAlgorithm)
-ryppl_find_package(BoostAny)
-ryppl_find_package(BoostArray)
-ryppl_find_package(BoostBind)
-ryppl_find_package(BoostConceptCheck)
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostConversion)
-ryppl_find_package(BoostCore)
-ryppl_find_package(BoostDisjointSets)
-ryppl_find_package(BoostDynamicBitset)
-ryppl_find_package(BoostException)
-ryppl_find_package(BoostFilesystem)
-ryppl_find_package(BoostForeach)
-ryppl_find_package(BoostFunction)
-ryppl_find_package(BoostFunctional)
-ryppl_find_package(BoostInteger)
-ryppl_find_package(BoostIterator)
-ryppl_find_package(BoostMath)
-ryppl_find_package(BoostMPI)
-ryppl_find_package(BoostMPL)
-ryppl_find_package(BoostMultiIndex)
-ryppl_find_package(BoostOptional)
-ryppl_find_package(BoostParameter)
-ryppl_find_package(BoostPropertyMap)
-ryppl_find_package(BoostPropertyTree)
-ryppl_find_package(BoostRandom)
-ryppl_find_package(BoostRange)
-ryppl_find_package(BoostRegex)
-ryppl_find_package(BoostSerialization)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostSpirit)
-ryppl_find_package(BoostStaticAssert)
-ryppl_find_package(BoostTest)
-ryppl_find_package(BoostTuple)
-ryppl_find_package(BoostTypeTraits)
-ryppl_find_package(BoostTypeof)
-ryppl_find_package(BoostUnordered)
-ryppl_find_package(BoostUtility)
-ryppl_find_package(BoostVariant)
-ryppl_find_package(BoostXpressive)
-
-add_definitions(
-  ${BoostAlgorithm_DEFINITIONS}
-  ${BoostAny_DEFINITIONS}
-  ${BoostArray_DEFINITIONS}
-  ${BoostBind_DEFINITIONS}
-  ${BoostConceptCheck_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostDisjointSets_DEFINITIONS}
-  ${BoostDynamicBitset_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostFilesystem_DEFINITIONS}
-  ${BoostForeach_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostFunctional_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostMath_DEFINITIONS}
-  ${BoostMPI_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostMultiIndex_DEFINITIONS}
-  ${BoostOptional_DEFINITIONS}
-  ${BoostParameter_DEFINITIONS}
-  ${BoostPropertyMap_DEFINITIONS}
-  ${BoostPropertyTree_DEFINITIONS}
-  ${BoostRandom_DEFINITIONS}
-  ${BoostRange_DEFINITIONS}
-  ${BoostRegex_DEFINITIONS}
-  ${BoostSerialization_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostSpirit_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  ${BoostTuple_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostTypeof_DEFINITIONS}
-  ${BoostUnordered_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  ${BoostVariant_DEFINITIONS}
-  ${BoostXpressive_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAlgorithm_INCLUDE_DIRS}
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostArray_INCLUDE_DIRS}
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostConceptCheck_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostDisjointSets_INCLUDE_DIRS}
-  ${BoostDynamicBitset_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostFilesystem_INCLUDE_DIRS}
-  ${BoostForeach_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostFunctional_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostMath_INCLUDE_DIRS}
-  ${BoostMPI_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostMultiIndex_INCLUDE_DIRS}
-  ${BoostOptional_INCLUDE_DIRS}
-  ${BoostParameter_INCLUDE_DIRS}
-  ${BoostPropertyMap_INCLUDE_DIRS}
-  ${BoostPropertyTree_INCLUDE_DIRS}
-  ${BoostRandom_INCLUDE_DIRS}
-  ${BoostRange_INCLUDE_DIRS}
-  ${BoostRegex_INCLUDE_DIRS}
-  ${BoostSerialization_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostSpirit_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  ${BoostTuple_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostTypeof_INCLUDE_DIRS}
-  ${BoostUnordered_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  ${BoostVariant_INCLUDE_DIRS}
-  ${BoostXpressive_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostAlgorithm)
+ryppl_find_and_use_package(BoostAny)
+ryppl_find_and_use_package(BoostArray)
+ryppl_find_and_use_package(BoostBind)
+ryppl_find_and_use_package(BoostConceptCheck)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostConversion)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostDisjointSets)
+ryppl_find_and_use_package(BoostDynamicBitset)
+ryppl_find_and_use_package(BoostException)
+ryppl_find_and_use_package(BoostFilesystem)
+ryppl_find_and_use_package(BoostForeach)
+ryppl_find_and_use_package(BoostFunction)
+ryppl_find_and_use_package(BoostFunctional)
+ryppl_find_and_use_package(BoostInteger)
+ryppl_find_and_use_package(BoostIterator)
+ryppl_find_and_use_package(BoostMath)
+ryppl_find_and_use_package(BoostMPL)
+ryppl_find_and_use_package(BoostMultiIndex)
+ryppl_find_and_use_package(BoostOptional)
+ryppl_find_and_use_package(BoostParameter)
+ryppl_find_and_use_package(BoostPropertyMap)
+ryppl_find_and_use_package(BoostPropertyTree)
+ryppl_find_and_use_package(BoostRandom)
+ryppl_find_and_use_package(BoostRange)
+ryppl_find_and_use_package(BoostRegex)
+ryppl_find_and_use_package(BoostSerialization)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostSpirit)
+ryppl_find_and_use_package(BoostStaticAssert)
+ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostTuple)
+ryppl_find_and_use_package(BoostTypeTraits)
+ryppl_find_and_use_package(BoostTypeof)
+ryppl_find_and_use_package(BoostUnordered)
+ryppl_find_and_use_package(BoostUtility)
+ryppl_find_and_use_package(BoostVariant)
+ryppl_find_and_use_package(BoostXpressive)
 
 add_library(boost_graph
   src/read_graphviz_new.cpp
@@ -147,7 +60,6 @@ ryppl_export(
     boost_graph
   DEPENDS
     BoostPropertyMap 
-    BoostSerialization 
   INCLUDE_DIRECTORIES
     include
   )

@@ -6,7 +6,7 @@ project(BoostFilesystem CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostSystem)
+ryppl_find_and_use_package(BoostSystem)
 
 add_definitions(
   ${BoostSystem_DEFINITIONS}

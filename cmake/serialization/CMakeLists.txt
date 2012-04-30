@@ -6,72 +6,26 @@ project(BoostSerialization CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostArray)
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostCore)
-ryppl_find_package(BoostException)
-ryppl_find_package(BoostFunction)
-ryppl_find_package(BoostFunctional)
-ryppl_find_package(BoostInteger)
-ryppl_find_package(BoostIO)
-ryppl_find_package(BoostIterator)
-ryppl_find_package(BoostMPL)
-ryppl_find_package(BoostOptional)
-ryppl_find_package(BoostPreprocessor)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostSpirit)
-ryppl_find_package(BoostStaticAssert)
-ryppl_find_package(BoostTimer)
-ryppl_find_package(BoostTypeTraits)
-ryppl_find_package(BoostUtility)
-ryppl_find_package(BoostUUID)
-ryppl_find_package(BoostVariant)
-
-add_definitions(
-  ${BoostArray_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostFunctional_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIO_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostOptional_DEFINITIONS}
-  ${BoostPreprocessor_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostSpirit_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostTimer_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  ${BoostUUID_DEFINITIONS}
-  ${BoostVariant_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostArray_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostFunctional_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIO_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostOptional_INCLUDE_DIRS}
-  ${BoostPreprocessor_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostSpirit_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostTimer_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  ${BoostUUID_INCLUDE_DIRS}
-  ${BoostVariant_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostArray)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostException)
+ryppl_find_and_use_package(BoostFunction)
+ryppl_find_and_use_package(BoostFunctional)
+ryppl_find_and_use_package(BoostInteger)
+ryppl_find_and_use_package(BoostIO)
+ryppl_find_and_use_package(BoostIterator)
+ryppl_find_and_use_package(BoostMPL)
+ryppl_find_and_use_package(BoostOptional)
+ryppl_find_and_use_package(BoostPreprocessor)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostSpirit)
+ryppl_find_and_use_package(BoostStaticAssert)
+ryppl_find_and_use_package(BoostTimer)
+ryppl_find_and_use_package(BoostTypeTraits)
+ryppl_find_and_use_package(BoostUtility)
+ryppl_find_and_use_package(BoostUUID)
+ryppl_find_and_use_package(BoostVariant)
 
 if(MSVC)
   add_definitions(
@@ -153,7 +107,6 @@ ryppl_export(
     BoostSmartPtr 
     BoostSpirit 
     BoostStaticAssert 
-    BoostTimer 
     BoostTypeTraits 
     BoostUtility 
     BoostUUID 

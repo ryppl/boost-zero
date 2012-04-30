@@ -4,18 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostAssign)
-ryppl_find_package(BoostTest)
-
-add_definitions(
-  ${BoostAssign_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAssign_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostAssign)
+ryppl_find_and_use_package(BoostTest)
 
 ryppl_test_suite(
   RUN

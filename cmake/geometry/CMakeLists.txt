@@ -32,7 +32,6 @@ ryppl_export(
     BoostSmartPtr 
     BoostStaticAssert 
     BoostTest 
-    BoostTimer 
     BoostTokenizer 
     BoostTuple 
     BoostTypeTraits 

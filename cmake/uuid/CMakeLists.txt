@@ -14,7 +14,6 @@ ryppl_export(
     BoostIO 
     BoostIterator 
     BoostRandom 
-    BoostSerialization 
     BoostSmartPtr 
     BoostStaticAssert 
     BoostTypeTraits 
