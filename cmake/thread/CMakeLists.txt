@@ -6,67 +6,11 @@ project(BoostThread CXX)
 
 include(Ryppl)
 
-ryppl_find_and_use_package(BoostBind)
-ryppl_find_and_use_package(BoostChrono)
 ryppl_find_and_use_package(BoostConfig)
-ryppl_find_and_use_package(BoostCore)
-ryppl_find_and_use_package(BoostDateTime)
-ryppl_find_and_use_package(BoostException)
-ryppl_find_and_use_package(BoostFunction)
-ryppl_find_and_use_package(BoostFunctional)
-ryppl_find_and_use_package(BoostInteger)
-ryppl_find_and_use_package(BoostIO)
-ryppl_find_and_use_package(BoostMove)
-ryppl_find_and_use_package(BoostMPL)
-ryppl_find_and_use_package(BoostOptional)
-ryppl_find_and_use_package(BoostSmartPtr)
-ryppl_find_and_use_package(BoostStaticAssert)
-ryppl_find_and_use_package(BoostSystem)
-ryppl_find_and_use_package(BoostTypeTraits)
-ryppl_find_and_use_package(BoostUtility)
-ryppl_find_and_use_package(Threads)
-
-add_definitions(
-  ${BoostBind_DEFINITIONS}
-  ${BoostChrono_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostDateTime_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostFunctional_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIO_DEFINITIONS}
-  ${BoostMove_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostOptional_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostSystem_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
+ryppl_find_package(Threads)
 
 include_directories(
   include
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostChrono_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostDateTime_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostFunctional_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIO_INCLUDE_DIRS}
-  ${BoostMove_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostOptional_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostSystem_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
   )
 
 if(CMAKE_USE_WIN32_THREADS_INIT)

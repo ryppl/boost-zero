@@ -6,54 +6,10 @@ project(BoostDateTime)
 
 include(Ryppl)
 
-ryppl_find_and_use_package(BoostAlgorithm)
 ryppl_find_and_use_package(BoostConfig)
-ryppl_find_and_use_package(BoostConversion)
-ryppl_find_and_use_package(BoostCore)
-ryppl_find_and_use_package(BoostException)
-ryppl_find_and_use_package(BoostInteger)
-ryppl_find_and_use_package(BoostIO)
-ryppl_find_and_use_package(BoostMPL)
-ryppl_find_and_use_package(BoostRange)
-ryppl_find_and_use_package(BoostSerialization)
-ryppl_find_and_use_package(BoostSmartPtr)
-ryppl_find_and_use_package(BoostTokenizer)
-ryppl_find_and_use_package(BoostTypeTraits)
-ryppl_find_and_use_package(BoostUtility)
 
 add_definitions(
-  ${BoostAlgorithm_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIO_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostRange_DEFINITIONS}
-  ${BoostSerialization_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostTokenizer_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
   -DDATE_TIME_INLINE
-  )
-
-include_directories(
-  ${BoostAlgorithm_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIO_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostRange_INCLUDE_DIRS}
-  ${BoostSerialization_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostTokenizer_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
   )
 
 add_library(boost_date_time

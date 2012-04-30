@@ -6,88 +6,10 @@ project(BoostMath CXX)
 
 include(Ryppl)
 include(RypplPrecompileHeader)
-include(Ryppl)
 
-ryppl_find_and_use_package(BoostAlgorithm)
-ryppl_find_and_use_package(BoostArray)
-ryppl_find_and_use_package(BoostBind)
-ryppl_find_and_use_package(BoostConceptCheck)
 ryppl_find_and_use_package(BoostConfig)
-ryppl_find_and_use_package(BoostConversion)
-ryppl_find_and_use_package(BoostCore)
-ryppl_find_and_use_package(BoostException)
-ryppl_find_and_use_package(BoostFormat)
-ryppl_find_and_use_package(BoostFunction)
-ryppl_find_and_use_package(BoostFusion)
-ryppl_find_and_use_package(BoostInteger)
-ryppl_find_and_use_package(BoostMPL)
-ryppl_find_and_use_package(BoostNumeric)
-ryppl_find_and_use_package(BoostRandom)
-ryppl_find_and_use_package(BoostRegex)
-ryppl_find_and_use_package(BoostSmartPtr)
-ryppl_find_and_use_package(BoostSpirit)
-ryppl_find_and_use_package(BoostStaticAssert)
-ryppl_find_and_use_package(BoostTest)
-ryppl_find_and_use_package(BoostTimer)
-ryppl_find_and_use_package(BoostTR1)
-ryppl_find_and_use_package(BoostTuple)
-ryppl_find_and_use_package(BoostTypeTraits)
-ryppl_find_and_use_package(BoostUtility)
-
-add_definitions(
-  ${BoostAlgorithm_DEFINITIONS}
-  ${BoostArray_DEFINITIONS}
-  ${BoostBind_DEFINITIONS}
-  ${BoostConceptCheck_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostFormat_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostFusion_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostNumeric_DEFINITIONS}
-  ${BoostRandom_DEFINITIONS}
-  ${BoostRegex_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostSpirit_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  ${BoostTimer_DEFINITIONS}
-  ${BoostTR1_DEFINITIONS}
-  ${BoostTuple_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
 
 include_directories(
-  ${BoostAlgorithm_INCLUDE_DIRS}
-  ${BoostArray_INCLUDE_DIRS}
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostConceptCheck_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostFormat_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostFusion_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostNumeric_INCLUDE_DIRS}
-  ${BoostRandom_INCLUDE_DIRS}
-  ${BoostRegex_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostSpirit_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  ${BoostTimer_INCLUDE_DIRS}
-  ${BoostTR1_INCLUDE_DIRS}
-  ${BoostTuple_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
   include
   src/tr1
   )

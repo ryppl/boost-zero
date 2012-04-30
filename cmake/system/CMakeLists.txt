@@ -7,20 +7,6 @@ project(BoostSystem CXX)
 include(Ryppl)
 
 ryppl_find_and_use_package(BoostConfig)
-ryppl_find_and_use_package(BoostInteger)
-ryppl_find_and_use_package(BoostUtility)
-
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  )
 
 add_library(boost_system
   src/error_code.cpp
