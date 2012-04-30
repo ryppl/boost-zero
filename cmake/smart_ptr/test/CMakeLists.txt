@@ -1,60 +1,75 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-boost_add_multiple_tests(
+include(Ryppl)
+include(RypplTestSuite)
+
+ryppl_find_package(BoostConfig)
+
+add_definitions(
+  ${BoostConfig_DEFINITIONS}
+  )
+
+include_directories(
+  ${BoostConfig_INCLUDE_DIRS}
+  )
+
+
+ryppl_test_suite(
   COMPILE
-    pointer_to_other_test
-    make_shared_fp_test
+    pointer_to_other_test.cpp
+    make_shared_fp_test.cpp
   COMPILE_FAIL
-    shared_ptr_assign_fail
-    shared_ptr_delete_fail
-    shared_ptr_compare_fail
-    shared_ptr_pv_fail
-    scoped_ptr_eq_fail
-    scoped_array_eq_fail
-    auto_ptr_lv_fail
+    shared_ptr_assign_fail.cpp
+    shared_ptr_delete_fail.cpp
+    shared_ptr_compare_fail.cpp
+    shared_ptr_pv_fail.cpp
+    scoped_ptr_eq_fail.cpp
+    scoped_array_eq_fail.cpp
+    auto_ptr_lv_fail.cpp
   RUN
-    smart_ptr_test
+    smart_ptr_test.cpp
     shared_ptr_basic_test.cpp
     shared_ptr_test.cpp
-    weak_ptr_test
-    weak_ptr_move_test
+    weak_ptr_test.cpp
+    weak_ptr_move_test.cpp
     shared_from_this_test.cpp
-    get_deleter_test
-    intrusive_ptr_test
-    intrusive_ptr_move_test
-    atomic_count_test
-    lw_mutex_test
-    shared_ptr_alloc2_test
-    pointer_cast_test
-    auto_ptr_rv_test
-    shared_ptr_alias_test
-    shared_ptr_rv_test
-    shared_ptr_move_test
-    sp_unary_addr_test
-    esft_regtest
-    yield_k_test
-    spinlock_test
-    spinlock_try_test
-    spinlock_pool_test
-    make_shared_test
-    make_shared_perfect_forwarding_test
-    sp_convertible_test
-    wp_convertible_test
-    ip_convertible_test
-    allocate_shared_test
-    sp_atomic_test
-    esft_void_test
-    esft_second_ptr_test
-    make_shared_esft_test
-    allocate_shared_esft_test
-    sp_recursive_assign_test
-    sp_recursive_assign2_test
-    sp_recursive_assign_rv_test
-    sp_recursive_assign2_rv_test
-    esft_constructor_test
-    enable_shared_from_raw_test
-    atomic_count_test2
-    sp_typeinfo_test
-    sp_hash_test
+    get_deleter_test.cpp
+    intrusive_ptr_test.cpp
+    intrusive_ptr_move_test.cpp
+    atomic_count_test.cpp
+    lw_mutex_test.cpp
+    shared_ptr_alloc2_test.cpp
+    pointer_cast_test.cpp
+    auto_ptr_rv_test.cpp
+    shared_ptr_alias_test.cpp
+    shared_ptr_rv_test.cpp
+    shared_ptr_move_test.cpp
+    sp_unary_addr_test.cpp
+    esft_regtest.cpp
+    yield_k_test.cpp
+    spinlock_test.cpp
+    spinlock_try_test.cpp
+    spinlock_pool_test.cpp
+    make_shared_test.cpp
+    make_shared_perfect_forwarding_test.cpp
+    sp_convertible_test.cpp
+    wp_convertible_test.cpp
+    ip_convertible_test.cpp
+    allocate_shared_test.cpp
+    sp_atomic_test.cpp
+    esft_void_test.cpp
+    esft_second_ptr_test.cpp
+    make_shared_esft_test.cpp
+    allocate_shared_esft_test.cpp
+    sp_recursive_assign_test.cpp
+    sp_recursive_assign2_test.cpp
+    sp_recursive_assign_rv_test.cpp
+    sp_recursive_assign2_rv_test.cpp
+    esft_constructor_test.cpp
+    enable_shared_from_raw_test.cpp
+    atomic_count_test2.cpp
+    sp_typeinfo_test.cpp
+    sp_hash_test.cpp
+  NO_SINGLE_TARGET
   )
