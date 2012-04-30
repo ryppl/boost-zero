@@ -136,24 +136,28 @@ boost_python_test_add( crossmod_opaque
 # Whenever the cause for the failure of the polymorphism test is found
 # and fixed, this should be retested.
 
-boost_add_test(pointer_vector PYTHON
-  LINK_BOOST_LIBRARIES
-    shared python
+boost_add_test_suite(
+  PYTHON
+    pointer_vector.cpp
+  LINK_LIBRARIES
+    python-shared
   )
 
-boost_add_test(map_indexing_suite PYTHON
-  SOURCES
-    map_indexing_suite.cpp
+boost_add_test_suite(
+  PYTHON
+    map_indexing_suite
+  ADDITIONAL_SOURCES
     a_map_indexing_suite.cpp
     int_map_indexing_suite.cpp
-  LINK_BOOST_LIBRARIES
-    shared python
+  LINK_LIBRARIES
+    python-shared
   )
 
-boost_add_test(import_ RUN
+boost_add_test_suite(
+  RUN
     import_.cpp
-  LINK_BOOST_LIBRARIES
-    shared python
+  LINK_LIBRARIES
+    python-shared
   ARGS
     ${CMAKE_CURRENT_SOURCE_DIR}/import_.py
   )
@@ -165,18 +169,18 @@ boost_add_test(import_ RUN
 # }
 
 if(WIN32)
-  boost_add_test(calling_conventions    PYTHON)
-  boost_add_test(calling_conventions_mf PYTHON)
+  boost_add_test_suite(PYTHON calling_conventions.cpp)
+  boost_add_test_suite(PYTHON calling_conventions_mf.cpp)
 endif()
 
-boost_add_multiple_tests(
+boost_add_test_suite(
   COMPILE
-    select_arg_to_python_test
+    select_arg_to_python_test.cpp
   COMPILE_FAIL
-    raw_pyobject_fail1
-    raw_pyobject_fail2
-    as_to_python_function
-    object_fail1
+    raw_pyobject_fail1.cpp
+    raw_pyobject_fail2.cpp
+    as_to_python_function.cpp
+    object_fail1.cpp
   LINK
     string_literal
   MODULE
@@ -186,14 +190,14 @@ boost_add_multiple_tests(
     copy_ctor_mutates_rhs
     select_holder
   RUN
-    destroy_test
-    pointer_type_id_test
-    bases
-    if_else
-    pointee
-    result
-    upcast
-    select_from_python_test
+    destroy_test.cpp
+    pointer_type_id_test.cpp
+    bases.cpp
+    if_else.cpp
+    pointee.cpp
+    result.cpp
+    upcast.cpp
+    select_from_python_test.cpp
   PYTHON
     injected
     properties
@@ -246,8 +250,9 @@ boost_add_multiple_tests(
     docstring
     pytype_function
     vector_indexing_suite
-  LINK_BOOST_LIBRARIES
-    shared python
+  LINK_LIBRARIES
+    python-shared
+  NO_SINGLE_TARGET
   )
 
 boost_python_test_add(polymorphism2_auto_ptr

@@ -88,7 +88,7 @@ ryppl_test_suite(
   COMPILE
     typedefs_pass.cpp
     ratio_ratio/ratio_pass.cpp
-  COMPILE-FAIL
+  COMPILE_FAIL
     ratio_ratio/ratio1_fail.cpp
     ratio_ratio/ratio2_fail.cpp
     ratio_ratio/ratio3_fail.cpp
@@ -98,7 +98,7 @@ ryppl_test_suite(
   
 # ratio_io
 ryppl_test_suite(
-  COMPILE-FAIL
+  COMPILE_FAIL
     ratio_io/ratio_io_fail.cpp
   RUN
     ratio_io/ratio_io_pass.cpp
@@ -112,7 +112,7 @@ ryppl_test_suite(
     ratio_arithmetic/ratio_subtract_pass.cpp
     ratio_arithmetic/ratio_multiply_pass.cpp
     ratio_arithmetic/ratio_divide_pass.cpp
-  COMPILE-FAIL
+  COMPILE_FAIL
     ratio_arithmetic/ratio_add_fail.cpp 
     ratio_arithmetic/ratio_add_2_fail.cpp 
     ratio_arithmetic/ratio_add_3_fail.cpp 

@@ -25,3 +25,6 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
+  
+ryppl_add_test_subdirectory(test)
+
