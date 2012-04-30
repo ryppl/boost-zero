@@ -6,63 +6,23 @@ project(Quickbook CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostAlgorithm)
-ryppl_find_package(BoostBind)
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostConversion)
-ryppl_find_package(BoostCore)
-ryppl_find_package(BoostFilesystem)
-ryppl_find_package(BoostForeach)
-ryppl_find_package(BoostIOStreams)
-ryppl_find_package(BoostIterator)
-ryppl_find_package(BoostPreprocessor)
-ryppl_find_package(BoostProgramOptions)
-ryppl_find_package(BoostRange)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostSpirit)
-ryppl_find_package(BoostTuple)
-ryppl_find_package(BoostUnordered)
-ryppl_find_package(BoostUtility)
-
-add_definitions(
-  ${BoostAlgorithm_DEFINITIONS}
-  ${BoostBind_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostFilesystem_DEFINITIONS}
-  ${BoostForeach_DEFINITIONS}
-  ${BoostIOStreams_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostPreprocessor_DEFINITIONS}
-  ${BoostProgramOptions_DEFINITIONS}
-  ${BoostRange_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostSpirit_DEFINITIONS}
-  ${BoostTuple_DEFINITIONS}
-  ${BoostUnordered_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAlgorithm_INCLUDE_DIRS}
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostFilesystem_INCLUDE_DIRS}
-  ${BoostForeach_INCLUDE_DIRS}
-  ${BoostIOStreams_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostPreprocessor_INCLUDE_DIRS}
-  ${BoostProgramOptions_INCLUDE_DIRS}
-  ${BoostRange_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostSpirit_INCLUDE_DIRS}
-  ${BoostTuple_INCLUDE_DIRS}
-  ${BoostUnordered_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostAlgorithm)
+ryppl_find_and_use_package(BoostBind)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostConversion)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostFilesystem)
+ryppl_find_and_use_package(BoostForeach)
+ryppl_find_and_use_package(BoostIOStreams)
+ryppl_find_and_use_package(BoostIterator)
+ryppl_find_and_use_package(BoostPreprocessor)
+ryppl_find_and_use_package(BoostProgramOptions)
+ryppl_find_and_use_package(BoostRange)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostSpirit)
+ryppl_find_and_use_package(BoostTuple)
+ryppl_find_and_use_package(BoostUnordered)
+ryppl_find_and_use_package(BoostUtility)
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS

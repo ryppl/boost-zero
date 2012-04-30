@@ -6,9 +6,9 @@ project(BoostIOStreams CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BZip2)
-ryppl_find_package(ZLIB)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BZip2)
+ryppl_find_and_use_package(ZLIB)
 
 add_definitions(
   ${BoostConfig_DEFINITIONS}

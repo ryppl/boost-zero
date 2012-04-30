@@ -6,68 +6,27 @@ project(BoostMPI CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostConversion)
-ryppl_find_package(BoostCore)
-ryppl_find_package(BoostException)
-ryppl_find_package(BoostFunction)
-ryppl_find_package(BoostGraph)
-ryppl_find_package(BoostInteger)
-ryppl_find_package(BoostIterator)
-ryppl_find_package(BoostMPL)
-ryppl_find_package(BoostOptional)
-ryppl_find_package(BoostPropertyMap)
-ryppl_find_package(BoostPython)
-ryppl_find_package(BoostSerialization)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostStaticAssert)
-ryppl_find_package(BoostTypeTraits)
-ryppl_find_package(BoostUtility)
-ryppl_find_package(MPI)
-ryppl_find_package(PythonLibs)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostConversion)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostException)
+ryppl_find_and_use_package(BoostFunction)
+ryppl_find_and_use_package(BoostGraph)
+ryppl_find_and_use_package(BoostInteger)
+ryppl_find_and_use_package(BoostIterator)
+ryppl_find_and_use_package(BoostMPL)
+ryppl_find_and_use_package(BoostOptional)
+ryppl_find_and_use_package(BoostPropertyMap)
+ryppl_find_and_use_package(BoostPython)
+ryppl_find_and_use_package(BoostSerialization)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostStaticAssert)
+ryppl_find_and_use_package(BoostTypeTraits)
+ryppl_find_and_use_package(BoostUtility)
+ryppl_find_and_use_package(MPI)
+ryppl_find_and_use_package(PythonLibs)
 
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostGraph_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostOptional_DEFINITIONS}
-  ${BoostPropertyMap_DEFINITIONS}
-  ${BoostPython_DEFINITIONS}
-  ${BoostSerialization_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostGraph_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostOptional_INCLUDE_DIRS}
-  ${BoostPropertyMap_INCLUDE_DIRS}
-  ${BoostPython_INCLUDE_DIRS}
-  ${BoostSerialization_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  ${MPI_INCLUDE_PATH}
-  ${PYTHON_INCLUDE_DIRS}
-  include
-  )
+include_directories(include)
 
 if(MSVC)
   add_definitions(

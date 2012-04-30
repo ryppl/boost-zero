@@ -6,27 +6,13 @@ project(BoostGraphParallel CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostConversion)
-ryppl_find_package(BoostGraph)
-ryppl_find_package(BoostMPI)
-ryppl_find_package(BoostUtility)
-ryppl_find_package(MPI)
+ryppl_find_and_use_package(BoostConversion)
+ryppl_find_and_use_package(BoostGraph)
+ryppl_find_and_use_package(BoostMPI)
+ryppl_find_and_use_package(BoostUtility)
+ryppl_find_and_use_package(MPI)
 
-add_definitions(
-  ${BoostConversion_DEFINITIONS}
-  ${BoostGraph_DEFINITIONS}
-  ${BoostMPI_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostGraph_INCLUDE_DIRS}
-  ${BoostMPI_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  ${MPI_INCLUDE_PATH}
-  include
-  )
+include_directories(include)
 
 if(MSVC)
   add_definitions(

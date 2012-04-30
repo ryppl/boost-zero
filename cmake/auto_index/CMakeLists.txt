@@ -6,17 +6,17 @@ project(BoostAutoIndex CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostAlgorithm)
-ryppl_find_package(BoostArray)
-ryppl_find_package(BoostCore)
-ryppl_find_package(BoostException)
-ryppl_find_package(BoostFilesystem)
-ryppl_find_package(BoostFormat)
-ryppl_find_package(BoostProgramOptions)
-ryppl_find_package(BoostRange)
-ryppl_find_package(BoostRegex)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostUtility)
+ryppl_find_and_use_package(BoostAlgorithm)
+ryppl_find_and_use_package(BoostArray)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostException)
+ryppl_find_and_use_package(BoostFilesystem)
+ryppl_find_and_use_package(BoostFormat)
+ryppl_find_and_use_package(BoostProgramOptions)
+ryppl_find_and_use_package(BoostRange)
+ryppl_find_and_use_package(BoostRegex)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostUtility)
 
 add_definitions(
   ${BoostAlgorithm_DEFINITIONS}

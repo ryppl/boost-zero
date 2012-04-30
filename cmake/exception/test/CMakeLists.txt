@@ -2,7 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(Ryppl)
-ryppl_find_package(Boost COMPONENTS test utility NO_MODULE)
+ryppl_find_and_use_package(Boost COMPONENTS test utility NO_MODULE)
 include(${Boost_USE_FILE})
 include(RypplTestSuite)
 

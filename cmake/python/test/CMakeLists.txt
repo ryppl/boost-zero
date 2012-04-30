@@ -4,7 +4,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 include(Ryppl)
-ryppl_find_package(PythonInterp)
+ryppl_find_and_use_package(PythonInterp)
 
 function( boost_python_test_library_add target target_module )
   add_library(${target} MODULE EXCLUDE_FROM_ALL ${ARGN})

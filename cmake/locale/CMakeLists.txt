@@ -6,17 +6,17 @@ project(BoostLocale CXX)
 
 include(Ryppl)
 
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostFunction)
-ryppl_find_package(BoostInteger)
-ryppl_find_package(BoostIterator)
-ryppl_find_package(BoostSmartPtr)
-ryppl_find_package(BoostThread)
-ryppl_find_package(BoostTypeTraits)
-ryppl_find_package(BoostUnordered)
-ryppl_find_package(BoostUtility)
-ryppl_find_package(Iconv)
-ryppl_find_package(ICU)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostFunction)
+ryppl_find_and_use_package(BoostInteger)
+ryppl_find_and_use_package(BoostIterator)
+ryppl_find_and_use_package(BoostSmartPtr)
+ryppl_find_and_use_package(BoostThread)
+ryppl_find_and_use_package(BoostTypeTraits)
+ryppl_find_and_use_package(BoostUnordered)
+ryppl_find_and_use_package(BoostUtility)
+ryppl_find_and_use_package(Iconv)
+ryppl_find_and_use_package(ICU)
 
 add_definitions(
   ${BoostConfig_DEFINITIONS}
