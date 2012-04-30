@@ -75,7 +75,6 @@ ryppl_export(
     BoostIO 
     BoostMPL 
     BoostRange 
-    BoostSerialization 
     BoostSmartPtr 
     BoostTokenizer 
     BoostTypeTraits 

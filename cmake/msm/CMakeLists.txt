@@ -19,7 +19,6 @@ ryppl_export(
     BoostPhoenix 
     BoostPreprocessor 
     BoostProto 
-    BoostSerialization 
     BoostSmartPtr 
     BoostStatechart 
     BoostTimer 

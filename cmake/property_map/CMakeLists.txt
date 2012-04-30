@@ -21,7 +21,6 @@ ryppl_export(
     BoostMPL 
     BoostMultiIndex 
     BoostOptional 
-    BoostSerialization 
     BoostSmartPtr 
     BoostTypeTraits 
     BoostUtility 

@@ -147,7 +147,6 @@ ryppl_export(
     boost_graph
   DEPENDS
     BoostPropertyMap 
-    BoostSerialization 
   INCLUDE_DIRECTORIES
     include
   )
