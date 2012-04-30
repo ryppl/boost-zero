@@ -19,53 +19,15 @@ ryppl_find_and_use_package(BoostMPL)
 ryppl_find_and_use_package(BoostNumeric)
 ryppl_find_and_use_package(BoostPreprocessor)
 ryppl_find_and_use_package(BoostPropertyMap)
+ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostSmartPtr)
 ryppl_find_and_use_package(BoostStaticAssert)
 ryppl_find_and_use_package(BoostTuple)
 ryppl_find_and_use_package(BoostTypeTraits)
 ryppl_find_and_use_package(BoostUtility)
-ryppl_find_and_use_package(PythonLibs)
+ryppl_find_package(PythonLibs)
 
-add_definitions(
-  ${BoostBind_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostForeach_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostGraph_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostNumeric_DEFINITIONS}
-  ${BoostPreprocessor_DEFINITIONS}
-  ${BoostPropertyMap_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostTuple_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostForeach_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostGraph_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostNumeric_INCLUDE_DIRS}
-  ${BoostPreprocessor_INCLUDE_DIRS}
-  ${BoostPropertyMap_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostTuple_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
+include_directories(  
   ${PYTHON_INCLUDE_DIRS}
   include
   )

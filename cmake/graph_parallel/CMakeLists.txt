@@ -10,9 +10,12 @@ ryppl_find_and_use_package(BoostConversion)
 ryppl_find_and_use_package(BoostGraph)
 ryppl_find_and_use_package(BoostMPI)
 ryppl_find_and_use_package(BoostUtility)
-ryppl_find_and_use_package(MPI)
+ryppl_find_package(MPI)
 
-include_directories(include)
+include_directories(
+  ${MPI_INCLUDE_PATH}
+  include
+  )
 
 if(MSVC)
   add_definitions(

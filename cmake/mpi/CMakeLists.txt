@@ -23,10 +23,14 @@ ryppl_find_and_use_package(BoostSmartPtr)
 ryppl_find_and_use_package(BoostStaticAssert)
 ryppl_find_and_use_package(BoostTypeTraits)
 ryppl_find_and_use_package(BoostUtility)
-ryppl_find_and_use_package(MPI)
-ryppl_find_and_use_package(PythonLibs)
+ryppl_find_package(MPI)
+ryppl_find_package(PythonLibs)
 
-include_directories(include)
+include_directories(
+  ${MPI_INCLUDE_PATH}
+  ${PYTHON_INCLUDE_DIRS}
+  include
+  )
 
 if(MSVC)
   add_definitions(
