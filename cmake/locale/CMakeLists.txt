@@ -15,33 +15,11 @@ ryppl_find_and_use_package(BoostThread)
 ryppl_find_and_use_package(BoostTypeTraits)
 ryppl_find_and_use_package(BoostUnordered)
 ryppl_find_and_use_package(BoostUtility)
-ryppl_find_and_use_package(Iconv)
-ryppl_find_and_use_package(ICU)
 
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostThread_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUnordered_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
+ryppl_find_package(Iconv)
+ryppl_find_package(ICU)
 
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostThread_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUnordered_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  include
-  )
+include_directories(include)
 
 if(ICONV_FOUND)
   option(BOOST_LOCALE_NO_ICONV "Disable iconv library" OFF)
@@ -218,6 +196,13 @@ add_library(boost_locale
 
 target_link_libraries(boost_locale
   ${link_libraries}
+  )
+
+ryppl_export(
+  TARGETS
+    boost_locale
+  INCLUDE_DIRECTORIES
+    include
   )
 
 ryppl_add_test_subdirectory(test)

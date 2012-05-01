@@ -4,18 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostTest)
-
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostRatio)
+ryppl_find_and_use_package(BoostTest)
 
 ##<os>LINUX:<threading>multi
 ## uncomment the line above if you build outside the Boost release
@@ -32,8 +22,12 @@ add_definitions(
   -DBOOST_ENABLE_WARNINGS 
   -DBOOST_RATIO_USES_MPL_ASSERT 
   -DBOOST_MPL_NEXT_PRIOR_EXT
-  /W4 # <warnings>all
   )
+
+# <warnings>all
+if(MSVC)
+  add_definitions(/W4)
+endif()
   
 # #<toolset>sun:<define>BOOST_COMMON_TYPE_DONT_USE_TYPEOF
 # #<toolset>sun:<define>BOOST_TYPEOF_EMULATION

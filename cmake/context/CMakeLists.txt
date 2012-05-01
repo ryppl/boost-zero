@@ -127,5 +127,12 @@ add_library(boost_context
   src/fcontext.cpp
   )
 
+ryppl_export(
+  TARGETS
+    boost_context
+  INCLUDE_DIRECTORIES
+    include
+  )
+
 # add_subdirectory(test)
 

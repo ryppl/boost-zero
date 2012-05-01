@@ -58,5 +58,12 @@ add_library(boost_signals
   src/signal_base.cpp
   src/slot.cpp
   )
-  
+
+ryppl_export(
+  TARGETS
+    boost_signals
+  INCLUDE_DIRECTORIES
+    include
+  )
+
 ryppl_add_test_subdirectory(test)

@@ -4,18 +4,9 @@
 include(Ryppl)
 include(RypplTestSuite)
 
+ryppl_find_and_use_package(BoostAccumulators)
 ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostTest)
-
-add_definitions(
-  ${BoostSerialization_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostSerialization_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
 
 #if(MSVC)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)

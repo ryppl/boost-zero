@@ -12,7 +12,6 @@ ryppl_export(
     BoostCore 
     BoostException 
     BoostTypeTraits 
-    BoostThread 
     BoostUtility 
   INCLUDE_DIRECTORIES
     include

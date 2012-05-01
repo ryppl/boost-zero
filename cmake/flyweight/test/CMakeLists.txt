@@ -5,18 +5,10 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostContainer)
+ryppl_find_and_use_package(BoostInterprocess)
+ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostTest)
-ryppl_find_and_use_package(Threads)
-
-add_definitions(
-  ${BoostContainer_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostContainer_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
+ryppl_find_package(Threads)
 
 # assoc_cont_factory
 ryppl_test_suite(

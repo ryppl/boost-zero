@@ -66,6 +66,8 @@ add_library(boost_unit_test_framework
   )
 
 ryppl_export(
+  DEPENDS
+    BoostTimer
   TARGETS
     boost_prg_exec_monitor
     boost_test_exec_monitor

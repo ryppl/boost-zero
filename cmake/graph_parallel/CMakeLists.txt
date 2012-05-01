@@ -6,7 +6,6 @@ project(BoostGraphParallel CXX)
 
 include(Ryppl)
 
-ryppl_find_and_use_package(BoostConversion)
 ryppl_find_and_use_package(BoostGraph)
 ryppl_find_and_use_package(BoostMPI)
 ryppl_find_and_use_package(BoostUtility)
@@ -36,4 +35,11 @@ target_link_libraries(boost_graph_parallel
   # <link>shared:<define>BOOST_GRAPH_DYN_LINK=1
   # <toolset>intel-vc71-win-9.1:<optimization>off
   # <toolset>msvc-7.1:<cxxflags>-GR-
+  )
+
+ryppl_export(
+  TARGETS
+    boost_graph_parallel
+  INCLUDE_DIRECTORIES
+    include
   )

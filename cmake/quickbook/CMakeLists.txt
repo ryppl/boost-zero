@@ -6,23 +6,9 @@ project(Quickbook CXX)
 
 include(Ryppl)
 
-ryppl_find_and_use_package(BoostAlgorithm)
-ryppl_find_and_use_package(BoostBind)
-ryppl_find_and_use_package(BoostConfig)
-ryppl_find_and_use_package(BoostConversion)
-ryppl_find_and_use_package(BoostCore)
 ryppl_find_and_use_package(BoostFilesystem)
-ryppl_find_and_use_package(BoostForeach)
-ryppl_find_and_use_package(BoostIOStreams)
-ryppl_find_and_use_package(BoostIterator)
-ryppl_find_and_use_package(BoostPreprocessor)
 ryppl_find_and_use_package(BoostProgramOptions)
-ryppl_find_and_use_package(BoostRange)
-ryppl_find_and_use_package(BoostSmartPtr)
 ryppl_find_and_use_package(BoostSpirit)
-ryppl_find_and_use_package(BoostTuple)
-ryppl_find_and_use_package(BoostUnordered)
-ryppl_find_and_use_package(BoostUtility)
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS

@@ -4,22 +4,14 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostAny)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostAny_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  -D_SCL_SECURE_NO_WARNINGS=1
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
+if(MSVC)
+  add_definitions(-D_SCL_SECURE_NO_WARNINGS=1)
+endif()
 
 ryppl_test_suite(
   RUN

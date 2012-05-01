@@ -6,16 +6,7 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostAssign)
 ryppl_find_and_use_package(BoostSignals2)
-
-add_definitions(
-  ${BoostAssign_DEFINITIONS}
-  ${BoostSignals2_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAssign_INCLUDE_DIRS}
-  ${BoostSignals2_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostThread)
 
 ryppl_test_suite(
   RUN

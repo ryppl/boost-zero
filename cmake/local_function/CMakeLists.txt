@@ -4,3 +4,9 @@
 cmake_minimum_required(VERSION 2.8.8)
 project(BoostLocalFunction CXX)
 
+include(Ryppl)
+
+ryppl_export(
+  INCLUDE_DIRECTORIES
+    include
+  )

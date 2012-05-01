@@ -6,7 +6,10 @@ project(BoostThread CXX)
 
 include(Ryppl)
 
+ryppl_find_and_use_package(BoostChrono)
 ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostDateTime)
+ryppl_find_and_use_package(BoostSystem)
 ryppl_find_package(Threads)
 
 include_directories(
