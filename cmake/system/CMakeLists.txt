@@ -8,8 +8,7 @@ include(Ryppl)
 
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostInteger) # cstdint.hpp
-ryppl_find_and_use_package(BoostUtility) # assert.hpp, noncopyable.hpp, enable_if.hpp
-ryppl_find_and_use_package(BoostOperators) # assert.hpp
+ryppl_find_and_use_package(BoostUtility) # assert.hpp, noncopyable.hpp, enable_if.hpp, operators.hpp
 
 add_library(boost_system
   src/error_code.cpp
