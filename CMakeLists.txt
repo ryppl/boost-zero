@@ -9,7 +9,7 @@
 cmake_minimum_required(VERSION 2.8.8 FATAL_ERROR)
 project(Boost)
 
-list(APPEND CMAKE_MODULE_PATH "${Boost_SOURCE_DIR}/ryppl/Modules")
+list(APPEND CMAKE_MODULE_PATH "${Boost_SOURCE_DIR}/ryppl/cmake/Modules")
 
 file(COPY ${Boost_SOURCE_DIR}/cmake/ DESTINATION ${Boost_SOURCE_DIR}/boost)
 

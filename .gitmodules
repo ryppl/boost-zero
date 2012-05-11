@@ -603,4 +603,4 @@
 	url = https://github.com/boost-lib/xpressive.git
 [submodule "ryppl"]
 	path = ryppl
-	url = https://github.com/ryppl/ryppl-cmake.git
+	url = https://github.com/ryppl/ryppl.git
