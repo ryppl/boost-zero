@@ -2,7 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8.8)
-project(BoostThread CXX)
+project(BoostThread C CXX) # C is required for find_package(Threads)
 
 include(Ryppl)
 
