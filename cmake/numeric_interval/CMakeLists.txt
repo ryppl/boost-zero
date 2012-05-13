@@ -2,24 +2,25 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8.8)
-project(BoostConversion)
+project(BoostNumericInterval NONE)
 
 include(Ryppl)
 
-ryppl_add_test_subdirectory(test)
-
 ryppl_export(
   DEPENDS
+    BoostConceptCheck 
     BoostConfig 
-    BoostContainer 
     BoostCore 
-    BoostException 
     BoostInteger 
-    BoostMath 
+    BoostIO 
+    BoostLogic 
     BoostMPL 
-    BoostNumericConversion
+    BoostPreprocessor 
+    BoostRational 
+    BoostSmartPtr 
     BoostStaticAssert 
     BoostTypeTraits 
+    BoostTypeof 
     BoostUtility 
   INCLUDE_DIRECTORIES
     include
