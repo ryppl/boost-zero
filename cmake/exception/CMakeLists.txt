@@ -6,6 +6,9 @@ project(BoostException NONE)
 
 include(Ryppl)
 
+# add_subdirectory(test)
+
+
 ryppl_export(
   DEPENDS
     BoostConfig 
@@ -16,5 +19,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-# add_subdirectory(test)

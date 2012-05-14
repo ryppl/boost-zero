@@ -6,6 +6,11 @@ project(BoostFunction NONE)
 
 include(Ryppl)
 
+#boost_documentation(doc/function.xml)
+
+ryppl_add_test_subdirectory(test)
+
+
 ryppl_export(
   DEPENDS
     BoostBind 
@@ -20,7 +25,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-#boost_documentation(doc/function.xml)
-
-ryppl_add_test_subdirectory(test)

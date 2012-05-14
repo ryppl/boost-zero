@@ -6,6 +6,12 @@ project(BoostDisjointSets)
 
 include(Ryppl)
 
+#ryppl_test_suite(
+#  RUN
+#    disjoint_set_test.cpp
+#  )
+
+
 ryppl_export(
   DEPENDS
     BoostCore 
@@ -14,8 +20,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-#ryppl_test_suite(
-#  RUN
-#    disjoint_set_test.cpp
-#  )

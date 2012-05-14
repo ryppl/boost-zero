@@ -6,13 +6,6 @@ project(BoostConfig)
 
 include(Ryppl)
 
-ryppl_export(
-  DEPENDS
-    BoostCore 
-  INCLUDE_DIRECTORIES
-    include
-  )
-
 #boost_documentation(doc/config.qbk
 #  doc/configuring_boost.qbk
 #  doc/macro_reference.qbk
@@ -20,3 +13,11 @@ ryppl_export(
 #  doc/rationale.qbk
 #  doc/acknowledgements.qbk
 #  )
+
+
+ryppl_export(
+  DEPENDS
+    BoostCore 
+  INCLUDE_DIRECTORIES
+    include
+  )
