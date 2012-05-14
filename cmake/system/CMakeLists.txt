@@ -21,6 +21,9 @@ if(NOT BUILD_SHARED_LIBS)
     )
 endif(NOT BUILD_SHARED_LIBS)
 
+#add_subdirectory(doc)
+
+
 ryppl_export(
   TARGETS
     boost_system
@@ -31,5 +34,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-#add_subdirectory(doc)

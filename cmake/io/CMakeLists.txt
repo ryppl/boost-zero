@@ -5,10 +5,11 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostIO NONE)
 
 include(Ryppl)
+  
+ryppl_add_test_subdirectory(test)
+
 
 ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-  
-ryppl_add_test_subdirectory(test)

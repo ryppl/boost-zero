@@ -5,6 +5,9 @@ cmake_minimum_required(VERSION 2.8.8)
 project(BoostMove NONE)
 
 include(Ryppl)
+  
+ryppl_add_test_subdirectory(test)
+
 
 ryppl_export(
   DEPENDS
@@ -15,5 +18,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-  
-ryppl_add_test_subdirectory(test)

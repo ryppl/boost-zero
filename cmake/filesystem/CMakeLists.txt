@@ -37,6 +37,9 @@ target_link_libraries(boost_filesystem
   boost_system
   )
 
+ryppl_add_test_subdirectory(test)
+
+
 ryppl_export(
   TARGETS
     boost_filesystem
@@ -56,5 +59,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-ryppl_add_test_subdirectory(test)

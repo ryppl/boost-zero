@@ -11,6 +11,10 @@ ryppl_find_and_use_package(BoostConfig)
 add_library(boost_random
   src/random_device.cpp
   )
+  
+ryppl_add_test_subdirectory(test)
+
+
 
 ryppl_export(
   TARGETS
@@ -33,6 +37,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-  
-ryppl_add_test_subdirectory(test)
-

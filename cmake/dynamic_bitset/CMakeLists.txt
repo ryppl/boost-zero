@@ -6,6 +6,16 @@ project(BoostDynamicBitset)
 
 include(Ryppl)
 
+# ryppl_test_suite(
+#  RUN
+#    dyn_bitset_unit_tests1.cpp
+#    dyn_bitset_unit_tests2.cpp
+#    dyn_bitset_unit_tests3.cpp
+#    dyn_bitset_unit_tests4.cpp
+#  )
+
+
+
 ryppl_export(
   DEPENDS
     BoostConfig 
@@ -15,12 +25,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-# ryppl_test_suite(
-#  RUN
-#    dyn_bitset_unit_tests1.cpp
-#    dyn_bitset_unit_tests2.cpp
-#    dyn_bitset_unit_tests3.cpp
-#    dyn_bitset_unit_tests4.cpp
-#  )
-

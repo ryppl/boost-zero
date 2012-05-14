@@ -6,18 +6,6 @@ project(BoostConceptCheck)
 
 include(Ryppl)
 
-ryppl_export(
-  DEPENDS
-    BoostConfig 
-    BoostIterator 
-    BoostMPL 
-    BoostParameter 
-    BoostPreprocessor 
-    BoostTypeTraits 
-  INCLUDE_DIRECTORIES
-    include
-  )
-
 #ryppl_test_suite(
 #  RUN
 #    #stl_concept_covering
@@ -35,3 +23,16 @@ ryppl_export(
 #    old_concept_class_fail.cpp
 #  NO_SINGLE_TARGET
 #  )
+
+
+ryppl_export(
+  DEPENDS
+    BoostConfig 
+    BoostIterator 
+    BoostMPL 
+    BoostParameter 
+    BoostPreprocessor 
+    BoostTypeTraits 
+  INCLUDE_DIRECTORIES
+    include
+  )

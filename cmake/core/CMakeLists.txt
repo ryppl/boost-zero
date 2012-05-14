@@ -17,6 +17,9 @@ string(REPLACE "." "_" BOOST_LIB_VERSION "${Boost_VERSION}")
 
 configure_file(include/boost/version.hpp.in include/boost/version.hpp)
 
+ryppl_add_test_subdirectory(test)
+
+
 ryppl_export(
   DEPENDS
     BoostConfig 
@@ -28,5 +31,3 @@ ryppl_export(
     "${PROJECT_BINARY_DIR}/include"
   VERSION "1.50"
   )
-
-ryppl_add_test_subdirectory(test)

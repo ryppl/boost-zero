@@ -6,6 +6,9 @@ project(BoostCRC)
 
 include(Ryppl)
 
+ryppl_add_test_subdirectory(test)
+
+
 ryppl_export(
   DEPENDS
     BoostArray 
@@ -16,5 +19,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-ryppl_add_test_subdirectory(test)

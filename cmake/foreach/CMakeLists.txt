@@ -6,6 +6,11 @@ project(BoostForeach NONE)
 
 include(Ryppl)
 
+#boost_documentation(doc/foreach.qbk)
+
+ryppl_add_test_subdirectory(test)
+
+
 ryppl_export(
   DEPENDS
     BoostConfig 
@@ -17,7 +22,3 @@ ryppl_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-#boost_documentation(doc/foreach.qbk)
-
-ryppl_add_test_subdirectory(test)
