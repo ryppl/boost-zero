@@ -5,7 +5,6 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostRatio)
-ryppl_find_and_use_package(BoostTest)
 
 ##<os>LINUX:<threading>multi
 ## uncomment the line above if you build outside the Boost release

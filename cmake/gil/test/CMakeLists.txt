@@ -6,7 +6,6 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostCRC)
 ryppl_find_and_use_package(BoostGIL)
-ryppl_find_and_use_package(BoostTest)
 
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/gil_reference_checksums.txt"

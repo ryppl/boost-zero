@@ -5,7 +5,6 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostContainer)
-ryppl_find_and_use_package(BoostTest)
 
 file(GLOB sources *.cpp)
 ryppl_test_suite(RUN ${sources} NO_SINGLE_TARGET)

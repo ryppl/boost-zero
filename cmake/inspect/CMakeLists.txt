@@ -12,7 +12,6 @@ ryppl_find_and_use_package(BoostConversion)
 ryppl_find_and_use_package(BoostFilesystem)
 ryppl_find_and_use_package(BoostRegex)
 ryppl_find_and_use_package(BoostSmartPtr)
-ryppl_find_and_use_package(BoostTest)
 ryppl_find_and_use_package(BoostUtility)
 
 add_executable(inspect

@@ -5,7 +5,6 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostConfig)
-ryppl_find_and_use_package(BoostTest)
 
 ryppl_test_suite(
   COMPILE

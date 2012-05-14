@@ -4,7 +4,6 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostTest)
 ryppl_find_and_use_package(BoostCore)
 
 if(MSVC)

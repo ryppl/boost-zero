@@ -6,7 +6,6 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostCore)
 ryppl_find_and_use_package(BoostMPL)
-ryppl_find_and_use_package(BoostTest)
 
 include_directories(../example) # needed for Boost.PP file iteration with some compilers
 

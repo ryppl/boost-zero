@@ -8,7 +8,6 @@ ryppl_find_and_use_package(BoostContainer)
 ryppl_find_and_use_package(BoostFlyweight)
 ryppl_find_and_use_package(BoostInterprocess)
 ryppl_find_and_use_package(BoostSerialization)
-ryppl_find_and_use_package(BoostTest)
 ryppl_find_package(Threads)
 
 # assoc_cont_factory
