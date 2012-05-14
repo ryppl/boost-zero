@@ -169,9 +169,6 @@
 [submodule "boost/multi_index"]
 	path = boost/multi_index
 	url = https://github.com/boost-lib/multi_index.git
-[submodule "boost/numeric"]
-	path = boost/numeric
-	url = https://github.com/boost-lib/numeric.git
 [submodule "boost/optional"]
 	path = boost/optional
 	url = https://github.com/boost-lib/optional.git
