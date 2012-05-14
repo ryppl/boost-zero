@@ -15,28 +15,6 @@ ryppl_find_and_use_package(BoostSmartPtr)
 ryppl_find_and_use_package(BoostTest)
 ryppl_find_and_use_package(BoostUtility)
 
-add_definitions(
-  ${BoostAlgorithm_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostFilesystem_DEFINITIONS}
-  ${BoostRegex_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAlgorithm_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostFilesystem_INCLUDE_DIRS}
-  ${BoostRegex_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  )
-
 add_executable(inspect
   apple_macro_check.cpp
   ascii_check.cpp

@@ -13,7 +13,7 @@ ryppl_export(
     BoostCore 
     BoostException 
     BoostForeach 
-    BoostFunctional 
+    BoostFunctionalHash
     BoostIterator 
     BoostMove 
     BoostPreprocessor 

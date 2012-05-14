@@ -8,6 +8,7 @@ include(Ryppl)
 
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostTimer)
+include_directories(include)
 
 if(MSVC)
   # specify the asynchronous exception handling model

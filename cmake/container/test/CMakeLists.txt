@@ -7,15 +7,5 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostContainer)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostContainer_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostContainer_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
 file(GLOB sources *.cpp)
 ryppl_test_suite(RUN ${sources} NO_SINGLE_TARGET)

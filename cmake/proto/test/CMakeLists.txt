@@ -7,16 +7,7 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  -DBOOST_PROTO_DONT_USE_PREPROCESSED_FILES
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
+add_definitions(-DBOOST_PROTO_DONT_USE_PREPROCESSED_FILES)
 
 if(MSVC80)
   add_definitions(

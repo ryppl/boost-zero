@@ -10,14 +10,7 @@ ryppl_find_and_use_package(BoostConfig)
 ryppl_find_package(BZip2)
 ryppl_find_package(ZLIB)
 
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  -DBOOST_IOSTREAMS_USE_DEPRECATED
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  )
+add_definitions(-DBOOST_IOSTREAMS_USE_DEPRECATED)
 
 if(MSVC)
   add_definitions(

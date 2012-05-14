@@ -5,8 +5,6 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostArray)
-add_definitions(${BoostArray_DEFINITIONS})
-include_directories(${BoostArray_INCLUDE_DIRS})
 
 ryppl_test_suite(
   RUN

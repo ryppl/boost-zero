@@ -7,16 +7,6 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostConversion)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostConversion_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
 ryppl_test_suite(RUN ../cast_test.cpp NO_SINGLE_TARGET)
 ryppl_test_suite(RUN ../numeric_cast_test.cpp NO_SINGLE_TARGET)
 #ryppl_test_suite(RUN ../lexical_cast_test.cpp NO_SINGLE_TARGET)

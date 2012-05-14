@@ -17,32 +17,7 @@ ryppl_find_and_use_package(BoostSmartPtr)
 ryppl_find_and_use_package(BoostTypeTraits)
 ryppl_find_and_use_package(BoostUtility)
 
-add_definitions(
-  ${BoostAny_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostOptional_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostOptional_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  include
-  )
+include_directories(include)
 
 if(MSVC)
   add_definitions(
@@ -60,7 +35,6 @@ add_library(boost_signals
   )
 
 ryppl_add_test_subdirectory(test)
-
 
 ryppl_export(
   TARGETS

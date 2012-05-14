@@ -8,18 +8,6 @@ ryppl_find_and_use_package(BoostCore)
 ryppl_find_and_use_package(BoostAny)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostCore_DEFINITIONS}
-  ${BoostAny_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
 if(MSVC)
   # <asynch-exceptions>on
 endif(MSVC)

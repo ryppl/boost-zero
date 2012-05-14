@@ -4,19 +4,9 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostConfig)
-ryppl_find_package(BoostTest)
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-  
 ryppl_test_suite(
   RUN
     rational_example.cpp

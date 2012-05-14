@@ -6,14 +6,7 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostTest_DEFINITIONS}
-  -DBOOST_LOCALE_DYN_LINK=1
-  )
-
-include_directories(
-  ${BoostTest_INCLUDE_DIRS}
-  )
+add_definitions(-DBOOST_LOCALE_DYN_LINK=1)
 
 ryppl_test_suite(
   RUN

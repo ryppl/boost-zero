@@ -4,8 +4,7 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostAny)
-ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostPropertyTree)
 ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostTest)
 

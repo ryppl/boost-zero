@@ -7,14 +7,7 @@ project(BoostFilesystem CXX)
 include(Ryppl)
 
 ryppl_find_and_use_package(BoostSystem)
-
-add_definitions(
-  ${BoostSystem_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostSystem_INCLUDE_DIRS}
-  )
+include_directories(include)
 
 add_library(boost_filesystem
   src/operations.cpp
@@ -47,7 +40,7 @@ ryppl_export(
     BoostBind 
     BoostConfig 
     BoostCore 
-    BoostFunctional 
+    BoostFunctionalHash
     BoostInteger 
     BoostIO 
     BoostIterator 

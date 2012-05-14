@@ -9,20 +9,6 @@ ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostAssign)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostBimap_DEFINITIONS}
-  ${BoostSerialization_DEFINITIONS}
-  ${BoostAssign_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostBimap_INCLUDE_DIRS}
-  ${BoostSerialization_INCLUDE_DIRS}
-  ${BoostAssign_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
 # XXX: some tests #include <libs/bimap/test/test_bimap.hpp>
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 set(test_bimap_hpp

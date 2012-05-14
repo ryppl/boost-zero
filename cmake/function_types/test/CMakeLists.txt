@@ -8,18 +8,7 @@ ryppl_find_and_use_package(BoostCore)
 ryppl_find_and_use_package(BoostMPL)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostCore_DEFINITIONS}
-  ${BoostMPL_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  ../example # needed for Boost.PP file iteration with some compilers
-  )
+include_directories(../example) # needed for Boost.PP file iteration with some compilers
 
 ryppl_test_suite(
 

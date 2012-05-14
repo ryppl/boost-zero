@@ -10,6 +10,8 @@ ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostSystem)
 ryppl_find_and_use_package(BoostRatio)
 
+include_directories(include)
+
 if(CMAKE_SYSTEM MATCHES "Linux")
   find_library(RT_LIBRARY rt)
 endif(CMAKE_SYSTEM MATCHES "Linux") 

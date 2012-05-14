@@ -4,18 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostPolygon)
 ryppl_find_and_use_package(BoostTest)
-
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
 
 if(MSVC)
   # <asynch-exceptions>on

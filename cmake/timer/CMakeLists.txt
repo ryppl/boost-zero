@@ -10,6 +10,8 @@ ryppl_find_and_use_package(BoostChrono)
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostSystem)
 
+include_directories(include)
+
 add_library(boost_timer
   src/auto_timers_construction.cpp
   src/cpu_timer.cpp

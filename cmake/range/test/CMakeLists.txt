@@ -4,20 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostConceptCheck)
-ryppl_find_package(BoostTest)
-
-
-add_definitions(
-  ${BoostConceptCheck_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConceptCheck_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
+ryppl_find_and_use_package(BoostRange)
+ryppl_find_and_use_package(BoostTest)
 
 if(CMAKE_COMPILER_IS_GNUCXX)
   add_definitions(-Wall -Wunused)

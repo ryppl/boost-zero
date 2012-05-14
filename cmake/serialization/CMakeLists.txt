@@ -7,6 +7,7 @@ project(BoostSerialization CXX)
 include(Ryppl)
 
 ryppl_find_and_use_package(BoostUtility)
+include_directories(include)
 
 if(MSVC)
   add_definitions(

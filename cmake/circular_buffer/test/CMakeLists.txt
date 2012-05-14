@@ -7,16 +7,6 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostCircularBuffer)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostCircularBuffer_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostCircularBuffer_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
 if(MSVC)
   add_definitions(
     /D_SCL_SECURE_NO_WARNINGS

@@ -8,18 +8,6 @@ ryppl_find_and_use_package(BoostMPL)
 ryppl_find_and_use_package(BoostAny)
 ryppl_find_and_use_package(BoostTest)
 
-add_definitions(
-  ${BoostMPL_DEFINITIONS}
-  ${BoostAny_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostMPL_INCLUDE_DIRS}
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
-
 ryppl_test_suite(
   RUN
     algorithm/all.cpp

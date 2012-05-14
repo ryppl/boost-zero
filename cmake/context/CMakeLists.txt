@@ -20,38 +20,6 @@ ryppl_find_and_use_package(BoostThread)
 ryppl_find_and_use_package(BoostTypeTraits)
 ryppl_find_and_use_package(BoostUtility)
 
-add_definitions(
-  ${BoostBind_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostFormat_DEFINITIONS}
-  ${BoostInteger_DEFINITIONS}
-  ${BoostMove_DEFINITIONS}
-  ${BoostPreprocessor_DEFINITIONS}
-  ${BoostProgramOptions_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostSystem_DEFINITIONS}
-  ${BoostThread_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostFormat_INCLUDE_DIRS}
-  ${BoostInteger_INCLUDE_DIRS}
-  ${BoostMove_INCLUDE_DIRS}
-  ${BoostPreprocessor_INCLUDE_DIRS}
-  ${BoostProgramOptions_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostSystem_INCLUDE_DIRS}
-  ${BoostThread_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  )
-
 set(abi
   aapcs
   eabi

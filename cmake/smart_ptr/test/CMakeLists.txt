@@ -4,16 +4,7 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostConfig)
-
-add_definitions(
-  ${BoostConfig_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostConfig_INCLUDE_DIRS}
-  )
-
+ryppl_find_and_use_package(BoostConfig)
 
 ryppl_test_suite(
   COMPILE

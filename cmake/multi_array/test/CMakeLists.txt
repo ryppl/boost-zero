@@ -4,18 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostArray)
+ryppl_find_and_use_package(BoostMultiArray)
 ryppl_find_and_use_package(BoostTest)
-
-add_definitions(
-  ${BoostArray_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostArray_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
 
 ryppl_test_suite(
   RUN

@@ -4,15 +4,7 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_package(BoostTest)
-
-add_definitions(
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostTest_INCLUDE_DIRS}
-  )
+ryppl_find_and_use_package(BoostTest)
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS)

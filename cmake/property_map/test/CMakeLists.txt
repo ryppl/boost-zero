@@ -4,21 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostAny)
-ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostPropertyMap)
 ryppl_find_and_use_package(BoostTest)
-
-add_definitions(
-  ${BoostAny_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  )
 
 ryppl_test_suite(
   RUN

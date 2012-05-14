@@ -7,16 +7,6 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostTest)
 ryppl_find_and_use_package(BoostCore)
 
-add_definitions(
-  ${BoostTest_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostTest_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  )
-
 if(MSVC)
   # <asynch-exceptions>on
 endif(MSVC)

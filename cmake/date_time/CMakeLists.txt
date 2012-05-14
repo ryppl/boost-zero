@@ -9,6 +9,8 @@ include(Ryppl)
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostTokenizer)
 
+include_directories(include)
+
 add_definitions(
   -DDATE_TIME_INLINE
   )

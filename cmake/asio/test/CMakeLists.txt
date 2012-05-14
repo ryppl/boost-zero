@@ -10,22 +10,6 @@ ryppl_find_and_use_package(BoostSystem)
 ryppl_find_and_use_package(BoostTest)
 ryppl_find_and_use_package(BoostThread)
 
-add_definitions(
-  ${BoostAsio_DEFINITIONS}
-  ${BoostRegex_DEFINITIONS}
-  ${BoostSystem_DEFINITIONS}
-  ${BoostTest_DEFINITIONS}
-  ${BoostThread_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAsio_INCLUDE_DIRS}
-  ${BoostRegex_INCLUDE_DIRS}
-  ${BoostSystem_INCLUDE_DIRS}
-  ${BoostTest_INCLUDE_DIRS}
-  ${BoostThread_INCLUDE_DIRS}
-  )
-
 ryppl_test_suite(
   RUN
     basic_datagram_socket.cpp

@@ -20,37 +20,7 @@ ryppl_find_and_use_package(BoostTokenizer)
 ryppl_find_and_use_package(BoostTypeTraits)
 ryppl_find_and_use_package(BoostUtility)
 
-add_definitions(
-  ${BoostAny_DEFINITIONS}
-  ${BoostBind_DEFINITIONS}
-  ${BoostConfig_DEFINITIONS}
-  ${BoostConversion_DEFINITIONS}
-  ${BoostCore_DEFINITIONS}
-  ${BoostException_DEFINITIONS}
-  ${BoostFunction_DEFINITIONS}
-  ${BoostIterator_DEFINITIONS}
-  ${BoostSmartPtr_DEFINITIONS}
-  ${BoostStaticAssert_DEFINITIONS}
-  ${BoostTokenizer_DEFINITIONS}
-  ${BoostTypeTraits_DEFINITIONS}
-  ${BoostUtility_DEFINITIONS}
-  )
-
-include_directories(
-  ${BoostAny_INCLUDE_DIRS}
-  ${BoostBind_INCLUDE_DIRS}
-  ${BoostConfig_INCLUDE_DIRS}
-  ${BoostConversion_INCLUDE_DIRS}
-  ${BoostCore_INCLUDE_DIRS}
-  ${BoostException_INCLUDE_DIRS}
-  ${BoostFunction_INCLUDE_DIRS}
-  ${BoostIterator_INCLUDE_DIRS}
-  ${BoostSmartPtr_INCLUDE_DIRS}
-  ${BoostStaticAssert_INCLUDE_DIRS}
-  ${BoostTokenizer_INCLUDE_DIRS}
-  ${BoostTypeTraits_INCLUDE_DIRS}
-  ${BoostUtility_INCLUDE_DIRS}
-  )
+include_directories(include)
 
 add_library(boost_program_options
   src/cmdline
