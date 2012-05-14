@@ -23,7 +23,7 @@ ryppl_export(
     BoostMath 
     BoostMPL 
     BoostMSM 
-    BoostNumeric 
+#   BoostNumeric 
     BoostPolygon 
     BoostProgramOptions 
     BoostProto 

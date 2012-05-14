@@ -17,7 +17,6 @@ ryppl_export(
     BoostFusion 
     BoostIterator 
     BoostMPL 
-    BoostNumeric 
     BoostParameter 
     BoostPreprocessor 
     BoostRange 
@@ -25,6 +24,7 @@ ryppl_export(
     BoostTuple 
     BoostTypeTraits 
     BoostTypeof 
+    BoostUBLAS
     BoostUtility 
   INCLUDE_DIRECTORIES
     include

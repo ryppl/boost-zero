@@ -16,7 +16,7 @@ ryppl_export(
     BoostInteger 
     BoostIterator 
     BoostMPL 
-    BoostNumeric 
+#   BoostNumeric 
     BoostOptional 
     BoostPreprocessor 
     BoostProto 
