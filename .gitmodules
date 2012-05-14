@@ -604,3 +604,15 @@
 [submodule "ryppl"]
 	path = ryppl
 	url = https://github.com/ryppl/ryppl.git
+[submodule "boost/ublas"]
+	path = boost/ublas
+	url = git://github.com/boost-lib/ublas.git
+[submodule "boost/functional_hash"]
+	path = boost/functional_hash
+	url = git://github.com/boost-lib/functional_hash.git
+[submodule "boost/numeric_conversion"]
+	path = boost/numeric_conversion
+	url = git://github.com/boost-lib/numeric_conversion.git
+[submodule "boost/numeric_interval"]
+	path = boost/numeric_interval
+	url = git://github.com/boost-lib/numeric_interval.git

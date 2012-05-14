@@ -2,27 +2,23 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8.8)
-project(BoostXpressive NONE)
+project(BoostUBLAS NONE)
 
 include(Ryppl)
 
 ryppl_export(
   DEPENDS
+    BoostConceptCheck 
     BoostConfig 
-    BoostConversion 
     BoostCore 
-    BoostException 
-    BoostFusion 
     BoostInteger 
-    BoostIterator 
+    BoostIO 
+    BoostLogic 
     BoostMPL 
-#   BoostNumeric 
-    BoostOptional 
     BoostPreprocessor 
-    BoostProto 
-    BoostRange 
+    BoostRational 
     BoostSmartPtr 
-    BoostSpirit 
+    BoostStaticAssert 
     BoostTypeTraits 
     BoostTypeof 
     BoostUtility 

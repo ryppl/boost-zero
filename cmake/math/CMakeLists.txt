@@ -107,7 +107,7 @@ ryppl_export(
     BoostFusion 
     BoostInteger 
     BoostMPL 
-    BoostNumeric 
+#   BoostNumeric 
     BoostSmartPtr 
     BoostSpirit 
     BoostStaticAssert 
