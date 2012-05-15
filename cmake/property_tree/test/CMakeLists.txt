@@ -6,6 +6,7 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostPropertyTree)
 ryppl_find_and_use_package(BoostSerialization)
+ryppl_find_and_use_package(BoostTest)
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS=1)

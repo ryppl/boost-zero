@@ -5,6 +5,7 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostCircularBuffer)
+ryppl_find_and_use_package(BoostTest)
 
 if(MSVC)
   add_definitions(

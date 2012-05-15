@@ -5,6 +5,7 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostTest)
 
 ryppl_test_suite(    
   RUN
