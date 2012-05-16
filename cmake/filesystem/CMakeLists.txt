@@ -7,6 +7,8 @@ project(BoostFilesystem CXX)
 include(Ryppl)
 
 ryppl_find_and_use_package(BoostSystem)
+ryppl_find_and_use_package(BoostFunctionalHash)
+
 include_directories(include)
 
 add_library(boost_filesystem
