@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://ryppl.github.com/feeds/boost/CMakeLists.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<interface uri="https://raw.github.com/ryppl/feeds/gh-pages/boost/CMakeLists.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>BoostCMakeLists</name>
   <summary>CMake build files for modularized Boost</summary>
   <description>
@@ -11,7 +11,7 @@ be merged into the Boost repositories and this separate feed can be eliminated.<
   <homepage>http://ryppl.org</homepage>
   <category>Development</category>
   <icon href="http://www.cmake.org/opensourcelogos/cmakelogo.png" type="image/png"/>
-  <feed-for interface="http://ryppl.github.com/feeds/boost/CMakeLists.xml"/>
+  <feed-for interface="https://raw.github.com/ryppl/feeds/gh-pages/boost/CMakeLists.xml"/>
 
   <group license="OSI Approved :: Boost Software License 1.0 (BSL-1.0)">
     <implementation arch="*-src" id=".."  version="1.50-pre" stability="developer"/>
