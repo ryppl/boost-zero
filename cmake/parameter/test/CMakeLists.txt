@@ -6,6 +6,7 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostPython)
 ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostTimer)
 
 ryppl_test_suite(
   RUN

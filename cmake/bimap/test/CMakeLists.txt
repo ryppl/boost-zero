@@ -7,6 +7,7 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostBimap)
 ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostAssign)
+ryppl_find_and_use_package(BoostTest)
 
 # XXX: some tests #include <libs/bimap/test/test_bimap.hpp>
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
