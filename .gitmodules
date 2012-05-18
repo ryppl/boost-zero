@@ -313,3 +313,6 @@
 [submodule "boost/numeric_interval"]
 	path = boost/numeric_interval
 	url = git://github.com/boost-lib/numeric_interval.git
+[submodule "boost/spirit_classic"]
+	path = boost/spirit_classic
+	url = http://github.com/boost-lib/spirit_classic
