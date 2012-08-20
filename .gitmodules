@@ -316,3 +316,9 @@
 [submodule "boost/spirit_classic"]
 	path = boost/spirit_classic
 	url = http://github.com/boost-lib/spirit_classic
+[submodule "boost/atomic"]
+	path = boost/atomic
+	url = https://github.com/boost-lib/atomic.git
+[submodule "boost/lockfree"]
+	path = boost/lockfree
+	url = https://github.com/boost-lib/lockfree.git
