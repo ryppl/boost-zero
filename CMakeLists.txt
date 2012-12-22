@@ -1,12 +1,12 @@
-##########################################################################
-# Copyright (C) 2012 Daniel Pfeifer <daniel@pfeifer-mail.de>             #
-#                                                                        #
-# Distributed under the Boost Software License, Version 1.0.             #
-# See accompanying file LICENSE_1_0.txt or copy at                       #
-#   http://www.boost.org/LICENSE_1_0.txt                                 #
-##########################################################################
+#=============================================================================
+# Copyright (C) 2012 Daniel Pfeifer <daniel@pfeifer-mail.de>
+#
+# Distributed under the Boost Software License, Version 1.0.
+# See accompanying file LICENSE_1_0.txt or copy at
+#   http://www.boost.org/LICENSE_1_0.txt
+#=============================================================================
 
-cmake_minimum_required(VERSION 2.8.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8.10 FATAL_ERROR)
 project(Boost)
 
 list(APPEND CMAKE_MODULE_PATH "${Boost_SOURCE_DIR}/ryppl/cmake/Modules")
@@ -19,20 +19,22 @@ add_subdirectory(boost/any)
 add_subdirectory(boost/array)
 add_subdirectory(boost/asio)
 add_subdirectory(boost/assign)
-add_subdirectory(boost/atomic)
+#add_subdirectory(boost/atomic)
 add_subdirectory(boost/auto_index)
 add_subdirectory(boost/bimap)
 add_subdirectory(boost/bind)
 add_subdirectory(boost/boostbook)
+#add_subdirectory(boost/build)
 add_subdirectory(boost/chrono)
 add_subdirectory(boost/circular_buffer)
 add_subdirectory(boost/compatibility)
 add_subdirectory(boost/concept_check)
 add_subdirectory(boost/config)
 add_subdirectory(boost/container)
-add_subdirectory(boost/context)
+#add_subdirectory(boost/context)
 add_subdirectory(boost/conversion)
 add_subdirectory(boost/core)
+#add_subdirectory(boost/coroutine)
 add_subdirectory(boost/crc)
 add_subdirectory(boost/date_time)
 add_subdirectory(boost/disjoint_sets)
@@ -42,20 +44,21 @@ add_subdirectory(boost/filesystem)
 add_subdirectory(boost/flyweight)
 add_subdirectory(boost/foreach)
 add_subdirectory(boost/format)
-add_subdirectory(boost/function_types)
 add_subdirectory(boost/function)
+add_subdirectory(boost/function_types)
 add_subdirectory(boost/functional)
 add_subdirectory(boost/functional_hash)
 add_subdirectory(boost/fusion)
 add_subdirectory(boost/geometry)
 add_subdirectory(boost/gil)
-add_subdirectory(boost/graph_parallel)
 add_subdirectory(boost/graph)
+add_subdirectory(boost/graph_parallel)
 add_subdirectory(boost/heap)
 add_subdirectory(boost/icl)
 add_subdirectory(boost/inspect)
 add_subdirectory(boost/integer)
 add_subdirectory(boost/interprocess)
+add_subdirectory(boost/interval)
 add_subdirectory(boost/intrusive)
 add_subdirectory(boost/io)
 add_subdirectory(boost/iostreams)
@@ -72,8 +75,9 @@ add_subdirectory(boost/mpl)
 add_subdirectory(boost/msm)
 add_subdirectory(boost/multi_array)
 add_subdirectory(boost/multi_index)
+#add_subdirectory(boost/multiprecision)
 add_subdirectory(boost/numeric_conversion)
-add_subdirectory(boost/numeric_interval)
+#add_subdirectory(boost/odeint)
 add_subdirectory(boost/optional)
 add_subdirectory(boost/parameter)
 add_subdirectory(boost/phoenix)
