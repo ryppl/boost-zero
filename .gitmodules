@@ -1,324 +1,339 @@
 [submodule "boost/accumulators"]
 	path = boost/accumulators
-	url = https://github.com/boost-lib/accumulators.git
+	url = https://bitbucket.org/ryppl/accumulators.git
 [submodule "boost/algorithm"]
 	path = boost/algorithm
-	url = https://github.com/boost-lib/algorithm.git
+	url = https://bitbucket.org/ryppl/algorithm.git
 [submodule "boost/any"]
 	path = boost/any
-	url = https://github.com/boost-lib/any.git
+	url = https://bitbucket.org/ryppl/any.git
 [submodule "boost/array"]
 	path = boost/array
-	url = https://github.com/boost-lib/array.git
+	url = https://bitbucket.org/ryppl/array.git
 [submodule "boost/asio"]
 	path = boost/asio
-	url = https://github.com/boost-lib/asio.git
+	url = https://bitbucket.org/ryppl/asio.git
 [submodule "boost/assign"]
 	path = boost/assign
-	url = https://github.com/boost-lib/assign.git
+	url = https://bitbucket.org/ryppl/assign.git
 [submodule "boost/auto_index"]
 	path = boost/auto_index
-	url = https://github.com/boost-lib/auto_index.git
+	url = https://bitbucket.org/ryppl/auto_index.git
 [submodule "boost/bimap"]
 	path = boost/bimap
-	url = https://github.com/boost-lib/bimap.git
+	url = https://bitbucket.org/ryppl/bimap.git
 [submodule "boost/bind"]
 	path = boost/bind
-	url = https://github.com/boost-lib/bind.git
+	url = https://bitbucket.org/ryppl/bind.git
 [submodule "boost/boostbook"]
 	path = boost/boostbook
-	url = https://github.com/boost-lib/boostbook.git
+	url = https://bitbucket.org/ryppl/boostbook.git
 [submodule "boost/chrono"]
 	path = boost/chrono
-	url = https://github.com/boost-lib/chrono.git
+	url = https://bitbucket.org/ryppl/chrono.git
 [submodule "boost/circular_buffer"]
 	path = boost/circular_buffer
-	url = https://github.com/boost-lib/circular_buffer.git
+	url = https://bitbucket.org/ryppl/circular_buffer.git
 [submodule "boost/compatibility"]
 	path = boost/compatibility
-	url = https://github.com/boost-lib/compatibility.git
+	url = https://bitbucket.org/ryppl/compatibility.git
 [submodule "boost/concept_check"]
 	path = boost/concept_check
-	url = https://github.com/boost-lib/concept_check.git
+	url = https://bitbucket.org/ryppl/concept_check.git
 [submodule "boost/config"]
 	path = boost/config
-	url = https://github.com/boost-lib/config.git
+	url = https://bitbucket.org/ryppl/config.git
 [submodule "boost/container"]
 	path = boost/container
-	url = https://github.com/boost-lib/container.git
+	url = https://bitbucket.org/ryppl/container.git
 [submodule "boost/context"]
 	path = boost/context
-	url = https://github.com/boost-lib/context.git
+	url = https://bitbucket.org/ryppl/context.git
 [submodule "boost/conversion"]
 	path = boost/conversion
-	url = https://github.com/boost-lib/conversion.git
+	url = https://bitbucket.org/ryppl/conversion.git
 [submodule "boost/core"]
 	path = boost/core
-	url = https://github.com/boost-lib/core.git
+	url = https://bitbucket.org/ryppl/core.git
 [submodule "boost/crc"]
 	path = boost/crc
-	url = https://github.com/boost-lib/crc.git
+	url = https://bitbucket.org/ryppl/crc.git
 [submodule "boost/date_time"]
 	path = boost/date_time
-	url = https://github.com/boost-lib/date_time.git
+	url = https://bitbucket.org/ryppl/date_time.git
 [submodule "boost/detail"]
 	path = boost/detail
-	url = https://github.com/boost-lib/detail.git
+	url = https://bitbucket.org/ryppl/detail.git
 [submodule "boost/disjoint_sets"]
 	path = boost/disjoint_sets
-	url = https://github.com/boost-lib/disjoint_sets.git
+	url = https://bitbucket.org/ryppl/disjoint_sets.git
 [submodule "boost/dynamic_bitset"]
 	path = boost/dynamic_bitset
-	url = https://github.com/boost-lib/dynamic_bitset.git
+	url = https://bitbucket.org/ryppl/dynamic_bitset.git
 [submodule "boost/exception"]
 	path = boost/exception
-	url = https://github.com/boost-lib/exception.git
+	url = https://bitbucket.org/ryppl/exception.git
 [submodule "boost/filesystem"]
 	path = boost/filesystem
-	url = https://github.com/boost-lib/filesystem.git
+	url = https://bitbucket.org/ryppl/filesystem.git
 [submodule "boost/flyweight"]
 	path = boost/flyweight
-	url = https://github.com/boost-lib/flyweight.git
+	url = https://bitbucket.org/ryppl/flyweight.git
 [submodule "boost/foreach"]
 	path = boost/foreach
-	url = https://github.com/boost-lib/foreach.git
+	url = https://bitbucket.org/ryppl/foreach.git
 [submodule "boost/format"]
 	path = boost/format
-	url = https://github.com/boost-lib/format.git
+	url = https://bitbucket.org/ryppl/format.git
 [submodule "boost/function"]
 	path = boost/function
-	url = https://github.com/boost-lib/function.git
+	url = https://bitbucket.org/ryppl/function.git
 [submodule "boost/function_types"]
 	path = boost/function_types
-	url = https://github.com/boost-lib/function_types.git
+	url = https://bitbucket.org/ryppl/function_types.git
 [submodule "boost/functional"]
 	path = boost/functional
-	url = https://github.com/boost-lib/functional.git
+	url = https://bitbucket.org/ryppl/functional.git
 [submodule "boost/fusion"]
 	path = boost/fusion
-	url = https://github.com/boost-lib/fusion.git
+	url = https://bitbucket.org/ryppl/fusion.git
 [submodule "boost/geometry"]
 	path = boost/geometry
-	url = https://github.com/boost-lib/geometry.git
+	url = https://bitbucket.org/ryppl/geometry.git
 [submodule "boost/gil"]
 	path = boost/gil
-	url = https://github.com/boost-lib/gil.git
+	url = https://bitbucket.org/ryppl/gil.git
 [submodule "boost/graph"]
 	path = boost/graph
-	url = https://github.com/boost-lib/graph.git
+	url = https://bitbucket.org/ryppl/graph.git
 [submodule "boost/graph_parallel"]
 	path = boost/graph_parallel
-	url = https://github.com/boost-lib/graph_parallel.git
+	url = https://bitbucket.org/ryppl/graph_parallel.git
 [submodule "boost/heap"]
 	path = boost/heap
-	url = https://github.com/boost-lib/heap.git
+	url = https://bitbucket.org/ryppl/heap.git
 [submodule "boost/icl"]
 	path = boost/icl
-	url = https://github.com/boost-lib/icl.git
+	url = https://bitbucket.org/ryppl/icl.git
 [submodule "boost/inspect"]
 	path = boost/inspect
-	url = https://github.com/boost-lib/inspect.git
+	url = https://bitbucket.org/ryppl/inspect.git
 [submodule "boost/integer"]
 	path = boost/integer
-	url = https://github.com/boost-lib/integer.git
+	url = https://bitbucket.org/ryppl/integer.git
 [submodule "boost/interprocess"]
 	path = boost/interprocess
-	url = https://github.com/boost-lib/interprocess.git
+	url = https://bitbucket.org/ryppl/interprocess.git
 [submodule "boost/intrusive"]
 	path = boost/intrusive
-	url = https://github.com/boost-lib/intrusive.git
+	url = https://bitbucket.org/ryppl/intrusive.git
 [submodule "boost/io"]
 	path = boost/io
-	url = https://github.com/boost-lib/io.git
+	url = https://bitbucket.org/ryppl/io.git
 [submodule "boost/iostreams"]
 	path = boost/iostreams
-	url = https://github.com/boost-lib/iostreams.git
+	url = https://bitbucket.org/ryppl/iostreams.git
 [submodule "boost/iterator"]
 	path = boost/iterator
-	url = https://github.com/boost-lib/iterator.git
+	url = https://bitbucket.org/ryppl/iterator.git
 [submodule "boost/lambda"]
 	path = boost/lambda
-	url = https://github.com/boost-lib/lambda.git
+	url = https://bitbucket.org/ryppl/lambda.git
 [submodule "boost/local_function"]
 	path = boost/local_function
-	url = https://github.com/boost-lib/local_function.git
+	url = https://bitbucket.org/ryppl/local_function.git
 [submodule "boost/locale"]
 	path = boost/locale
-	url = https://github.com/boost-lib/locale.git
+	url = https://bitbucket.org/ryppl/locale.git
 [submodule "boost/logic"]
 	path = boost/logic
-	url = https://github.com/boost-lib/logic.git
+	url = https://bitbucket.org/ryppl/logic.git
 [submodule "boost/math"]
 	path = boost/math
-	url = https://github.com/boost-lib/math.git
+	url = https://bitbucket.org/ryppl/math.git
 [submodule "boost/move"]
 	path = boost/move
-	url = https://github.com/boost-lib/move.git
+	url = https://bitbucket.org/ryppl/move.git
 [submodule "boost/mpi"]
 	path = boost/mpi
-	url = https://github.com/boost-lib/mpi.git
+	url = https://bitbucket.org/ryppl/mpi.git
 [submodule "boost/mpl"]
 	path = boost/mpl
-	url = https://github.com/boost-lib/mpl.git
+	url = https://bitbucket.org/ryppl/mpl.git
 [submodule "boost/msm"]
 	path = boost/msm
-	url = https://github.com/boost-lib/msm.git
+	url = https://bitbucket.org/ryppl/msm.git
 [submodule "boost/multi_array"]
 	path = boost/multi_array
-	url = https://github.com/boost-lib/multi_array.git
+	url = https://bitbucket.org/ryppl/multi_array.git
 [submodule "boost/multi_index"]
 	path = boost/multi_index
-	url = https://github.com/boost-lib/multi_index.git
+	url = https://bitbucket.org/ryppl/multi_index.git
 [submodule "boost/optional"]
 	path = boost/optional
-	url = https://github.com/boost-lib/optional.git
+	url = https://bitbucket.org/ryppl/optional.git
 [submodule "boost/parameter"]
 	path = boost/parameter
-	url = https://github.com/boost-lib/parameter.git
+	url = https://bitbucket.org/ryppl/parameter.git
 [submodule "boost/phoenix"]
 	path = boost/phoenix
-	url = https://github.com/boost-lib/phoenix.git
+	url = https://bitbucket.org/ryppl/phoenix.git
 [submodule "boost/polygon"]
 	path = boost/polygon
-	url = https://github.com/boost-lib/polygon.git
+	url = https://bitbucket.org/ryppl/polygon.git
 [submodule "boost/pool"]
 	path = boost/pool
-	url = https://github.com/boost-lib/pool.git
+	url = https://bitbucket.org/ryppl/pool.git
 [submodule "boost/preprocessor"]
 	path = boost/preprocessor
-	url = https://github.com/boost-lib/preprocessor.git
+	url = https://bitbucket.org/ryppl/preprocessor.git
 [submodule "boost/program_options"]
 	path = boost/program_options
-	url = https://github.com/boost-lib/program_options.git
+	url = https://bitbucket.org/ryppl/program_options.git
 [submodule "boost/property_map"]
 	path = boost/property_map
-	url = https://github.com/boost-lib/property_map.git
+	url = https://bitbucket.org/ryppl/property_map.git
 [submodule "boost/property_tree"]
 	path = boost/property_tree
-	url = https://github.com/boost-lib/property_tree.git
+	url = https://bitbucket.org/ryppl/property_tree.git
 [submodule "boost/proto"]
 	path = boost/proto
-	url = https://github.com/boost-lib/proto.git
+	url = https://bitbucket.org/ryppl/proto.git
 [submodule "boost/ptr_container"]
 	path = boost/ptr_container
-	url = https://github.com/boost-lib/ptr_container.git
+	url = https://bitbucket.org/ryppl/ptr_container.git
 [submodule "boost/python"]
 	path = boost/python
-	url = https://github.com/boost-lib/python.git
+	url = https://bitbucket.org/ryppl/python.git
 [submodule "boost/quickbook"]
 	path = boost/quickbook
-	url = https://github.com/boost-lib/quickbook.git
+	url = https://bitbucket.org/ryppl/quickbook.git
 [submodule "boost/random"]
 	path = boost/random
-	url = https://github.com/boost-lib/random.git
+	url = https://bitbucket.org/ryppl/random.git
 [submodule "boost/range"]
 	path = boost/range
-	url = https://github.com/boost-lib/range.git
+	url = https://bitbucket.org/ryppl/range.git
 [submodule "boost/ratio"]
 	path = boost/ratio
-	url = https://github.com/boost-lib/ratio.git
+	url = https://bitbucket.org/ryppl/ratio.git
 [submodule "boost/rational"]
 	path = boost/rational
-	url = https://github.com/boost-lib/rational.git
+	url = https://bitbucket.org/ryppl/rational.git
 [submodule "boost/regex"]
 	path = boost/regex
-	url = https://github.com/boost-lib/regex.git
+	url = https://bitbucket.org/ryppl/regex.git
 [submodule "boost/scope_exit"]
 	path = boost/scope_exit
-	url = https://github.com/boost-lib/scope_exit.git
+	url = https://bitbucket.org/ryppl/scope_exit.git
 [submodule "boost/serialization"]
 	path = boost/serialization
-	url = https://github.com/boost-lib/serialization.git
+	url = https://bitbucket.org/ryppl/serialization.git
 [submodule "boost/signals"]
 	path = boost/signals
-	url = https://github.com/boost-lib/signals.git
+	url = https://bitbucket.org/ryppl/signals.git
 [submodule "boost/signals2"]
 	path = boost/signals2
-	url = https://github.com/boost-lib/signals2.git
+	url = https://bitbucket.org/ryppl/signals2.git
 [submodule "boost/smart_ptr"]
 	path = boost/smart_ptr
-	url = https://github.com/boost-lib/smart_ptr.git
+	url = https://bitbucket.org/ryppl/smart_ptr.git
 [submodule "boost/spirit"]
 	path = boost/spirit
-	url = https://github.com/boost-lib/spirit.git
+	url = https://bitbucket.org/ryppl/spirit.git
 [submodule "boost/statechart"]
 	path = boost/statechart
-	url = https://github.com/boost-lib/statechart.git
+	url = https://bitbucket.org/ryppl/statechart.git
 [submodule "boost/static_assert"]
 	path = boost/static_assert
-	url = https://github.com/boost-lib/static_assert.git
+	url = https://bitbucket.org/ryppl/static_assert.git
 [submodule "boost/system"]
 	path = boost/system
-	url = https://github.com/boost-lib/system.git
+	url = https://bitbucket.org/ryppl/system.git
 [submodule "boost/test"]
 	path = boost/test
-	url = https://github.com/boost-lib/test.git
+	url = https://bitbucket.org/ryppl/test.git
 [submodule "boost/thread"]
 	path = boost/thread
-	url = https://github.com/boost-lib/thread.git
+	url = https://bitbucket.org/ryppl/thread.git
 [submodule "boost/timer"]
 	path = boost/timer
-	url = https://github.com/boost-lib/timer.git
+	url = https://bitbucket.org/ryppl/timer.git
 [submodule "boost/tokenizer"]
 	path = boost/tokenizer
-	url = https://github.com/boost-lib/tokenizer.git
+	url = https://bitbucket.org/ryppl/tokenizer.git
 [submodule "boost/tr1"]
 	path = boost/tr1
-	url = https://github.com/boost-lib/tr1.git
+	url = https://bitbucket.org/ryppl/tr1.git
 [submodule "boost/tti"]
 	path = boost/tti
-	url = https://github.com/boost-lib/tti.git
+	url = https://bitbucket.org/ryppl/tti.git
 [submodule "boost/tuple"]
 	path = boost/tuple
-	url = https://github.com/boost-lib/tuple.git
+	url = https://bitbucket.org/ryppl/tuple.git
 [submodule "boost/type_traits"]
 	path = boost/type_traits
-	url = https://github.com/boost-lib/type_traits.git
+	url = https://bitbucket.org/ryppl/type_traits.git
 [submodule "boost/typeof"]
 	path = boost/typeof
-	url = https://github.com/boost-lib/typeof.git
+	url = https://bitbucket.org/ryppl/typeof.git
 [submodule "boost/units"]
 	path = boost/units
-	url = https://github.com/boost-lib/units.git
+	url = https://bitbucket.org/ryppl/units.git
 [submodule "boost/unordered"]
 	path = boost/unordered
-	url = https://github.com/boost-lib/unordered.git
+	url = https://bitbucket.org/ryppl/unordered.git
 [submodule "boost/utility"]
 	path = boost/utility
-	url = https://github.com/boost-lib/utility.git
+	url = https://bitbucket.org/ryppl/utility.git
 [submodule "boost/uuid"]
 	path = boost/uuid
-	url = https://github.com/boost-lib/uuid.git
+	url = https://bitbucket.org/ryppl/uuid.git
 [submodule "boost/variant"]
 	path = boost/variant
-	url = https://github.com/boost-lib/variant.git
+	url = https://bitbucket.org/ryppl/variant.git
 [submodule "boost/wave"]
 	path = boost/wave
-	url = https://github.com/boost-lib/wave.git
+	url = https://bitbucket.org/ryppl/wave.git
 [submodule "boost/xpressive"]
 	path = boost/xpressive
-	url = https://github.com/boost-lib/xpressive.git
+	url = https://bitbucket.org/ryppl/xpressive.git
 [submodule "ryppl"]
 	path = ryppl
 	url = https://github.com/ryppl/ryppl.git
 [submodule "boost/ublas"]
 	path = boost/ublas
-	url = git://github.com/boost-lib/ublas.git
+	url = https://bitbucket.org/ryppl/ublas.git
 [submodule "boost/functional_hash"]
 	path = boost/functional_hash
-	url = git://github.com/boost-lib/functional_hash.git
+	url = https://bitbucket.org/ryppl/functional_hash.git
 [submodule "boost/numeric_conversion"]
 	path = boost/numeric_conversion
-	url = git://github.com/boost-lib/numeric_conversion.git
+	url = https://bitbucket.org/ryppl/numeric_conversion.git
 [submodule "boost/numeric_interval"]
 	path = boost/numeric_interval
-	url = git://github.com/boost-lib/numeric_interval.git
+	url = https://bitbucket.org/ryppl/numeric_interval.git
 [submodule "boost/spirit_classic"]
 	path = boost/spirit_classic
-	url = http://github.com/boost-lib/spirit_classic
+	url = https://bitbucket.org/ryppl/spirit_classic.git
 [submodule "boost/atomic"]
 	path = boost/atomic
-	url = https://github.com/boost-lib/atomic.git
+	url = https://bitbucket.org/ryppl/atomic.git
 [submodule "boost/lockfree"]
 	path = boost/lockfree
-	url = https://github.com/boost-lib/lockfree.git
+	url = https://bitbucket.org/ryppl/lockfree.git
+[submodule "boost/build"]
+	path = boost/build
+	url = https://bitbucket.org/ryppl/build.git
+[submodule "boost/coroutine"]
+	path = boost/coroutine
+	url = https://bitbucket.org/ryppl/coroutine.git
+[submodule "boost/interval"]
+	path = boost/interval
+	url = https://bitbucket.org/ryppl/interval.git
+[submodule "boost/multiprecision"]
+	path = boost/multiprecision
+	url = https://bitbucket.org/ryppl/multiprecision.git
+[submodule "boost/odeint"]
+	path = boost/odeint
+	url = https://bitbucket.org/ryppl/odeint.git
