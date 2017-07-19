@@ -12,415 +12,415 @@
 	url = https://bitbucket.org/ryppl/numeric_interval.git
 [submodule "boost/signals"]
 	path = boost/signals
-	url = http://github.org/boostorg/signals
+	url = http://github.com/boostorg/signals
 	branch = release
 [submodule "boost/algorithm"]
 	path = boost/algorithm
-	url = http://github.org/boostorg/algorithm
+	url = http://github.com/boostorg/algorithm
 	branch = release
 [submodule "boost/pool"]
 	path = boost/pool
-	url = http://github.org/boostorg/pool
+	url = http://github.com/boostorg/pool
 	branch = release
 [submodule "boost/graph_parallel"]
 	path = boost/graph_parallel
-	url = http://github.org/boostorg/graph_parallel
+	url = http://github.com/boostorg/graph_parallel
 	branch = release
 [submodule "boost/bimap"]
 	path = boost/bimap
-	url = http://github.org/boostorg/bimap
+	url = http://github.com/boostorg/bimap
 	branch = release
 [submodule "boost/mpi"]
 	path = boost/mpi
-	url = http://github.org/boostorg/mpi
+	url = http://github.com/boostorg/mpi
 	branch = release
 [submodule "boost/assign"]
 	path = boost/assign
-	url = http://github.org/boostorg/assign
+	url = http://github.com/boostorg/assign
 	branch = release
 [submodule "boost/mpl"]
 	path = boost/mpl
-	url = http://github.org/boostorg/mpl
+	url = http://github.com/boostorg/mpl
 	branch = release
 [submodule "boost/signals2"]
 	path = boost/signals2
-	url = http://github.org/boostorg/signals2
+	url = http://github.com/boostorg/signals2
 	branch = release
 [submodule "boost/conversion"]
 	path = boost/conversion
-	url = http://github.org/boostorg/conversion
+	url = http://github.com/boostorg/conversion
 	branch = release
 [submodule "boost/date_time"]
 	path = boost/date_time
-	url = http://github.org/boostorg/date_time
+	url = http://github.com/boostorg/date_time
 	branch = release
 [submodule "boost/optional"]
 	path = boost/optional
-	url = http://github.org/boostorg/optional
+	url = http://github.com/boostorg/optional
 	branch = release
 [submodule "boost/property_tree"]
 	path = boost/property_tree
-	url = http://github.org/boostorg/property_tree
+	url = http://github.com/boostorg/property_tree
 	branch = release
 [submodule "boost/build"]
 	path = boost/build
-	url = http://github.org/boostorg/build
+	url = http://github.com/boostorg/build
 	branch = release
 [submodule "boost/boostbook"]
 	path = boost/boostbook
-	url = http://github.org/boostorg/boostbook
+	url = http://github.com/boostorg/boostbook
 	branch = release
 [submodule "boost/bind"]
 	path = boost/bind
-	url = http://github.org/boostorg/bind
+	url = http://github.com/boostorg/bind
 	branch = release
 [submodule "boost/math"]
 	path = boost/math
-	url = http://github.org/boostorg/math
+	url = http://github.com/boostorg/math
 	branch = release
 [submodule "boost/scope_exit"]
 	path = boost/scope_exit
-	url = http://github.org/boostorg/scope_exit
+	url = http://github.com/boostorg/scope_exit
 	branch = release
 [submodule "boost/msm"]
 	path = boost/msm
-	url = http://github.org/boostorg/msm
+	url = http://github.com/boostorg/msm
 	branch = release
 [submodule "boost/asio"]
 	path = boost/asio
-	url = http://github.org/boostorg/asio
+	url = http://github.com/boostorg/asio
 	branch = release
 [submodule "boost/spirit"]
 	path = boost/spirit
-	url = http://github.org/boostorg/spirit
+	url = http://github.com/boostorg/spirit
 	branch = release
 [submodule "boost/crc"]
 	path = boost/crc
-	url = http://github.org/boostorg/crc
+	url = http://github.com/boostorg/crc
 	branch = release
 [submodule "boost/static_assert"]
 	path = boost/static_assert
-	url = http://github.org/boostorg/static_assert
+	url = http://github.com/boostorg/static_assert
 	branch = release
 [submodule "boost/disjoint_sets"]
 	path = boost/disjoint_sets
-	url = http://github.org/boostorg/disjoint_sets
+	url = http://github.com/boostorg/disjoint_sets
 	branch = release
 [submodule "boost/multi_array"]
 	path = boost/multi_array
-	url = http://github.org/boostorg/multi_array
+	url = http://github.com/boostorg/multi_array
 	branch = release
 [submodule "boost/compatibility"]
 	path = boost/compatibility
-	url = http://github.org/boostorg/compatibility
+	url = http://github.com/boostorg/compatibility
 	branch = release
 [submodule "boost/io"]
 	path = boost/io
-	url = http://github.org/boostorg/io
+	url = http://github.com/boostorg/io
 	branch = release
 [submodule "boost/tokenizer"]
 	path = boost/tokenizer
-	url = http://github.org/boostorg/tokenizer
+	url = http://github.com/boostorg/tokenizer
 	branch = release
 [submodule "boost/typeof"]
 	path = boost/typeof
-	url = http://github.org/boostorg/typeof
+	url = http://github.com/boostorg/typeof
 	branch = release
 [submodule "boost/polygon"]
 	path = boost/polygon
-	url = http://github.org/boostorg/polygon
+	url = http://github.com/boostorg/polygon
 	branch = release
 [submodule "boost/function"]
 	path = boost/function
-	url = http://github.org/boostorg/function
+	url = http://github.com/boostorg/function
 	branch = release
 [submodule "boost/property_map"]
 	path = boost/property_map
-	url = http://github.org/boostorg/property_map
+	url = http://github.com/boostorg/property_map
 	branch = release
 [submodule "boost/flyweight"]
 	path = boost/flyweight
-	url = http://github.org/boostorg/flyweight
+	url = http://github.com/boostorg/flyweight
 	branch = release
 [submodule "boost/any"]
 	path = boost/any
-	url = http://github.org/boostorg/any
+	url = http://github.com/boostorg/any
 	branch = release
 [submodule "boost/foreach"]
 	path = boost/foreach
-	url = http://github.org/boostorg/foreach
+	url = http://github.com/boostorg/foreach
 	branch = release
 [submodule "boost/random"]
 	path = boost/random
-	url = http://github.org/boostorg/random
+	url = http://github.com/boostorg/random
 	branch = release
 [submodule "boost/utility"]
 	path = boost/utility
-	url = http://github.org/boostorg/utility
+	url = http://github.com/boostorg/utility
 	branch = release
 [submodule "boost/integer"]
 	path = boost/integer
-	url = http://github.org/boostorg/integer
+	url = http://github.com/boostorg/integer
 	branch = release
 [submodule "boost/multi_index"]
 	path = boost/multi_index
-	url = http://github.org/boostorg/multi_index
+	url = http://github.com/boostorg/multi_index
 	branch = release
 [submodule "boost/python"]
 	path = boost/python
-	url = http://github.org/boostorg/python
+	url = http://github.com/boostorg/python
 	branch = release
 [submodule "boost/fusion"]
 	path = boost/fusion
-	url = http://github.org/boostorg/fusion
+	url = http://github.com/boostorg/fusion
 	branch = release
 [submodule "boost/type_traits"]
 	path = boost/type_traits
-	url = http://github.org/boostorg/type_traits
+	url = http://github.com/boostorg/type_traits
 	branch = release
 [submodule "boost/circular_buffer"]
 	path = boost/circular_buffer
-	url = http://github.org/boostorg/circular_buffer
+	url = http://github.com/boostorg/circular_buffer
 	branch = release
 [submodule "boost/rational"]
 	path = boost/rational
-	url = http://github.org/boostorg/rational
+	url = http://github.com/boostorg/rational
 	branch = release
 [submodule "boost/format"]
 	path = boost/format
-	url = http://github.org/boostorg/format
+	url = http://github.com/boostorg/format
 	branch = release
 [submodule "boost/array"]
 	path = boost/array
-	url = http://github.org/boostorg/array
+	url = http://github.com/boostorg/array
 	branch = release
 [submodule "boost/tr1"]
 	path = boost/tr1
-	url = http://github.org/boostorg/tr1
+	url = http://github.com/boostorg/tr1
 	branch = release
 [submodule "boost/graph"]
 	path = boost/graph
-	url = http://github.org/boostorg/graph
+	url = http://github.com/boostorg/graph
 	branch = release
 [submodule "boost/parameter"]
 	path = boost/parameter
-	url = http://github.org/boostorg/parameter
+	url = http://github.com/boostorg/parameter
 	branch = release
 [submodule "boost/iostreams"]
 	path = boost/iostreams
-	url = http://github.org/boostorg/iostreams
+	url = http://github.com/boostorg/iostreams
 	branch = release
 [submodule "boost/lambda"]
 	path = boost/lambda
-	url = http://github.org/boostorg/lambda
+	url = http://github.com/boostorg/lambda
 	branch = release
 [submodule "boost/bcp"]
 	path = boost/bcp
-	url = http://github.org/boostorg/bcp
+	url = http://github.com/boostorg/bcp
 	branch = release
 [submodule "boost/ptr_container"]
 	path = boost/ptr_container
-	url = http://github.org/boostorg/ptr_container
+	url = http://github.com/boostorg/ptr_container
 	branch = release
 [submodule "boost/wave"]
 	path = boost/wave
-	url = http://github.org/boostorg/wave
+	url = http://github.com/boostorg/wave
 	branch = release
 [submodule "boost/litre"]
 	path = boost/litre
-	url = http://github.org/boostorg/litre
+	url = http://github.com/boostorg/litre
 	branch = release
 [submodule "boost/xpressive"]
 	path = boost/xpressive
-	url = http://github.org/boostorg/xpressive
+	url = http://github.com/boostorg/xpressive
 	branch = release
 [submodule "boost/interprocess"]
 	path = boost/interprocess
-	url = http://github.org/boostorg/interprocess
+	url = http://github.com/boostorg/interprocess
 	branch = release
 [submodule "boost/dynamic_bitset"]
 	path = boost/dynamic_bitset
-	url = http://github.org/boostorg/dynamic_bitset
+	url = http://github.com/boostorg/dynamic_bitset
 	branch = release
 [submodule "boost/regex"]
 	path = boost/regex
-	url = http://github.org/boostorg/regex
+	url = http://github.com/boostorg/regex
 	branch = release
 [submodule "boost/timer"]
 	path = boost/timer
-	url = http://github.org/boostorg/timer
+	url = http://github.com/boostorg/timer
 	branch = release
 [submodule "boost/filesystem"]
 	path = boost/filesystem
-	url = http://github.org/boostorg/filesystem
+	url = http://github.com/boostorg/filesystem
 	branch = release
 [submodule "boost/program_options"]
 	path = boost/program_options
-	url = http://github.org/boostorg/program_options
+	url = http://github.com/boostorg/program_options
 	branch = release
 [submodule "boost/uuid"]
 	path = boost/uuid
-	url = http://github.org/boostorg/uuid
+	url = http://github.com/boostorg/uuid
 	branch = release
 [submodule "boost/core"]
 	path = boost/core
-	url = http://github.org/boostorg/core
+	url = http://github.com/boostorg/core
 	branch = release
 [submodule "boost/test"]
 	path = boost/test
-	url = http://github.org/boostorg/test
+	url = http://github.com/boostorg/test
 	branch = release
 [submodule "boost/variant"]
 	path = boost/variant
-	url = http://github.org/boostorg/variant
+	url = http://github.com/boostorg/variant
 	branch = release
 [submodule "boost/gil"]
 	path = boost/gil
-	url = http://github.org/boostorg/gil
+	url = http://github.com/boostorg/gil
 	branch = release
 [submodule "boost/units"]
 	path = boost/units
-	url = http://github.org/boostorg/units
+	url = http://github.com/boostorg/units
 	branch = release
 [submodule "boost/thread"]
 	path = boost/thread
-	url = http://github.org/boostorg/thread
+	url = http://github.com/boostorg/thread
 	branch = release
 [submodule "boost/serialization"]
 	path = boost/serialization
-	url = http://github.org/boostorg/serialization
+	url = http://github.com/boostorg/serialization
 	branch = release
 [submodule "boost/smart_ptr"]
 	path = boost/smart_ptr
-	url = http://github.org/boostorg/smart_ptr
+	url = http://github.com/boostorg/smart_ptr
 	branch = release
 [submodule "boost/functional"]
 	path = boost/functional
-	url = http://github.org/boostorg/functional
+	url = http://github.com/boostorg/functional
 	branch = release
 [submodule "boost/inspect"]
 	path = boost/inspect
-	url = http://github.org/boostorg/inspect
+	url = http://github.com/boostorg/inspect
 	branch = release
 [submodule "boost/preprocessor"]
 	path = boost/preprocessor
-	url = http://github.org/boostorg/preprocessor
+	url = http://github.com/boostorg/preprocessor
 	branch = release
 [submodule "boost/proto"]
 	path = boost/proto
-	url = http://github.org/boostorg/proto
+	url = http://github.com/boostorg/proto
 	branch = release
 [submodule "boost/range"]
 	path = boost/range
-	url = http://github.org/boostorg/range
+	url = http://github.com/boostorg/range
 	branch = release
 [submodule "boost/icl"]
 	path = boost/icl
-	url = http://github.org/boostorg/icl
+	url = http://github.com/boostorg/icl
 	branch = release
 [submodule "boost/chrono"]
 	path = boost/chrono
-	url = http://github.org/boostorg/chrono
+	url = http://github.com/boostorg/chrono
 	branch = release
 [submodule "boost/geometry"]
 	path = boost/geometry
-	url = http://github.org/boostorg/geometry
+	url = http://github.com/boostorg/geometry
 	branch = release
 [submodule "boost/ratio"]
 	path = boost/ratio
-	url = http://github.org/boostorg/ratio
+	url = http://github.com/boostorg/ratio
 	branch = release
 [submodule "boost/config"]
 	path = boost/config
-	url = http://github.org/boostorg/config
+	url = http://github.com/boostorg/config
 	branch = release
 [submodule "boost/move"]
 	path = boost/move
-	url = http://github.org/boostorg/move
+	url = http://github.com/boostorg/move
 	branch = release
 [submodule "boost/phoenix"]
 	path = boost/phoenix
-	url = http://github.org/boostorg/phoenix
+	url = http://github.com/boostorg/phoenix
 	branch = release
 [submodule "boost/system"]
 	path = boost/system
-	url = http://github.org/boostorg/system
+	url = http://github.com/boostorg/system
 	branch = release
 [submodule "boost/boost"]
 	path = boost/boost
-	url = http://github.org/boostorg/boost
+	url = http://github.com/boostorg/boost
 	branch = release
 [submodule "boost/auto_index"]
 	path = boost/auto_index
-	url = http://github.org/boostorg/auto_index
+	url = http://github.com/boostorg/auto_index
 	branch = release
 [submodule "boost/locale"]
 	path = boost/locale
-	url = http://github.org/boostorg/locale
+	url = http://github.com/boostorg/locale
 	branch = release
 [submodule "boost/container"]
 	path = boost/container
-	url = http://github.org/boostorg/container
+	url = http://github.com/boostorg/container
 	branch = release
 [submodule "boost/accumulators"]
 	path = boost/accumulators
-	url = http://github.org/boostorg/accumulators
+	url = http://github.com/boostorg/accumulators
 	branch = release
 [submodule "boost/atomic"]
 	path = boost/atomic
-	url = http://github.org/boostorg/atomic
+	url = http://github.com/boostorg/atomic
 	branch = release
 [submodule "boost/context"]
 	path = boost/context
-	url = http://github.org/boostorg/context
+	url = http://github.com/boostorg/context
 	branch = release
 [submodule "boost/heap"]
 	path = boost/heap
-	url = http://github.org/boostorg/heap
+	url = http://github.com/boostorg/heap
 	branch = release
 [submodule "boost/coroutine"]
 	path = boost/coroutine
-	url = http://github.org/boostorg/coroutine
+	url = http://github.com/boostorg/coroutine
 	branch = release
 [submodule "boost/local_function"]
 	path = boost/local_function
-	url = http://github.org/boostorg/local_function
+	url = http://github.com/boostorg/local_function
 	branch = release
 [submodule "boost/multiprecision"]
 	path = boost/multiprecision
-	url = http://github.org/boostorg/multiprecision
+	url = http://github.com/boostorg/multiprecision
 	branch = release
 [submodule "boost/numeric_conversion"]
 	path = boost/numeric_conversion
-	url = http://github.org/boostorg/numeric_conversion
+	url = http://github.com/boostorg/numeric_conversion
 	branch = release
 [submodule "boost/odeint"]
 	path = boost/odeint
-	url = http://github.org/boostorg/odeint
+	url = http://github.com/boostorg/odeint
 	branch = release
 [submodule "boost/ublas"]
 	path = boost/ublas
-	url = http://github.org/boostorg/ublas
+	url = http://github.com/boostorg/ublas
 	branch = release
 [submodule "boost/lockfree"]
 	path = boost/lockfree
-	url = http://github.org/boostorg/lockfree
+	url = http://github.com/boostorg/lockfree
 	branch = release
 [submodule "boost/interval"]
 	path = boost/interval
-	url = http://github.org/boostorg/interval
+	url = http://github.com/boostorg/interval
 	branch = release
 [submodule "boost/functional_hash"]
 	path = boost/functional_hash
-	url = http://github.org/boostorg/functional_hash
+	url = http://github.com/boostorg/functional_hash
 	branch = release
 [submodule "boost/spirit_classic"]
 	path = boost/spirit_classic
-	url = http://github.org/boostorg/spirit_classic
+	url = http://github.com/boostorg/spirit_classic
 	branch = release
 [submodule "boost/compose"]
 	path = boost/compose
-	url = http://github.org/boostorg/compose
+	url = http://github.com/boostorg/compose
 	branch = release
 [submodule "boost/tuple"]
 	path = boost/tuple
